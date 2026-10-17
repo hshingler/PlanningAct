@@ -1,42 +1,42 @@
-# Planning Act 2026 — lightweight Logseq DB graph viewer
+# Planning Act 2026 — lightweight Logseq database viewer
 
-This is an initial working prototype of a static legislative viewer generated from a Logseq **database graph EDN export**. It does not load the Logseq application at runtime. It uses Python's standard library to turn the EDN datoms into JSON and publishes a small static website via GitHub Pages.
+This repository builds a static searchable viewer **directly from a Logseq database-graph SQLite file**. The EDN export is not used by the build.
 
-## Included
+## Files
 
-- `source/graph.edn` — the supplied EDN export used to build this prototype. Replace this with a fresh export when you update the graph.
-- `build_site.py` — converts Logseq EDN datoms to a compact data file and copies the viewer.
-- `index.html` — reader UI with page list, full-text search, nested block display, and reference inspection.
-- `.github/workflows/publish.yml` — automatically builds and deploys to GitHub Pages on pushes to `main`.
+- `source/graph.sqlite` — the source database snapshot.
+- `build_site.py` — reads the database's materialized `kvs` index and creates the viewer data.
+- `index.html` — the browser interface.
+- `.github/workflows/publish.yml` — builds and deploys to GitHub Pages when changes are pushed to `main`.
 
-## Set up in GitHub (one time)
+## Publish on GitHub Pages
 
-1. Create a **new repository** for the viewer, or use a separate branch/repository from your existing Logseq site. Do not overwrite the current working site while testing.
-2. Upload all files and folders in this package, keeping their folder structure, and commit them to the `main` branch.
-3. In the repository, open **Settings → Pages** and set the publishing source to **GitHub Actions**.
-4. Open **Actions**. The workflow named “Build and publish Planning Act viewer” should run after the push. When it finishes successfully, open the URL shown in the deployment summary.
+1. Upload the repository files while preserving the folder structure, including `.github/workflows/publish.yml` and `source/graph.sqlite`.
+2. In the GitHub repository, open **Settings → Pages** and set the build/deployment source to **GitHub Actions**.
+3. Push to `main` or manually run **Build and publish Planning Act viewer** in the Actions tab.
+4. Check the workflow has succeeded before relying on the published site.
 
-## Updating the published Act
+## Updating the site when the Logseq graph changes
 
-1. In Logseq, use **Export graph → Export EDN file** to export the current database graph.
-2. Replace `source/graph.edn` with the new export (keep the filename exactly `graph.edn`).
-3. Commit and push the replacement to GitHub. The workflow regenerates and republishes the site automatically.
+1. Let Logseq finish saving/syncing, then close the graph (or Logseq) before taking the database snapshot.
+2. Replace `source/graph.sqlite` with a fresh, consistent snapshot of the database, keeping the filename exactly `graph.sqlite`.
+3. If the database has a non-empty `-wal` file, do not copy just the main `.sqlite` file. Use SQLite's backup facility or close/checkpoint the database first so the snapshot includes recent changes.
+4. Commit and push the replacement file to `main`.
+5. Check the GitHub Actions run and inspect the site, especially a few pages whose nesting/order you know well.
 
-You do not need to edit `data.json` manually; it is generated during the workflow.
+The SQLite file in this package is a snapshot of the database supplied for this prototype. It will not update itself when your local Logseq graph changes; you replace it when you want to publish a newer snapshot.
 
-## Test locally (optional)
+## Test locally
+
+Requires Python 3.10+:
 
 ```bash
-python3 build_site.py source/graph.edn site
-cd site
-python3 -m http.server 8000
+python3 build_site.py source/graph.sqlite site
+python3 -m http.server 8000 --directory site
 ```
 
 Then open `http://localhost:8000`.
 
-## Important prototype limits
+## Important limitations
 
-- This is an initial prototype, not yet a validated legal publication. Compare key pages against Logseq before making it public.
-- It preserves exported block text, parent/child structure, entity IDs, UUIDs, tags and reference relationships in the generated data. The reader currently provides page search, nested content, and page/block reference exploration; it does **not** yet reproduce every Logseq rendering feature, query, embed, property view, or all block-level navigation semantics.
-- The data export includes system pages and property entities; the visible page list is filtered to pages tagged `PA2026` plus the home/index pages. Search is similarly scoped.
-- The workflow requires the repository's GitHub Pages source to be set to GitHub Actions. Keep the original site until you have verified the new output.
+The builder reconstructs the current page/block fields from Logseq's internal `kvs` index. This is a prototype decoder for Logseq's database representation, which may change between Logseq versions. Validate representative pages against Logseq after changing the source database or updating Logseq. Keep your existing published site and a backup of the source database until you are satisfied with the result.
