@@ -134,8 +134,11 @@ def build(src, out):
         if name and title:
             pages.append({
                 "id": eid, "label": title, "name": name,
-                "uuid": e.get("block/uuid"), "tags": e.get("block/tags", [])
+                "uuid": e.get("block/uuid"), "tags": e.get("block/tags", []),
+                "deleted": bool(e.get("logseq.property/deleted-at"))
             })
+    deleted_page_ids = {p["id"] for p in pages if p.get("deleted")}
+    pages = [p for p in pages if not p.get("deleted")]
     page_by_id = {p["id"]: p for p in pages}
     page_by_name = {}
     for p in pages:
@@ -149,6 +152,8 @@ def build(src, out):
         if "block/title" not in e:
             continue
         page_id = e.get("block/page")
+        if page_id in deleted_page_ids or e.get("logseq.property/deleted-at"):
+            continue
         pg = page_by_id.get(page_id)
         is_page = bool(e.get("block/name"))
         direct_tags = e.get("block/tags", [])
@@ -175,7 +180,8 @@ def build(src, out):
             "parentId": e.get("block/parent"), "order": str(e.get("block/order") or ""),
             "tags": direct_tags, "pageTags": page_tags,
             "refs": [r["id"] for r in resolved_refs], "resolvedRefs": resolved_refs,
-            "properties": properties
+            "properties": properties,
+            "deleted": bool(e.get("logseq.property/deleted-at"))
         })
 
     payload = {
