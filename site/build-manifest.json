@@ -6,6 +6,11 @@
   "blocks_with_page": 12115,
   "pages_without_children": 184,
   "generated_files": 581,
+  "home_page": "Planning Act 2026 \u2014 Home",
+  "pages_with_linked_references": 432,
+  "pages_with_unlinked_references": 66,
+  "linked_reference_edges": 5129,
+  "unlinked_reference_matches": 7269,
   "browse_category_counts": {
     "Provisions": 340,
     "Concepts and expressions": 24,
@@ -16,6 +21,8 @@
     "Page and block titles are extracted from :block/title.",
     "Block ordering uses the exported :block/order value.",
     "UUID references are linked when they resolve to an exported page or block.",
+    "Linked references are generated from stored :block/refs relationships.",
+    "Unlinked references are candidate page-title matches in block text and may include false positives.",
     "This is an initial structural prototype, not a validated legal publication."
   ]
 }
