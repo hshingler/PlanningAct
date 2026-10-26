@@ -27,8 +27,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build viewer from SQLite
-        run: python build_site.py source/graph.sqlite site
+      - name: Build viewer from edn
+        run: python build_site.py source/graph.edn site
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3
