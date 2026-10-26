@@ -1,6 +1,12 @@
-# Planning Act Knowledge Base — version 3 prototype
+# Planning Act Knowledge Base — version 3.1 prototype
 
 This package builds a static website from a Logseq database EDN export and publishes it to GitHub Pages. It preserves the EDN source as input and generates HTML, CSS, and a searchable JSON index.
+
+## Version 3.1 changes
+
+- **Archival reference-card styling:** warm paper tones, a restrained manila card treatment for page titles, subtle filing-tab details, fine ink-like rules, and lightly imperfect edges.
+- **Styling-only update:** preserves v3 page content, navigation, search, graph links, grouped references, and block controls. No new JavaScript, external fonts, image assets, or runtime dependencies were added.
+- The stylesheet is included in both the generated site and the build script, so future rebuilds retain the v3.1 appearance.
 
 ## Version 3 changes
 
