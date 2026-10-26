@@ -20,9 +20,9 @@
   "prototype_notes": [
     "Page and block titles are extracted from :block/title.",
     "Block ordering uses the exported :block/order value.",
-    "UUID references are linked when they resolve to an exported page or block.",
-    "Linked references are generated from stored :block/refs relationships.",
-    "Unlinked references are candidate page-title matches in block text and may include false positives.",
-    "This is an initial structural prototype, not a validated legal publication."
+    "UUID links resolve to human-readable page or block titles where available.",
+    "Saved and candidate references are merged and sorted numerically by statutory provision, then schedule.",
+    "Concept and actor pages group references by interpretation, RSP, LUP, NEP and other references.",
+    "Unlinked references are candidate page-title matches and may include false positives."
   ]
 }
