@@ -1,0 +1,21 @@
+{
+  "source_file": "logseq_db_PA 22Oct1.2_1792752823.edn",
+  "datoms_parsed": 96607,
+  "entities": 12701,
+  "pages": 574,
+  "blocks_with_page": 12115,
+  "pages_without_children": 184,
+  "generated_files": 581,
+  "browse_category_counts": {
+    "Provisions": 340,
+    "Concepts and expressions": 24,
+    "Planning instruments": 5,
+    "Actors": 4
+  },
+  "prototype_notes": [
+    "Page and block titles are extracted from :block/title.",
+    "Block ordering uses the exported :block/order value.",
+    "UUID references are linked when they resolve to an exported page or block.",
+    "This is an initial structural prototype, not a validated legal publication."
+  ]
+}

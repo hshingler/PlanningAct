@@ -1,31 +1,32 @@
-# Planning Act 2026 web viewer — Version 1.2
+# Planning Act Knowledge Base — prototype
 
-This is a **viewer-code update only** for the existing SQLite-based Planning Act 2026 GitHub Pages site. It does not include or replace your SQLite database, generated `data.json`, or GitHub Actions workflow.
+This is an initial static-site prototype built from the supplied Logseq EDN export.
 
-## Apply it to the existing repository
+## What is included
+- `site/`: generated static website, including the homepage, browser-side search index, and one HTML page for each exported Logseq page.
+- `build.py`: repeatable generator. It reads the EDN file and writes a separate output directory; it does not modify the source export or SQLite database.
+- `site/build-manifest.json`: basic extraction counts and caveats.
 
-1. Download and unzip this package.
-2. In the root of your existing `PlanningAct2026` repository, replace **only** `index.html` and `build_site.py` with the two files in this package.
-3. Leave `source/graph.sqlite`, the existing generated site data, and `.github/workflows/deploy.yml` untouched.
-4. Commit and push the two replaced files to `main`.
-5. Check the existing GitHub Actions deployment completes, then test the items below.
+## Preview locally
+Open `site/index.html` in a browser. For browser search to load consistently, serve the `site` folder with a local static server, for example:
 
-The update is deliberately code-only so it does not overwrite the source graph or change your working deployment workflow. The new viewer will use the `data.json` already published with the site; `build_site.py` is for the existing workflow if/when it rebuilds from the SQLite source.
+```bash
+cd site
+python3 -m http.server 8000
+```
 
-## Version 1.2 changes
+Then visit `http://localhost:8000`.
 
-- **Multi-word search:** unquoted words are treated as required terms (for example, `growth and change` finds matches containing both “growth” and “change”). Put a phrase in quotes, square brackets, or parentheses to search it as a phrase.
-- **Readable reference labels:** resolve UUID-only block/page labels to readable titles wherever the graph contains a matching entity.
-- **Possible unlinked references:** add a page-level section that searches for literal mentions of the current page title/name that are not already linked to that page. These are suggestions for review, not automatic graph edits.
-- **No “(empty block)” placeholders:** blank blocks do not display a label; any children remain visible.
-- **Stable collapse controls:** move collapse controls into a separate row so they do not disrupt the vertical alignment of block text or hierarchy.
-- **Expand/collapse all:** add page-level buttons at the top of each page.
-- **More Logseq-like linked references:** group incoming references by their source page, with expandable source-page headings and the referencing blocks underneath. Retain the All, RSP, LUP, NEP and NPD filters.
-- Keeps the previous search highlighting, selected-result navigation, tag filtering, deleted-record exclusion and block navigation improvements.
+## Rebuild from the EDN export
 
-## Safe publishing notes
+```bash
+python3 build.py "/path/to/your-export.edn" site
+```
 
-- Keep a copy of the current repository version before replacing files.
-- Do not upload the cleaned SQLite file as part of this patch.
-- Do not replace your existing GitHub Actions workflow.
-- The possible-unlinked-reference section is intentionally read-only; it does not create Logseq links or modify the database.
+## Important limitations
+- This is a prototype, not a validated legal publication.
+- It extracts page and block titles and uses exported parent/page/order relationships to render content.
+- It resolves UUID references when they point to an exported page or block. Some Logseq link forms or references may need further handling.
+- Page categories for RSP, LUP, NEP, concepts, expressions and actors have not been editorially assigned. The generator deliberately does not infer legal significance from keyword matches.
+- The initial parser should be tested against representative sections, schedules, tags, properties and cross-references before public release.
+- No source database or export is included in this package; use your local source file to rebuild.
