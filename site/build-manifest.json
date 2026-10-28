@@ -1,19 +1,19 @@
 {
-  "source_file": "logseq_db_PA 22Oct1.2_1792752823.edn",
-  "datoms_parsed": 96607,
-  "entities": 12701,
-  "pages": 574,
-  "blocks_with_page": 12115,
-  "pages_without_children": 184,
-  "generated_files": 581,
+  "source_file": "graph.edn",
+  "datoms_parsed": 96642,
+  "entities": 12702,
+  "pages": 578,
+  "blocks_with_page": 12112,
+  "pages_without_children": 188,
+  "generated_files": 585,
   "home_page": "Planning Act 2026 \u2014 Home",
   "pages_with_linked_references": 432,
   "pages_with_unlinked_references": 66,
-  "linked_reference_edges": 5129,
+  "linked_reference_edges": 5137,
   "unlinked_reference_matches": 7269,
   "browse_category_counts": {
     "Provisions": 340,
-    "Concepts and expressions": 24,
+    "Concepts": 24,
     "Planning instruments": 5,
     "Actors": 4
   },
@@ -23,6 +23,7 @@
     "UUID links resolve to human-readable page or block titles where available.",
     "Saved and candidate references are merged and sorted numerically by statutory provision, then schedule.",
     "Concept and actor pages group references by interpretation, RSP, LUP, NEP and other references.",
+    "Version 4 adds sticky graph navigation, recent pages, provision groups, page-jump controls, improved reference snippets and tag styling.",
     "Unlinked references are candidate page-title matches and may include false positives."
   ]
 }
