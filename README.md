@@ -41,3 +41,19 @@ If it returns 404, the deployed files/workflow are incomplete or the published b
 
 - Recently visited pages are stored locally in the visitor's browser.
 - Search and references are generated from the supplied graph export. Candidate unlinked references can include false positives. Verify statutory wording and legal context against the official legislation.
+
+
+## Favicon and home-page visual link
+
+The builder now copies the required icon files from `brand-assets/` into the generated `site/` root on every build, and adds the favicon links to the home page, browse pages, and individual graph pages. This means the assets are not dependent on manually copying files into the generated `site/` folder after a build.
+
+The home page also includes the Bosch-inspired funnel figure as a linked visual note pointing to the requested Eclectic Light article. Its image is copied to `site/assets/bosch-funnel-icon.png` during each build.
+
+For this repository, the published site base is `https://hshingler.github.io/PlanningAct/`. After deployment, these should resolve:
+
+- `https://hshingler.github.io/PlanningAct/favicon.ico`
+- `https://hshingler.github.io/PlanningAct/favicon-32.png`
+- `https://hshingler.github.io/PlanningAct/assets/bosch-funnel-icon.png`
+- `https://hshingler.github.io/PlanningAct/assets/search-index.json`
+
+Commit and push `build_site.py`, `brand-assets/`, `source/graph.edn`, `.github/workflows/deploy-pages.yml`, and the rest of the package. The workflow rebuilds and publishes `site/` automatically.
