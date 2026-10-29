@@ -271,7 +271,7 @@ def sidebar_html(from_root=False):
     tree=[]
     for label,items in groups.items():
         tree.append('<li><details><summary>'+html.escape(label)+' ('+str(len(items))+')</summary><ul class=\"side-tree\">'+''.join('<li><a href=\"'+nav_href(p,from_root)+'\">'+html.escape(p['title'])+'</a></li>' for p in items)+'</ul></details></li>')
-    return f'''<aside class=\"panel sidebar\"><form class=\"sidebar-search\" action=\"{prefix}index.html\" method=\"get\"><input type=\"search\" name=\"q\" placeholder=\"Search the graph…\" aria-label=\"Search the graph\"><button type=\"submit\">Go</button></form><section class=\"side-section\"><h3>Recently visited</h3><ol class=\"recent-list\" id=\"recent-pages\"></ol></section><section class=\"side-section\"><h3>Explore the graph</h3><ul class=\"navlist\"><li><a href=\"{prefix}provisions.html\">Planning Act provisions</a></li><li><a href=\"{prefix}concepts-expressions.html\">Concepts</a></li><li><a href=\"{prefix}planning-instruments.html\">Planning instruments</a></li><li><a href=\"{prefix}actors.html\">Actors</a></li></ul></section><section class=\"side-section\"><h3>Planning Act provisions</h3><ul class=\"side-tree\">{''.join(tree)}</ul></section></aside>'''
+    return f'''<aside class=\"panel sidebar\"><form class=\"sidebar-search\" action=\"{prefix}index.html\" method=\"get\"><input type=\"search\" name=\"q\" placeholder=\"Search the graph…\" aria-label=\"Search the graph\"><button type=\"submit\">Go</button></form><section class=\"side-section\"><h3>Recently visited</h3><ol class=\"recent-list\" id=\"recent-pages\"></ol></section><section class=\"side-section\"><h3>Explore the graph</h3><ul class=\"navlist\"><li><a href=\"{prefix}provisions.html\">Planning Act provisions</a></li><li><a href=\"{prefix}concepts-expressions.html\">Concepts</a></li><li><a href=\"{prefix}planning-instruments.html\">Key Instruments</a></li><li><a href=\"{prefix}actors.html\">Actors</a></li></ul></section><section class=\"side-section\"><h3>Planning Act provisions</h3><ul class=\"side-tree\">{''.join(tree)}</ul></section></aside>'''
 
 # Render individual pages. Concept and actor pages use special reference grouping.
 for p in pages.values():
@@ -287,7 +287,7 @@ def has_tag(p,*labels): return any(str(t).casefold() in {x.casefold() for x in l
 browse_categories=[
  {'slug':'provisions','title':'Provisions','description':'Browse provision pages and statutory material already tagged as provisions.','items':[p for p in pages.values() if has_tag(p,'provision')]},
  {'slug':'concepts-expressions','title':'Concepts','description':'Explore concepts and follow references to provisions.','items':[p for p in pages.values() if has_tag(p,'concept')]},
- {'slug':'planning-instruments','title':'Planning instruments','description':'Navigate pages tagged RSP, LUP and NEP. These labels reflect existing graph tags.','items':[p for p in pages.values() if has_tag(p,'RSP','LUP','NEP','instrument')]},
+ {'slug':'planning-instruments','title':'Key Instruments','description':'Navigate pages tagged RSP, LUP and NEP. These labels reflect existing graph tags.','items':[p for p in pages.values() if has_tag(p,'RSP','LUP','NEP','instrument')]},
  {'slug':'actors','title':'Actors','description':'Find actor pages and follow references to their statutory roles.','items':[p for p in pages.values() if has_tag(p,'Actor')]},
 ]
 for cat in browse_categories:
