@@ -47,7 +47,7 @@ If it returns 404, the deployed files/workflow are incomplete or the published b
 
 The builder now copies the required icon files from `brand-assets/` into the generated `site/` root on every build, and adds the favicon links to the home page, browse pages, and individual graph pages. This means the assets are not dependent on manually copying files into the generated `site/` folder after a build.
 
-The home page also includes the Bosch-inspired funnel figure as a linked visual note pointing to the requested Eclectic Light article. Its image is copied to `site/assets/bosch-funnel-icon.png` during each build.
+The funnel-butt image is used as the top-left site logo, browser favicon, and a visual motif on the home page. The builder copies the image and icon files into the generated site on every build.
 
 For this repository, the published site base is `https://hshingler.github.io/PlanningAct/`. After deployment, these should resolve:
 
