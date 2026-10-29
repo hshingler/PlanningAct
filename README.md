@@ -33,7 +33,7 @@ Commit/push the package contents, including `build_site.py`, `source/graph.edn`,
 
 After deployment, confirm that this URL loads JSON rather than a 404:
 
-`https://hshingler.github.io/PlanningAct2026/assets/search-index.json`
+`https://hshingler.github.io/PlanningAct/assets/search-index.json`
 
 If it returns 404, the deployed files/workflow are incomplete or the published base path differs from the URL; browser search cannot work until that is corrected.
 
@@ -57,3 +57,14 @@ For this repository, the published site base is `https://hshingler.github.io/Pla
 - `https://hshingler.github.io/PlanningAct/assets/search-index.json`
 
 Commit and push `build_site.py`, `brand-assets/`, `source/graph.edn`, `.github/workflows/deploy-pages.yml`, and the rest of the package. The workflow rebuilds and publishes `site/` automatically.
+
+
+## Version 4.5 — olive header and compact layout
+
+- Recoloured the header to a muted olive-brown sampled from the supplied Bosch painting.
+- Enlarged the top-left funnel-butt logo to 104 × 104 px on desktop, with a responsive 76 px size on mobile.
+- Reworked the home header so the site title, page heading, and search field sit to the right of the logo.
+- Reduced header vertical padding and removed the tall stacked hero layout on laptop screens; at narrower widths, the search field moves below the heading to avoid crowding.
+- Kept the browser-tab favicon assets and rebuild-time asset copying.
+
+The generated `site/` and `build_site.py` are both updated. The live website changes only after these files are committed and pushed to the `PlanningAct` repository.
