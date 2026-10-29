@@ -1,35 +1,25 @@
-# Planning Act Knowledge Base — version 3.1 prototype
+# Planning Act Knowledge Base — Version 4
 
-This package builds a static website from a Logseq database EDN export and publishes it to GitHub Pages. It preserves the EDN source as input and generates HTML, CSS, and a searchable JSON index.
+Version 4 of the static site generated from the Logseq database graph EDN export.
 
-## Version 3.1 changes
+## Included
 
-- **Archival reference-card styling:** warm paper tones, a restrained manila card treatment for page titles, subtle filing-tab details, fine ink-like rules, and lightly imperfect edges.
-- **Styling-only update:** preserves v3 page content, navigation, search, graph links, grouped references, and block controls. No new JavaScript, external fonts, image assets, or runtime dependencies were added.
-- The stylesheet is included in both the generated site and the build script, so future rebuilds retain the v3.1 appearance.
+- `build_site.py` — static-site generator.
+- `source/graph.edn` — the graph export used to generate this package.
+- `site/` — prebuilt site, including all graph pages, browse pages, search index and stylesheet.
+- `.github/workflows/deploy-pages.yml` — GitHub Pages deployment workflow.
 
-## Version 3 changes
+## Version 4 changes
 
-- **Human-readable graph links:** internal page and block links use their titles instead of exposing UUIDs or database IDs where the export provides a title. Tag IDs are resolved to readable labels where possible.
-- **Merged references:** saved linked references and candidate unlinked references appear together in one reference list, with duplicate source-block entries removed.
-- **Statutory ordering:** references are sorted numerically by section (1, 2, 3 … 9, 10, 11), followed by schedules in numeric order, then other pages.
-- **Cleaner homepage:** the homepage uses the existing Logseq page **Planning Act 2026 — Home** and no longer displays the long “All pages” list or the yellow prototype notice.
-- **Block controls:** each parent block has an expand/collapse control positioned outside the text flow, plus page-level “Expand all blocks” and “Collapse all blocks” buttons. These controls do not change the text indentation.
-- **Concept and actor pages:** references are grouped into an interpretation box (references from §3 — Interpretation and NPD Interpretation), three side-by-side instrument boxes (RSP, LUP, NEP), and a filtered “Other references” box.
-- **Grouped search:** searches return references in the same interpretation / RSP / LUP / NEP / other grouping structure. Matching text is highlighted yellow, including after opening a search result.
-- **Filtering:** reference lists can be filtered by page title or reference excerpt.
+- Persistent right-side floating controls to jump to the top or bottom of a page.
+- A sticky left sidebar with graph search, recently visited pages, graph exploration links, and collapsible provision navigation.
+- Interpretation heading shortened to **Interpretation**; its reference filter matches only references whose opening block text starts with the entered term.
+- More Logseq-like opening excerpts on reference cards, with long snippets capped to keep the page readable.
+- Reference cards and instrument columns use responsive, minimum-width-safe layout rules to avoid the extremely narrow cards seen in the previous version.
+- Tags are styled as quiet classification labels rather than button-like orange chips.
+- Improved parsing of nested Logseq UUID links so their readable labels are preserved.
 
-## Source file
-
-Keep your EDN export at:
-
-```text
-source/graph.edn
-```
-
-Do not put the EDN file inside `site/`. The `site/` folder is generated output and can be replaced on each build. Keep your SQLite database as a separate backup if you wish; this build reads the EDN export.
-
-## Build locally
+## Rebuild locally
 
 From the repository root:
 
@@ -37,25 +27,14 @@ From the repository root:
 python build_site.py source/graph.edn site
 ```
 
-The script uses only Python's standard library. It reads the EDN file and regenerates `site/` without modifying the EDN export or SQLite database.
-
-To preview locally:
-
-```bash
-python -m http.server 8000 --directory site
-```
-
-Then open `http://localhost:8000`.
+Python 3.10+ is recommended. No third-party Python packages are required.
 
 ## GitHub Pages
 
-The included workflow `.github/workflows/deploy-pages.yml` builds from `source/graph.edn` and publishes `site/` using GitHub Actions. In the repository's **Settings → Pages**, set the deployment source to **GitHub Actions**.
+Commit the `build_site.py`, `source/graph.edn`, `.github/workflows/deploy-pages.yml`, and generated `site/` directory. The workflow rebuilds the site and publishes the generated `site/` directory. Keep the EDN source in `source/`, not inside `site/`.
 
-Replace or remove any older workflow that runs `python build_site.py source/graph.sqlite site`; do not leave both the old SQLite workflow and this EDN workflow active.
+## Notes
 
-## Important limitations
-
-- Saved linked references come from the relationships stored in the Logseq export.
-- Unlinked references are candidate page-title matches in block text. They are useful for discovery, not proof of a legal or conceptual relationship, and may include false positives.
-- RSP/LUP/NEP grouping relies on existing graph tags. It is not a complete legal classification or an independent legal conclusion.
-- The site is a research prototype, not a validated legal publication. Confirm statutory wording and context against official legislation.
+- Recently visited pages are stored locally in the visitor's browser; they are not sent to a server.
+- Search and references are generated from the supplied graph export. Candidate unlinked references can include false positives. Verify legal wording and context against the official legislation.
+- The provision navigation is collapsible and lists the graph's provision-tagged pages. Where the graph export does not encode Part/Subpart membership as page titles or tags, the generator cannot reliably infer legal group boundaries; those provisions are retained under the expandable **All provisions** group rather than assigned to guessed Parts.
