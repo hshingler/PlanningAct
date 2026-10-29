@@ -24,7 +24,6 @@
     "Saved and candidate references are merged and sorted numerically by statutory provision, then schedule.",
     "Concept and actor pages group references by interpretation, RSP, LUP, NEP and other references.",
     "Version 4 adds sticky graph navigation, recent pages, provision groups, page-jump controls, improved reference snippets and tag styling.",
-    "Unlinked references are candidate page-title matches and may include false positives.",
-    "Search results group pages into RSP/LUP/NEP using either existing tags or mentions of the full instrument name/acronym in page text; instrument result cards use one column per group for readable widths."
+    "Unlinked references are candidate page-title matches and may include false positives."
   ]
 }
