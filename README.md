@@ -68,3 +68,11 @@ Commit and push `build_site.py`, `brand-assets/`, `source/graph.edn`, `.github/w
 - Kept the browser-tab favicon assets and rebuild-time asset copying.
 
 The generated `site/` and `build_site.py` are both updated. The live website changes only after these files are committed and pushed to the `PlanningAct` repository.
+
+## Version 4.6 — The Funnel Folly
+
+- Clicking the funnel logo in the header opens the dedicated illustrated `funnel-folly.html` essay page.
+- The essay page preserves the supplied text and interleaves the seven supplied Bosch-related images in a responsive editorial layout.
+- The logo remains linked to the essay from the homepage, browse pages and individual graph pages.
+- The build script copies the essay images from the supplied image files into `site/assets/funnel-essay/` on each rebuild. Keep those source images available when rebuilding locally; the package also includes the generated images in `site/`.
+- The essay page includes a clear link back to the Planning Act Knowledge Base.
