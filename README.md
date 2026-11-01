@@ -76,3 +76,8 @@ The generated `site/` and `build_site.py` are both updated. The live website cha
 - The logo remains linked to the essay from the homepage, browse pages and individual graph pages.
 - The build script copies the essay images from the supplied image files into `site/assets/funnel-essay/` on each rebuild. Keep those source images available when rebuilding locally; the package also includes the generated images in `site/`.
 - The essay page includes a clear link back to the Planning Act Knowledge Base.
+
+
+### Funnel Folly image assets
+
+The source images are stored in `brand-assets/funnel-folly/` and copied into the generated site by `build_site.py`. The build does not depend on local `/mnt/data` paths, so it also works on GitHub Actions runners.

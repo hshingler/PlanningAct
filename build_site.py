@@ -246,18 +246,22 @@ shutil.copy2(brand_assets / 'bosch-funnel-icon.png', out / 'assets' / 'bosch-fun
 # Illustrated Funnel Folly essay images (supplied by the site owner).
 essay_assets = out / 'assets' / 'funnel-essay'
 essay_assets.mkdir(parents=True, exist_ok=True)
-source_images = {
-    'removing-the-stone-detail.jpg': Path('/mnt/data/Hieronymus_Bosch-Removing_the_Rocks_from_the_Head-Detail.jpg'),
-    'funnel-butt.jpg': Path('/mnt/data/images-4.jpeg'),
-    'funnel-red-cloak.jpg': Path('/mnt/data/images-5.jpeg'),
-    'funnel-barrel.jpg': Path('/mnt/data/images-6.jpeg'),
-    'funnel-goose.jpg': Path('/mnt/data/images-7.jpeg'),
-    'funnel-book.jpg': Path('/mnt/data/images-8.jpeg'),
-    'funnel-figure.jpg': Path('/mnt/data/boschtemptationstanthonyna-2.jpg'),
-}
-for asset_name, source_image in source_images.items():
+# Keep source copies inside the package: GitHub Actions runners do not have
+# access to the original /mnt/data upload paths from the author's computer.
+source_essay_assets = brand_assets / 'funnel-folly'
+source_images = [
+    'removing-the-stone-detail.jpg',
+    'funnel-butt.jpg',
+    'funnel-red-cloak.jpg',
+    'funnel-barrel.jpg',
+    'funnel-goose.jpg',
+    'funnel-book.jpg',
+    'funnel-figure.jpg',
+]
+for asset_name in source_images:
+    source_image = source_essay_assets / asset_name
     if not source_image.is_file():
-        raise SystemExit(f'Missing Funnel Folly image: {source_image}')
+        raise SystemExit(f'Missing Funnel Folly image in package: {source_image}')
     shutil.copy2(source_image, essay_assets / asset_name)
 
 def favicon_links(prefix=''):
