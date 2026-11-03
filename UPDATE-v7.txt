@@ -1,0 +1,10 @@
+Version 7.0 update
+- Removed duplicate sidebar search; retained the primary search in the header.
+- Added a persistent Home button at the top of the sidebar.
+- Added Expand all / Collapse all controls to the home page.
+- Fixed Interpretation search grouping so NPD Interpretation results are not filtered by whether their text begins with the first query term.
+- Updated homepage search prompt to: Welcome to a navigation tool of the new planning system in New Zealand.
+- Reduced Funnel Folly essay typography and final image size; aligned its header branding with the site's compact header and moved the essay title above the text.
+- Renamed site branding to NZ Planning System.
+- Replaced the Home / Knowledge graph breadcrumb with page tags and removed the duplicate tag row beneath page titles.
+- Rebuilt the site from source/graph.edn.
