@@ -1,0 +1,10 @@
+Version 4.1 — favicon and home-page visual link
+
+Changes:
+- Favicon files are now copied from brand-assets/ into the generated site root on every build.
+- Favicon links are inserted into the generated home page, browse pages, and individual graph pages.
+- The home page shows a small Bosch-inspired funnel figure linked to the requested Eclectic Light article.
+- README deployment URLs now use https://hshingler.github.io/PlanningAct/ rather than the incorrect PlanningAct2026 path.
+
+Rebuild command (run from the package root):
+python build_site.py source/graph.edn site
