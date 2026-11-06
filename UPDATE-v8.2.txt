@@ -1,0 +1,3 @@
+NZ Planning System v8.2 — favicon consistency fix
+
+All browser favicon PNG sizes (16, 32, 48, 64, 180, 192 and 512) and favicon.ico are now generated from the supplied monochrome favicon-32.png master. The multicolour bosch-funnel-icon.png and apple-touch-icon.png are retained unchanged. The build script copies every favicon size from brand-assets into site on each GitHub Actions build and declares the 16, 32, 48 and 64px PNG variants in page HTML.

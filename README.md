@@ -1,83 +1,37 @@
-# Planning Act Knowledge Base — repaired Version 4 package
+# NZ Planning System — Version 9.0
 
-This package is based on the latest supplied Logseq graph export (`source/graph.edn`) and retains the Version 4 navigation and reference features.
+A static, searchable legal knowledge base generated from the combined Logseq graph export supplied on 6 November 2026. The graph includes the Planning Act 2026, Natural Environment Act 2026 and national policy direction material.
 
-## Fixes in this package
+## What's new in v9.0
 
-- Corrected search JavaScript so the page can parse and run in Safari.
-- Search now treats multiple words as an **AND** query: every term must occur somewhere in a result's title, name, tags, or text. For example, `growth and change` requires all three words to be present. Each term is highlighted in the result excerpt.
-- Instrument reference sections for RSP, LUP, and NEP now use full-width stacked cards instead of three narrow columns, making reference titles and context easier to read.
-- The prebuilt `site/` includes all generated pages, `assets/style.css`, and `assets/search-index.json`.
-- The GitHub Pages workflow rebuilds from `source/graph.edn` and publishes the complete `site/` directory.
+- Combined graph is now the authoritative source at `source/graph.edn`.
+- Act-aware page classification uses the graph's `PA2026` and `NEA2026` tags.
+- Planning Act, Natural Environment Act and Both view controls.
+- A split reading workspace (`both.html`) with independently scrollable Act panes, a draggable divider and cross-Act link routing.
+- Sidebar reorganised into Recently Visited, Start Here (Planning Act, Natural Environment Act and National Policy Direction), and Explore (Actors, Concepts and Instruments).
+- Header identity updated to **NZ PLANNING SYSTEM / LEGAL KNOWLEDGE BASE**.
+- Editorial paper styling with restrained rules, serif typography and muted accent colours.
+- Existing search, references, recent history, block expansion, official legislation links and Funnel Folly essay retained.
+- Unlinked-reference detection optimised for the larger combined graph.
 
-## Contents
+## Build locally
 
-- `build_site.py` — site generator.
-- `source/graph.edn` — graph export used to build this package.
-- `site/` — complete prebuilt website, including search index and all generated pages.
-- `.github/workflows/deploy-pages.yml` — GitHub Pages deployment workflow.
-
-## Rebuild locally
-
-From the repository root:
+Python 3.10+; no third-party packages are required.
 
 ```bash
 python build_site.py source/graph.edn site
 ```
 
-Python 3.10+ is recommended. No third-party Python packages are required.
+The build regenerates the static website, search index, browse pages, and split reading workspace. The prebuilt `site/` directory is included.
 
 ## Publish to GitHub Pages
 
-Commit/push the package contents, including `build_site.py`, `source/graph.edn`, `.github/workflows/deploy-pages.yml`, and the complete `site/` folder. The workflow rebuilds the site and publishes `site/`.
+Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, `.github/workflows/deploy-pages.yml`, and the generated `site/` directory. The existing workflow builds from `source/graph.edn` and publishes `site/`.
 
 After deployment, confirm that this URL loads JSON rather than a 404:
 
 `https://hshingler.github.io/PlanningAct/assets/search-index.json`
 
-If it returns 404, the deployed files/workflow are incomplete or the published base path differs from the URL; browser search cannot work until that is corrected.
+## Important note
 
-## Notes
-
-- Recently visited pages are stored locally in the visitor's browser.
-- Search and references are generated from the supplied graph export. Candidate unlinked references can include false positives. Verify statutory wording and legal context against the official legislation.
-
-
-## Favicon and home-page visual link
-
-The builder now copies the required icon files from `brand-assets/` into the generated `site/` root on every build, and adds the favicon links to the home page, browse pages, and individual graph pages. This means the assets are not dependent on manually copying files into the generated `site/` folder after a build.
-
-The funnel-butt image is used as the top-left site logo and browser favicon. The separate visual-note section has been removed from the home page. The builder copies the image and icon files into the generated site on every build.
-
-For this repository, the published site base is `https://hshingler.github.io/PlanningAct/`. After deployment, these should resolve:
-
-- `https://hshingler.github.io/PlanningAct/favicon.ico`
-- `https://hshingler.github.io/PlanningAct/favicon-32.png`
-- `https://hshingler.github.io/PlanningAct/assets/bosch-funnel-icon.png`
-- `https://hshingler.github.io/PlanningAct/assets/search-index.json`
-
-Commit and push `build_site.py`, `brand-assets/`, `source/graph.edn`, `.github/workflows/deploy-pages.yml`, and the rest of the package. The workflow rebuilds and publishes `site/` automatically.
-
-
-## Version 4.5 — olive header and compact layout
-
-- Recoloured the header to a muted olive-brown sampled from the supplied Bosch painting.
-- Enlarged the top-left funnel-butt logo to 104 × 104 px on desktop, with a responsive 76 px size on mobile.
-- Reworked the home header so the site title, page heading, and search field sit to the right of the logo.
-- Reduced header vertical padding and removed the tall stacked hero layout on laptop screens; at narrower widths, the search field moves below the heading to avoid crowding.
-- Kept the browser-tab favicon assets and rebuild-time asset copying.
-
-The generated `site/` and `build_site.py` are both updated. The live website changes only after these files are committed and pushed to the `PlanningAct` repository.
-
-## Version 4.6 — The Funnel Folly
-
-- Clicking the funnel logo in the header opens the dedicated illustrated `funnel-folly.html` essay page.
-- The essay page preserves the supplied text and interleaves the seven supplied Bosch-related images in a responsive editorial layout.
-- The logo remains linked to the essay from the homepage, browse pages and individual graph pages.
-- The build script copies the essay images from the supplied image files into `site/assets/funnel-essay/` on each rebuild. Keep those source images available when rebuilding locally; the package also includes the generated images in `site/`.
-- The essay page includes a clear link back to the Planning Act Knowledge Base.
-
-
-### Funnel Folly image assets
-
-The source images are stored in `brand-assets/funnel-folly/` and copied into the generated site by `build_site.py`. The build does not depend on local `/mnt/data` paths, so it also works on GitHub Actions runners.
+This site is a navigation and knowledge tool generated from the supplied Logseq graph. It is not a substitute for checking statutory text, amendments, commencement and legal context against the official legislation.
