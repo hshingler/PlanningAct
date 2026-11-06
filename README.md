@@ -1,18 +1,20 @@
-# NZ Planning System — Version 9.0
+# NZ Planning System — Version 2.0.1
 
-A static, searchable legal knowledge base generated from the combined Logseq graph export supplied on 6 November 2026. The graph includes the Planning Act 2026, Natural Environment Act 2026 and national policy direction material.
+This package updates the combined Logseq graph website with the requested navigation, header, Act-view and reference-display fixes.
 
-## What's new in v9.0
+## Changes in 2.0.1
 
-- Combined graph is now the authoritative source at `source/graph.edn`.
-- Act-aware page classification uses the graph's `PA2026` and `NEA2026` tags.
-- Planning Act, Natural Environment Act and Both view controls.
-- A split reading workspace (`both.html`) with independently scrollable Act panes, a draggable divider and cross-Act link routing.
-- Sidebar reorganised into Recently Visited, Start Here (Planning Act, Natural Environment Act and National Policy Direction), and Explore (Actors, Concepts and Instruments).
-- Header identity updated to **NZ PLANNING SYSTEM / LEGAL KNOWLEDGE BASE**.
-- Editorial paper styling with restrained rules, serif typography and muted accent colours.
-- Existing search, references, recent history, block expansion, official legislation links and Funnel Folly essay retained.
-- Unlinked-reference detection optimised for the larger combined graph.
+- Fixed Recently Visited on both the homepage and knowledge pages. Page and search entries now render safely in the sidebar.
+- Moved the Act view selector into the top of the sidebar, directly below the Home link.
+- The Planning Act, Natural Environment Act and Both views now filter search results and Act-specific knowledge-page content using the `PA2026` and `NEA2026` graph tags. Shared and NPD-tagged pages remain available in either Act view.
+- The selected view is preserved when changing views, following search results, and navigating to the National Policy Direction contents page.
+- Moved the search field to the centre of the header.
+- Moved official legislation links to the far right of the header and added the label “Official Legislation:” above them.
+- Removed the “All provisions” catch-all group from the sidebar.
+- Renamed “Start here” to “Contents”; removed “home page” from the Act link labels.
+- Changed the National Policy Direction sidebar link to the National Policy Direction – Contents page.
+- Moved page tag details to directly below the page title.
+- Ensured unlinked interpretation matches are collected once per source block, rather than once for every occurrence of the target term within that block.
 
 ## Build locally
 
@@ -22,16 +24,12 @@ Python 3.10+; no third-party packages are required.
 python build_site.py source/graph.edn site
 ```
 
-The build regenerates the static website, search index, browse pages, and split reading workspace. The prebuilt `site/` directory is included.
+The combined Logseq export is stored at `source/graph.edn`. The prebuilt `site/` directory is included.
 
 ## Publish to GitHub Pages
 
-Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, `.github/workflows/deploy-pages.yml`, and the generated `site/` directory. The existing workflow builds from `source/graph.edn` and publishes `site/`.
-
-After deployment, confirm that this URL loads JSON rather than a 404:
-
-`https://hshingler.github.io/PlanningAct/assets/search-index.json`
+Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, `.github/workflows/deploy-pages.yml`, and the generated `site/` directory. The workflow builds from `source/graph.edn` and publishes `site/`.
 
 ## Important note
 
-This site is a navigation and knowledge tool generated from the supplied Logseq graph. It is not a substitute for checking statutory text, amendments, commencement and legal context against the official legislation.
+This site is a navigation and knowledge tool generated from the supplied Logseq graph. Check statutory wording, amendments, commencement and legal context against the official legislation.
