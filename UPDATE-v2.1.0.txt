@@ -1,0 +1,21 @@
+NZ Planning System — Version 2.1.0
+
+Comparison view
+- Concept and actor pages default to Both Acts.
+- Planning Act 2026 and Natural Environment Act 2026 material is presented in side-by-side columns.
+- Act classification is based on the source block's own tags, inheriting parent block tags where necessary.
+- Shared material remains separately labelled below the Act columns.
+- National Policy Direction material remains separately labelled below the Act columns.
+- Planning Act-only and Natural Environment Act-only views remain available.
+- Comparison columns stack on smaller screens.
+
+Headers
+- Standardised the homepage, knowledge-page, browse-page and Both Acts headers to match the Natural Environment Act contents-page header design.
+- Preserved the Funnel Folly header design.
+
+Source graph
+- source/graph.edn unchanged (combined Planning Act, Natural Environment Act and NPD Logseq export).
+- 934 pages; 16,345 blocks; 131,768 datoms.
+
+Build
+- python build_site.py source/graph.edn site

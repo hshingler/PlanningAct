@@ -1,4 +1,5 @@
 {
+  "version": "2.1.0",
   "source_file": "graph.edn",
   "datoms_parsed": 131768,
   "entities": 17291,
@@ -18,6 +19,7 @@
     "Actors": 4
   },
   "prototype_notes": [
+    "Version 2.1.0 adds default side-by-side Act comparisons for concept and actor pages.",
     "Page and block titles are extracted from :block/title.",
     "Block ordering uses the exported :block/order value.",
     "UUID links resolve to human-readable page or block titles where available.",
