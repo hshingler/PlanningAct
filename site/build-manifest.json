@@ -1,7 +1,7 @@
 {
   "version": "2.1.0",
   "source_file": "graph.edn",
-  "datoms_parsed": 131768,
+  "datoms_parsed": 131771,
   "entities": 17291,
   "pages": 934,
   "blocks_with_page": 16345,
