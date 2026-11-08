@@ -22,11 +22,11 @@ Python 3.10+; no third-party packages are required.
 python build_site.py source/graph.edn site
 ```
 
-The combined Logseq export is stored at `source/graph.edn`. The prebuilt `site/` directory is included.
+The combined Logseq export is stored at `source/graph.edn`. The generated `site/` directory is kept out of Git because the deployment workflow rebuilds it from the source files.
 
 ## Publish to GitHub Pages
 
-Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, `.github/workflows/deploy-pages.yml`, and the generated `site/` directory. The workflow builds from `source/graph.edn` and publishes `site/`.
+Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, and `.github/workflows/deploy.yml`. The workflow builds `site/` from `source/graph.edn` and publishes the generated output.
 
 ## Important note
 
