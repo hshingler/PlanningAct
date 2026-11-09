@@ -1,33 +1,43 @@
-# NZ Planning System — Version 2.1.0
+# NZ Planning System — XML-based site
 
-This package updates the combined Logseq graph website with a side-by-side Planning Act / Natural Environment Act comparison view and a consistent shared header design.
+The site is built from the Planning Act 2026 and Natural Environment Act 2026 XML source files, with a separate ontology overlay. The existing static-site renderer and UI are retained.
 
-## Changes in 2.1.0
+## Sources
 
-- Concept and actor pages now open in **Both Acts** mode by default.
-- Each concept/actor page presents Planning Act 2026 and Natural Environment Act 2026 material in adjacent, clearly labelled columns.
-- Act attribution is determined from the source block's tags, inheriting an Act tag from parent blocks where needed; it is not inferred solely from the page being linked to.
-- Shared material is kept in a separate section below the two Act columns rather than being silently assigned to either Act.
-- National Policy Direction material is kept in its own clearly labelled section below the Act comparison.
-- The Planning Act-only and Natural Environment Act-only view choices remain available. On comparison pages they show the selected Act column while retaining the shared and NPD sections.
-- The site header has been standardised across the homepage, knowledge pages, browse pages and the Both Acts page to match the Natural Environment Act contents-page header design. The Funnel Folly page's header design is deliberately preserved.
-- The comparison columns stack vertically on narrower screens.
-- The underlying combined Logseq graph is unchanged.
+- `source/legislation/` contains the Act XML files. These provide the statutory wording, structure, metadata, and internal cross-references.
+- `source/ontology.json` contains curated concepts, classifications, tags, and links. The current records are explicitly marked as prototype examples and should be replaced with the site's ontology before being treated as authoritative classifications.
+- `build_xml_site.py` joins those sources and generates the site. It does not read `source/graph.edn`.
+
+The XML IDs are used to keep provision references stable. During the build, XML and ontology data are converted into a temporary renderer-compatible format; that temporary file is deleted after the static HTML is generated. No EDN file is required as a content source at runtime or deployment.
 
 ## Build locally
 
 Python 3.10+; no third-party packages are required.
 
 ```bash
-python build_site.py source/graph.edn site
+python3 build_xml_site.py
 ```
 
-The combined Logseq export is stored at `source/graph.edn`. The generated `site/` directory is kept out of Git because the deployment workflow rebuilds it from the source files.
+The generated site is written to `site/`, which is ignored by Git. To choose another output directory:
+
+```bash
+python3 build_xml_site.py --acts source/legislation --ontology source/ontology.json --output site-preview
+```
+
+## View locally
+
+```bash
+python3 -m http.server 8000 --directory site
+```
+
+Open <http://localhost:8000/>. Serve the generated directory over HTTP so browser search can load the JSON index.
 
 ## Publish to GitHub Pages
 
-Commit and push `build_site.py`, `source/graph.edn`, `brand-assets/`, and `.github/workflows/deploy.yml`. The workflow builds `site/` from `source/graph.edn` and publishes the generated output.
+Push the XML files, ontology JSON, build script, renderer, brand assets, and workflow to `main`. GitHub Actions builds `site/` from `source/legislation/` and `source/ontology.json`, then publishes it.
 
-## Important note
+## Scope and source fidelity
 
-This site is a navigation and knowledge tool generated from the supplied Logseq graph. Check statutory wording, amendments, commencement and legal context against the official legislation. Unlinked references are candidate page-title matches and may include false positives.
+The XML build supports the site's existing navigation, search, provision pages, cross-references, Act views, comparison layout, and split-screen reader. Complex legal markup such as tables and editorial notes may need more renderer work. Actor and instrument pages depend on ontology records being added. The current ontology sample and National Policy Direction contents entry are demonstrations/placeholders, not substantive source content.
+
+This site is a navigation and knowledge tool. Check statutory wording, amendments, commencement, and legal context against the official legislation.

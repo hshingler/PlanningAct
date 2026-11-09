@@ -1,4 +1,4 @@
-name: Build and publish Planning Act viewer
+name: Build and publish XML-based planning system site
 
 'on':
   push:
@@ -27,8 +27,8 @@ jobs:
         with:
           python-version: "3.x"
 
-      - name: Build viewer from edn
-        run: python build_site.py source/graph.edn site
+      - name: Build viewer from legislation XML and ontology
+        run: python build_xml_site.py --acts source/legislation --ontology source/ontology.json --output site
 
       - name: Upload website
         uses: actions/upload-pages-artifact@v3

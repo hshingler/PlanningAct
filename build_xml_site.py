@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Build the existing static site UI from legislation XML plus ontology JSON.
+"""Build the static site from legislation XML plus ontology JSON.
 
-Usage: python build_xml_site.py --acts source/legislation --ontology source/ontology.json --output site-xml
+Usage: python build_xml_site.py --acts source/legislation --ontology source/ontology.json --output site
 """
 from __future__ import annotations
 
@@ -328,7 +328,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--acts", type=Path, default=ROOT / "source/legislation")
     parser.add_argument("--ontology", type=Path, default=ROOT / "source/ontology.json")
-    parser.add_argument("--output", type=Path, default=ROOT / "site-xml")
+    parser.add_argument("--output", type=Path, default=ROOT / "site")
     args = parser.parse_args()
     build(args.acts, args.ontology, args.output)
 
