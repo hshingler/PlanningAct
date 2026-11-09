@@ -1,0 +1,19 @@
+{
+  "_note": "Prototype sample only. Replace or remove these annotations with your own ontology.",
+  "concepts": [
+    {
+      "id": "demo-statutory-purpose",
+      "title": "Prototype: Statutory purpose",
+      "description": "Example ontology entry only. Use this page to explore how a curated concept can link provisions across Acts.",
+      "tags": ["Prototype", "Purpose"],
+      "links": [
+        { "target": "planning-act-2026:4", "relation": "purpose provision" },
+        { "target": "natural-environment-act-2026:4", "relation": "purpose provision" }
+      ]
+    }
+  ],
+  "provisions": {
+    "planning-act-2026:4": { "tags": ["Prototype: Purpose"] },
+    "natural-environment-act-2026:4": { "tags": ["Prototype: Purpose"] }
+  }
+}
