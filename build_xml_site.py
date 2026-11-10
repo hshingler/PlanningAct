@@ -64,15 +64,23 @@ def element_text(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[st
     """Flatten a legal structure while keeping paragraph and table boundaries readable."""
     if el.tag in {"para", "subprov", "label-para", "def-para", "row", "crosshead", "example"}:
         pieces = []
+        label = el.find("label")
+        marker = clean("".join(label.itertext())) if label is not None else ""
+        if marker:
+            pieces.append(f"({marker})")
         if el.text and el.text.strip():
             pieces.append(el.text.strip())
         for child in el:
+            if child.tag == "label":
+                continue
             if child.tag in {"para", "subprov", "label-para", "def-para", "row", "crosshead", "example"}:
                 value = element_text(child, id_to_page, id_to_uuid)
             else:
                 value = xml_inline(child, id_to_page, id_to_uuid)
             if value.strip():
                 pieces.append(value.strip())
+        if marker and len(pieces) > 1:
+            pieces[1] = " " + pieces[1]
         text = "\n".join(pieces)
     else:
         text = xml_inline(el, id_to_page, id_to_uuid)
