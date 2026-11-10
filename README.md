@@ -6,9 +6,9 @@ The site is built from the Planning Act 2026 and Natural Environment Act 2026 XM
 
 - `source/legislation/` contains the Act XML files. These provide the statutory wording, structure, metadata, and internal cross-references.
 - `source/ontology.json` contains curated concepts, classifications, tags, and links. The current records are explicitly marked as prototype examples and should be replaced with the site's ontology before being treated as authoritative classifications.
-- `build_xml_site.py` joins those sources and generates the site. It does not read `source/graph.edn`.
+- `build_xml_site.py` joins those sources and generates the site. It does not read a checked-in EDN export.
 
-The XML IDs are used to keep provision references stable. During the build, XML and ontology data are converted into a temporary renderer-compatible format; that temporary file is deleted after the static HTML is generated. No EDN file is required as a content source at runtime or deployment.
+The XML IDs are used to keep provision references stable. During the build, XML and ontology data are converted into a temporary EDN graph for `build_site.py`, which remains the shared HTML renderer. The temporary file is deleted after the static HTML is generated. No EDN export is needed as a source file at runtime or deployment.
 
 ## Build locally
 

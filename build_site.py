@@ -166,6 +166,25 @@ def render_links(s,prefix=''):
     s=re.sub(r'(?<!\*)\*([^*]+)\*(?!\*)',r'<em>\1</em>',s)
     return s
 
+def render_legal_text(s, prefix=''):
+    """Render parenthesized statutory markers with hanging text alignment."""
+    rendered=[]
+    marker_re=re.compile(r'^(?P<indent>[\u2003\u00a0 ]*)(?P<label>\((?:\d+|[a-z]|[ivxlcdm]+|[A-Z]|[IVXLCDM]+)\))\s*(?P<body>.*)$')
+    for line in str(s).splitlines():
+        match=marker_re.match(line)
+        if not match:
+            rendered.append(f'<div class="legal-text-line">{render_links(line,prefix)}</div>')
+            continue
+        depth=sum(1 for char in match.group('indent') if char in '\u2003\u00a0')
+        depth=min(depth,5)
+        indent_class=f' legal-line-indent-{depth}' if depth else ''
+        rendered.append(
+            f'<div class="legal-line{indent_class}"><span class="legal-label">'
+            f'{render_links(match.group("label"),prefix)}</span><span class="legal-copy">'
+            f'{render_links(match.group("body"),prefix)}</span></div>'
+        )
+    return ''.join(rendered) if rendered else render_links(s,prefix)
+
 def reference_href(ref,from_root=False):
     prefix='pages/' if from_root else ''
     target=pages[ref['target_page_id']]
@@ -248,10 +267,7 @@ def render_comparison_block(eid, desired, page_default='shared', inherited=None,
     context_class=' comparison-context' if own not in (desired,'shared') else ''
     toggle='<button class="block-toggle" type="button" aria-expanded="true" aria-label="Collapse block" title="Collapse/expand block">−</button>' if child_html else ''
     kids=f'<ul class="block-children">{child_html}</ul>' if child_html else ''
-    marker = re.fullmatch(r'\s*(\d+|[a-z]|[ivxlcdm]+)\s*', b['title'], re.I)
-    item_class = ' legal-marker' if marker else ''
-    title = f'({marker.group(1)})' if marker else b['title']
-    return f'<li class="block-item{context_class}{item_class}" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{render_links(title)}</div>{tags_html}{kids}</li>'
+    return f'<li class="block-item{context_class}" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{render_legal_text(b["title"])}</div>{tags_html}{kids}</li>'
 
 def comparison_section(page_id):
     page_default=page_act(pages[page_id])
@@ -279,17 +295,13 @@ def comparison_section(page_id):
 def render_block(eid,seen,prefix=''):
     if eid in seen or eid not in block_info: return ''
     seen.add(eid); b=block_info[eid]; uid=b['uuid'] or f'id-{eid}'
-    title_html=render_links(b['title'],prefix); labels=tag_titles(b['tags'])
+    title_html=render_legal_text(b['title'],prefix); labels=tag_titles(b['tags'])
     tag_html=''.join(f'<span class="tag">{html.escape(str(t))}</span>' for t in labels if t)
     child_ids=children.get(eid,[]); kids=''.join(render_block(k,seen,prefix) for k in child_ids)
     toggle='<button class="block-toggle" type="button" aria-expanded="true" aria-label="Collapse block" title="Collapse/expand block">−</button>' if child_ids else ''
     child_html=f'<ul class="block-children">{kids}</ul>' if child_ids else ''
     tags_html=f'<div class="tags">{tag_html}</div>' if tag_html else ''
-    marker = re.fullmatch(r'\s*(\d+|[a-z]|[ivxlcdm]+)\s*', b['title'], re.I)
-    item_class = ' legal-marker' if marker else ''
-    if marker:
-        title_html = html.escape(f'({marker.group(1)})')
-    return f'<li class="block-item{item_class}" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{title_html}</div>{tags_html}{child_html}</li>'
+    return f'<li class="block-item" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{title_html}</div>{tags_html}{child_html}</li>'
 
 if out.exists(): shutil.rmtree(out)
 (out/'pages').mkdir(parents=True, exist_ok=True); (out/'assets').mkdir(parents=True, exist_ok=True)
@@ -354,8 +366,9 @@ css += """
  .home-header-main .header-legislation{grid-column:1;grid-row:3;align-items:flex-start}
 }
 """
-css += '''\n.legal-marker>.block-text{display:inline}.legal-marker>.block-children{display:inline;margin:0;padding:0;list-style:none}.legal-marker>.block-children>.block-item{display:inline;padding:0}.legal-marker>.block-children>.block-item:before{content:" ";white-space:pre}.legal-marker>.block-children>.block-item>.block-children{display:block;margin:.3rem 0 .25rem;padding-left:1.4rem;list-style:disc}.legal-marker>.block-children>.block-item>.block-children>.block-item{display:list-item;padding:.18rem 0}\n.reference-status{display:inline-block;margin-left:5px;padding:1px 6px;font:600 .65rem/1.5 system-ui,sans-serif;letter-spacing:.02em;vertical-align:middle}.reference-status.linked{color:#386b55;background:#e6eee7}.reference-status.candidate{color:#865b2c;background:#f3ead7}.view-switch a.active{font-weight:750;color:#267f80;border-bottom-color:#267f80}.view-switch a[aria-current="page"]:after{content:" · current";font-size:.65rem;letter-spacing:.02em}
+css += '''\n.reference-status{display:inline-block;margin-left:5px;padding:1px 6px;font:600 .65rem/1.5 system-ui,sans-serif;letter-spacing:.02em;vertical-align:middle}.reference-status.linked{color:#386b55;background:#e6eee7}.reference-status.candidate{color:#865b2c;background:#f3ead7}.view-switch a.active{font-weight:750;color:#267f80;border-bottom-color:#267f80}.view-switch a[aria-current="page"]:after{content:" · current";font-size:.65rem;letter-spacing:.02em}
 /* 2.1.0: consistent editorial header and side-by-side Act comparison */\n.inner-header{display:grid;grid-template-columns:104px minmax(190px,auto) minmax(260px,1fr) auto;align-items:center;gap:18px;height:104px;min-height:104px;width:100%}.inner-header .brand-logo{width:92px;height:92px}.inner-header .brand-lockup{min-width:0}.inner-header .brand-title{display:block;font-weight:750;letter-spacing:.01em;font-size:1.02rem;line-height:1.25;margin:0 0 4px}.brand-subtitle{display:block;font-size:.68rem;letter-spacing:.13em;text-transform:uppercase;opacity:.85}.inner-search{grid-column:auto;margin:0;width:100%;max-width:620px;justify-self:center}.header-legislation{display:flex;flex-direction:column;align-items:flex-end;gap:4px;white-space:nowrap}.act-comparison{margin-top:18px}.act-comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:30px;align-items:start}.act-column{min-width:0;padding:0 16px 0 0;border-right:1px solid #d8d0c2}.act-column:last-child{padding:0 0 0 16px;border-right:0}.act-column h2,.comparison-extra h2{font:500 1.35rem/1.25 Georgia,serif;margin:0 0 16px;padding-bottom:10px;border-bottom:1px solid #d8d0c2}.comparison-tree{padding-left:1.35rem}.act-column .reference-section{margin-top:20px}.act-column .reference-box{border-top:1px solid #d8d0c2}.comparison-extra{margin-top:26px;padding-top:18px;border-top:1px solid #cfc5b2}.comparison-extra .page-tree{margin-bottom:18px}.comparison-context>.block-text{color:#807766;font-style:italic}.comparison-context>.tags{opacity:.7}.act-column[hidden],.comparison-extra[hidden]{display:none!important}.funnel-folly-page .inner-header{display:flex;align-items:center;gap:16px;height:104px;min-height:104px;width:100%}.funnel-folly-page .inner-header .brand-logo{width:104px;height:104px}.funnel-folly-page .inner-header .brand-title{font-size:clamp(1.35rem,2.3vw,2rem);margin:0;white-space:nowrap}.funnel-folly-page .inner-header .brand-subtitle{font-size:.68rem}@media(max-width:900px){.act-comparison-grid{grid-template-columns:1fr;gap:22px}.act-column,.act-column:last-child{padding:0;border:0}.act-column+ .act-column{padding-top:20px;border-top:1px solid #d8d0c2}.inner-header{grid-template-columns:76px minmax(0,1fr);height:auto;min-height:0;padding:8px 0}.inner-header .brand-logo{width:72px;height:72px}.inner-search{grid-column:1/-1;max-width:none}.header-legislation{grid-column:1/-1;align-items:flex-start;flex-direction:row;flex-wrap:wrap;white-space:normal}.brand-lockup{grid-column:2;grid-row:1}}\n'''
+css += '''\n.legal-line{display:grid;grid-template-columns:max-content minmax(0,1fr);column-gap:.5em;align-items:start}.legal-label{white-space:nowrap}.legal-copy{min-width:0}.legal-line-indent-1{margin-left:1.45em}.legal-line-indent-2{margin-left:2.9em}.legal-line-indent-3{margin-left:4.35em}.legal-line-indent-4{margin-left:5.8em}.legal-line-indent-5{margin-left:7.25em}.legal-text-line{display:block}\n'''
 (out/'assets/style.css').write_text(css,encoding='utf-8')
 
 # Search index includes full page text and graph tags for grouped search results.

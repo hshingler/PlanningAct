@@ -60,31 +60,32 @@ def xml_inline(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[str,
     return out
 
 
-def element_text(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[str, str]) -> str:
+def element_text(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[str, str], depth: int = 0) -> str:
     """Flatten a legal structure while keeping paragraph and table boundaries readable."""
     if el.tag in {"para", "subprov", "label-para", "def-para", "row", "crosshead", "example"}:
         pieces = []
         label = el.find("label")
         marker = clean("".join(label.itertext())) if label is not None else ""
         if marker:
-            pieces.append(f"({marker})")
+            pieces.append(("\u2003" * depth) + f"({marker})")
         if el.text and el.text.strip():
-            pieces.append(el.text.strip())
+            pieces.append(el.text.strip(" \t\r\n"))
         for child in el:
             if child.tag == "label":
                 continue
             if child.tag in {"para", "subprov", "label-para", "def-para", "row", "crosshead", "example"}:
-                value = element_text(child, id_to_page, id_to_uuid)
+                child_depth = depth + (1 if child.tag == "label-para" else 0)
+                value = element_text(child, id_to_page, id_to_uuid, child_depth)
             else:
                 value = xml_inline(child, id_to_page, id_to_uuid)
             if value.strip():
-                pieces.append(value.strip())
+                pieces.append(value.strip(" \t\r\n"))
         if marker and len(pieces) > 1:
-            pieces[1] = " " + pieces[1]
+            pieces[0] += " " + pieces.pop(1)
         text = "\n".join(pieces)
     else:
         text = xml_inline(el, id_to_page, id_to_uuid)
-    return text.strip()
+    return text.strip(" \t\r\n")
 
 
 class Graph:
@@ -292,7 +293,7 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
         command = [sys.executable, str(ROOT / "build_site.py"), str(edn_path), str(output)]
         subprocess.run(command, cwd=ROOT, check=True)
 
-    # Keep existing renderer copy/UI while correcting its EDN-specific footer
+    # Keep the shared renderer's UI while correcting its source-specific footer
     # and ensuring the compact preview viewport does not overlap the header.
     css_path = output / "assets/style.css"
     with css_path.open("a", encoding="utf-8") as css:
