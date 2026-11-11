@@ -2512,6 +2512,31 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
           </subprov>
         </prov.body>
       </prov>
+      <prov id="npd-theme-key-definitions-natural-hazards">
+        <heading>Key definitions for natural hazards</heading>
+        <prov.body>
+          <prov id="npd-natural-hazard-definition-high-risk">
+            <para>
+              <text>High natural hazard risk means natural hazard risk assessed as ‘high’ using the risk matrix on the following page.</text>
+            </para>
+          </prov>
+          <prov id="npd-natural-hazard-definition-risk-matrix">
+            <para>
+              <text>Risk matrix means the risk matrix (Figure 2), including likelihood and consequence tables (Tables 3 and 4), on the following pages.</text>
+            </para>
+          </prov>
+          <prov id="npd-natural-hazard-definition-significant-risk">
+            <para>
+              <text>Significant natural hazard risk means natural hazard risk assessed as ‘medium’,  'high’ and ‘very high’ using the risk matrix.</text>
+            </para>
+          </prov>
+          <prov id="npd-natural-hazard-risk-assessment-matrix">
+            <para>
+              <text>Risk matrix, likelihood and consequences tables on the following pages – when undertaking an assessment of natural hazard risk, the risk matrix and associated tables must be applied to enable assessment of consequence level and likelihood level and to determine the level of natural hazard risk applicable.</text>
+            </para>
+          </prov>
+        </prov.body>
+      </prov>
     </part>
   </body>
 </act>

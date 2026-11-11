@@ -298,6 +298,9 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
                 elif definition:
                     title = f"**{definition.group(1)}**"
                     statement = definition.group(2).strip()
+                elif text.startswith("Risk matrix, likelihood and consequences tables on the following pages"):
+                    title = text
+                    statement = ""
                 else:
                     title = f"**{text}**"
                     statement = ""
