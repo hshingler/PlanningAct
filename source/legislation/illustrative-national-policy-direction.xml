@@ -108,6 +108,32 @@
               </subprov>
             </prov.body>
           </subprov>
+          <prov id="npd-pdf-sw-directive-1.5">
+            <heading>SW-Directive 1.5: To protect identified Māori land, land use plans and natural environment plans must [in accordance with national standards]:</heading>
+            <prov.body>
+              <subprov id="npd-pdf-sw-directive-1.5-para-a">
+                <para>
+                  <text>a) identify such land and its cultural values</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-sw-directive-1.5-para-b">
+                <para>
+                  <text>b) manage adverse effects of activities that may affect identified Māori land.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </prov>
+          <prov id="npd-pdf-sw-directive-1.6">
+            <heading>SW-Directive 1.6: Where other directives
+
+enable use, development, or other activities,
+
+identified Māori land and sites of significance
+
+to Māori must be provided for in accordance
+
+with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
+          </prov>
         </prov.body>
       </prov>
       <prov id="npd-13792">
@@ -171,24 +197,6 @@
             </prov.body>
           </subprov>
         </prov.body>
-      </prov>
-      <prov id="npd-pdf-sw-directive-1.5">
-        <heading>SW-Directive 1.5: To protect identified Māori land, land use plans and natural environment plans must [in accordance with national standards]:</heading>
-        <prov.body>
-          <subprov id="npd-pdf-sw-directive-1.5-para-a">
-            <para>
-              <text>a) identify such land and its cultural values</text>
-            </para>
-          </subprov>
-          <subprov id="npd-pdf-sw-directive-1.5-para-b">
-            <para>
-              <text>b) manage adverse effects of activities that may affect identified Māori land. and resolve conflicts</text>
-            </para>
-          </subprov>
-        </prov.body>
-      </prov>
-      <prov id="npd-pdf-sw-directive-1.6">
-        <heading>SW-Directive 1.6: Where other directives enable use, development, or other activities, identified Māori land and sites of significance to Māori must be provided for in accordance with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13411" toc="yes">
@@ -374,90 +382,59 @@
           <text>CC-Directive 9: While a range of information and views may be provided through consent/permit processes, responsibility for deciding whether to grant, decline, or impose conditions on a consent/permit application rests with the relevant statutory decision-maker identified in the legislation.</text>
         </para>
       </prov>
-      <prov id="npd-13447">
-        <heading>Indicative Implementation Through National Standards (Not Part of the NPD)</heading>
-        <prov.body>
-          <subprov id="npd-13448">
-            <para>
-              <text>National standards for land use plans:</text>
-            </para>
-            <prov.body>
-              <subprov id="npd-13449">
-                <para>
-                  <text>Set out nationally consistent requirements for managing reverse sensitivity effects, including separation distances, buffers and overlays to protect established land uses from new sensitive and incompatible activities.</text>
-                </para>
-              </subprov>
-              <subprov id="npd-13450">
-                <para>
-                  <text>Require new sensitive or incompatible activities to avoid or mitigate their effects on existing land uses.</text>
-                </para>
-              </subprov>
-              <subprov id="npd-13451">
-                <para>
-                  <text>Set clear expectations for the anticipated land uses within zones that are to be enabled without unreasonable constraint from sensitive and incompatible activities.</text>
-                </para>
-              </subprov>
-            </prov.body>
-          </subprov>
-          <subprov id="npd-13452">
-            <para>
-              <text>National standards for managing complaints:</text>
-            </para>
-            <prov.body>
-              <subprov id="npd-13453">
-                <para>
-                  <text>Require local authorities to manage complaints from new, or more intensive, sensitive activities about existing land uses in a nationally consistent way, including how to consider complaints about effects that are known and lawfully established, anticipated, or reasonably foreseeable in particular locations.</text>
-                </para>
-              </subprov>
-            </prov.body>
-          </subprov>
-        </prov.body>
-      </prov>
     </part>
     <part id="npd-part-13455" toc="yes">
       <heading>Housing and Development</heading>
-      <prov id="npd-13456">
-        <heading>HD-Directive 1.1: To enable competitive urban land markets:</heading>
+      <prov id="npd-theme-competitive-urban-land-markets">
+        <heading>Competitive urban land markets</heading>
         <prov.body>
-          <subprov id="npd-13457">
-            <para>
-              <text>a) spatial plans must identify an abundance of areas for urban development, so there is no expectation of scarce land supply for future development</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13458">
-            <para>
-              <text>b) land use plans must:</text>
-            </para>
-            <prov.body>
-              <subprov id="npd-13459">
-                <para>
-                  <text>i) Enable abundant development opportunities for housing and business use.</text>
-                </para>
-              </subprov>
-              <subprov id="npd-13460">
-                <para>
-                  <text>ii) Meet housing and business capacity requirements, including Housing Growth Targets [as set out in national</text>
-                </para>
-              </subprov>
-            </prov.body>
-          </subprov>
-          <subprov id="npd-13461">
-            <para>
-              <text>c) local authorities must respond to a determination by the urban land market statutory officer that an act or omission by the local authority has materially contributed to a non-competitive urban land market, including any findings on the extent of non-competitiveness, in accordance with any relevant national standards, by:</text>
-            </para>
-            <prov.body>
-              <subprov id="npd-13462">
-                <para>
-                  <text>i) Taking into account the determination when making and deciding on plan changes, including private plan changes.</text>
-                </para>
-              </subprov>
-              <subprov id="npd-13463">
-                <para>
-                  <text>ii) Undertaking actions, which could include changes to the land use plan, required to address the matters identified in the determination.</text>
-                </para>
-              </subprov>
-            </prov.body>
-          </subprov>
+        <prov id="npd-13456">
+          <heading>HD-Directive 1.1: To enable competitive urban land markets:</heading>
+          <prov.body>
+            <subprov id="npd-13457">
+              <para>
+                <text>a) spatial plans must identify an abundance of areas for urban development, so there is no expectation of scarce land supply for future development</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13458">
+              <para>
+                <text>b) land use plans must:</text>
+              </para>
+              <prov.body>
+                <subprov id="npd-13459">
+                  <para>
+                    <text>i) Enable abundant development opportunities for housing and business use.</text>
+                  </para>
+                </subprov>
+                <subprov id="npd-13460">
+                  <para>
+                    <text>ii) Meet housing and business capacity requirements, including Housing Growth Targets [as set out in national</text>
+                  </para>
+                </subprov>
+                <subprov id="npd-13464">
+                  <para>
+                    <text>(iii) release additional development capacity if planning constraints or provisions are contributing to deteriorating trends in land efficiency indicators [as set out in national standards]</text>
+                  </para>
+                </subprov>
+              </prov.body>
+            </subprov>
+            <subprov id="npd-13461">
+              <para>
+                <text>c) local authorities must respond to a determination by the urban land market statutory officer that an act or omission by the local authority has materially contributed to a non-competitive urban land market, including any findings on the extent of non-competitiveness, in accordance with any relevant national standards, by:</text>
+              </para>
+              <prov.body>
+                <subprov id="npd-13462">
+                  <para>
+                    <text>i) Taking into account the determination when making and deciding on plan changes, including private plan changes.</text>
+                  </para>
+                </subprov>
+                <subprov id="npd-13463">
+                  <para>
+                    <text>ii) Undertaking actions, which could include changes to the land use plan, required to address the matters identified in the determination.</text>
+                  </para>
+                </subprov>
+              </prov.body>
+            </subprov>
         </prov.body>
       </prov>
       <prov id="npd-13465">
@@ -527,29 +504,35 @@
         </para>
         <prov.body />
       </prov>
-      <prov id="npd-13483">
-        <heading>HD-Directive 2.1: To provide for accessibility, choice and a mix of uses in urban areas, land use plans must:</heading>
+
+      </prov.body>
+      </prov>
+      <prov id="npd-theme-well-functioning-urban-areas">
+        <heading>Well-functioning urban areas</heading>
         <prov.body>
-          <subprov id="npd-13484">
-            <para>
-              <text>a) Enable a broad mix of compatible residential, commercial and community activities within urban zones intended predominantly for residential, commercial and community use.</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13485">
-            <para>
-              <text>b) provide for a diverse range of housing types, including papakāinga, in different locations to meet the needs of different households and communities</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13486">
-            <para>
-              <text>c) Provide for a range of sites suitable for different businesses and industry, including variation in location and site size.</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13487">
-            <para>
-              <text>d) Provide good accessibility between housing, workplaces, commercial and community services, and natural and open spaces, including where possible by public and active transport.</text>
-            </para>
-          </subprov>
+        <prov id="npd-13483">
+          <heading>HD-Directive 2.1: To provide for accessibility, choice and a mix of uses in urban areas, land use plans must:</heading>
+          <prov.body>
+            <subprov id="npd-13484">
+              <para>
+                <text>a) Enable a broad mix of compatible residential, commercial and community activities within urban zones intended predominantly for residential, commercial and community use.</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13485">
+              <para>
+                <text>b) provide for a diverse range of housing types, including papakāinga, in different locations to meet the needs of different households and communities</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13486">
+              <para>
+                <text>c) Provide for a range of sites suitable for different businesses and industry, including variation in location and site size.</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13487">
+              <para>
+                <text>d) Provide good accessibility between housing, workplaces, commercial and community services, and natural and open spaces, including where possible by public and active transport.</text>
+              </para>
+            </subprov>
         </prov.body>
       </prov>
       <prov id="npd-13489">
@@ -628,50 +611,63 @@
           </subprov>
         </prov.body>
       </prov>
-      <prov id="npd-13506">
-        <heading>HD-Directive 3.1: To create well-functioning rural areas, land use plans must:</heading>
+
+      </prov.body>
+      </prov>
+      <prov id="npd-theme-well-functioning-rural-areas">
+        <heading>Well-functioning rural areas</heading>
         <prov.body>
-          <subprov id="npd-13507">
-            <para>
-              <text>a) enable primary production and associated processing activities and an appropriate mix of compatible residential, commercial, industrial and community activities, including papakāinga</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13508">
-            <para>
-              <text>b) provide for a diverse range of housing types, including workers’ accommodation and papakāinga, in different locations to meet the needs of different households and communities, including where this supports rural businesses</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13509">
-            <para>
-              <text>c) Support rural communities to have reliable access to workplaces, services and recreation.</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13510">
-            <para>
-              <text>d) Enable rural land to be used and developed in a way that maximises the benefits of public and private investment.</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13511">
-            <para>
-              <text>e) In rural towns and rural settlements, provide for a broad mix of compatible</text>
-            </para>
-          </subprov>
+        <prov id="npd-13506">
+          <heading>HD-Directive 3.1: To create well-functioning rural areas, land use plans must:</heading>
+          <prov.body>
+            <subprov id="npd-13507">
+              <para>
+                <text>a) enable primary production and associated processing activities and an appropriate mix of compatible residential, commercial, industrial and community activities, including papakāinga</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13508">
+              <para>
+                <text>b) provide for a diverse range of housing types, including workers’ accommodation and papakāinga, in different locations to meet the needs of different households and communities, including where this supports rural businesses</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13509">
+              <para>
+                <text>c) Support rural communities to have reliable access to workplaces, services and recreation.</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13510">
+              <para>
+                <text>d) Enable rural land to be used and developed in a way that maximises the benefits of public and private investment.</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13511">
+              <para>
+                <text>e) in rural towns and rural settlements, provide for a broad mix of compatible residential, commercial, industrial and community activities, including papakāinga to support surrounding rural areas.</text>
+              </para>
+            </subprov>
         </prov.body>
       </prov>
-      <prov id="npd-13513">
-        <heading>HD-Directive 4.1: To support housing and development in appropriate locations, land use plans must ensure natural hazard risks associated with housing and development are managed by:</heading>
+      </prov.body>
+      </prov>
+      <prov id="npd-theme-natural-hazards">
+        <heading>Natural hazards</heading>
         <prov.body>
-          <subprov id="npd-13514">
-            <para>
-              <text>a) using an approach that is proportionate to the level of natural hazard risk</text>
-            </para>
-          </subprov>
-          <subprov id="npd-13515">
-            <para>
-              <text>b) Avoiding housing and development where risks are assessed as ‘very high’ (see interpretation section – definition of risk levels included in the NPD via the risk matrix).</text>
-            </para>
-          </subprov>
+        <prov id="npd-13513">
+          <heading>HD-Directive 4.1: To support housing and development in appropriate locations, land use plans must ensure natural hazard risks associated with housing and development are managed by:</heading>
+          <prov.body>
+            <subprov id="npd-13514">
+              <para>
+                <text>a) using an approach that is proportionate to the level of natural hazard risk</text>
+              </para>
+            </subprov>
+            <subprov id="npd-13515">
+              <para>
+                <text>b) Avoiding housing and development where risks are assessed as ‘very high’ (see interpretation section – definition of risk levels included in the NPD via the risk matrix).</text>
+              </para>
+            </subprov>
         </prov.body>
+      </prov>
+      </prov.body>
       </prov>
     </part>
     <part id="npd-part-13517" toc="yes">

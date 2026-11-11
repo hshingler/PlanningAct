@@ -286,7 +286,7 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
                 if not text:
                     return
                 directive = re.match(r"^([A-Z]+-Directive\s+[\d.]+)\s*:\s*(.*)$", text)
-                label = re.match(r"^([a-z]|[ivx]+|\d+)\)\s+(.*)$", text, re.I)
+                label = re.match(r"^\(?([a-z]|[ivx]+|\d+)\)\s+(.*)$", text, re.I)
                 definition = re.match(r"^(.+?\b(?:means?|is|are)\b)\s+(.*)$", text, re.I)
                 if directive:
                     title = f"**{directive.group(1)}**"
