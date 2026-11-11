@@ -144,14 +144,20 @@ class Graph:
 def read_act(path: Path):
     root = ET.parse(path).getroot()
     title = clean("".join(root.find("./cover/title").itertext()))
-    key = "planning-act-2026" if "planning act" in title.lower() else "natural-environment-act-2026"
-    act_tag = "PA 2026" if key.startswith("planning") else "NEA 2026"
+    if "planning act" in title.lower():
+        key, act_tag = "planning-act-2026", "PA 2026"
+    elif "natural environment act" in title.lower():
+        key, act_tag = "natural-environment-act-2026", "NEA 2026"
+    else:
+        key, act_tag = "illustrative-national-policy-direction", "NPD"
     return {"path": path, "root": root, "title": title, "key": key, "tag": act_tag}
 
 
 def section_label(prov: ET.Element) -> str:
     label = clean(prov.findtext("label", ""))
-    heading = clean(prov.findtext("heading", "Untitled provision"))
+    heading = clean(prov.findtext("heading", ""))
+    if not heading:
+        heading = clean(prov.findtext("para/text", "Untitled provision"))
     return f"§{label} — {heading}" if label else heading
 
 
@@ -191,6 +197,17 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
     id_to_page, id_to_uuid, page_meta = {}, {}, {}
     xmlid_to_item = {}
     for act in acts:
+        if act["key"] == "illustrative-national-policy-direction":
+            for part in act["root"].find("body").findall("part"):
+                xmlid = part.get("id")
+                title = clean(part.findtext("heading", ""))
+                key = f"illustrative-national-policy-direction:theme:{xmlid}"
+                item = {"act": act, "prov": part, "title": title, "xmlid": xmlid, "theme": True}
+                by_key[key] = item
+                xmlid_to_item[xmlid] = item
+                uid = stable_uuid("xml:" + xmlid)
+                id_to_uuid[xmlid] = uid
+            continue
         for prov in act["root"].findall(".//prov"):
             xmlid = prov.get("id")
             local_key, title = provision_context(act["root"], prov)
@@ -204,16 +221,22 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
     for refkey, item in by_key.items():
         act, prov, title, xmlid = item["act"], item["prov"], item["title"], item["xmlid"]
         extra_tags = ontology.get("provisions", {}).get(refkey, {}).get("tags", [])
-        page = graph.page(title, "provision:" + xmlid, [act["tag"], "Provision", *extra_tags], uid=id_to_uuid[xmlid])
+        tags = [] if item.get("theme") else [act["tag"], "Provision", *extra_tags]
+        page = graph.page(title, ("npd-theme:" if item.get("theme") else "provision:") + xmlid,
+                          tags, uid=id_to_uuid[xmlid])
         item["page"] = page
         id_to_page[xmlid] = page
 
     # Build contents pages, preserving the XML's part/subpart hierarchy.
     contents_by_act = {}
     for act in acts:
-        page_title = ("Planning Act 2026 — Contents" if act["key"].startswith("planning")
-                      else "Natural Environment Act 2026 - Contents")
-        page = graph.page(page_title, "contents:" + act["key"], [act["tag"]])
+        page_title = {
+            "planning-act-2026": "Planning Act 2026 — Contents",
+            "natural-environment-act-2026": "Natural Environment Act 2026 - Contents",
+            "illustrative-national-policy-direction": "Illustrative National Policy Direction Contents",
+        }[act["key"]]
+        page_tags = [] if act["key"] == "illustrative-national-policy-direction" else [act["tag"]]
+        page = graph.page(page_title, "contents:" + act["key"], page_tags)
         contents_by_act[act["key"]] = page
         home = page
         root_elems = list(act["root"].find("body"))
@@ -222,6 +245,12 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
         def add_section_refs(parent_node, children):
             nonlocal counter
             for child in children:
+                if act["key"] == "illustrative-national-policy-direction" and child.tag == "part":
+                    item = xmlid_to_item[child.get("id")]
+                    counter += 1
+                    graph.block(f"[{item['title']}]([[{id_to_uuid[item['xmlid']]}]])", home, parent_node, counter,
+                                f"toc:{act['key']}:{item['xmlid']}", refs=[item["page"]])
+                    continue
                 if child.tag == "prov":
                     xmlid = child.get("id")
                     item = xmlid_to_item.get(xmlid)
@@ -251,11 +280,49 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
     # Render each XML provision into nested, collapsible text blocks.
     for refkey, item in by_key.items():
         act, prov, page = item["act"], item["prov"], item["page"]
-        prov_body = prov.find("prov.body")
-        if prov_body is None:
+        if item.get("theme"):
+            def add_theme_node(node, parent, order, node_key):
+                text = clean(node.findtext("heading", "") or node.findtext("./para/text", ""))
+                if not text:
+                    return
+                directive = re.match(r"^([A-Z]+-Directive\s+[\d.]+)\s*:\s*(.*)$", text)
+                label = re.match(r"^([a-z]|[ivx]+|\d+)\)\s+(.*)$", text, re.I)
+                definition = re.match(r"^(.+?\b(?:means?|is|are)\b)\s+(.*)$", text, re.I)
+                if directive:
+                    title = f"**{directive.group(1)}**"
+                    statement = directive.group(2).strip()
+                elif label:
+                    title = f"({label.group(1)}) {label.group(2)}"
+                    statement = ""
+                elif definition:
+                    title = f"**{definition.group(1)}**"
+                    statement = definition.group(2).strip()
+                else:
+                    title = f"**{text}**"
+                    statement = ""
+                block = graph.block(title, page, parent, order, node_key)
+                child_order = 0
+                if statement:
+                    child_order += 1
+                    graph.block(statement, page, block, child_order, node_key + ":statement")
+                body = node.find("prov.body")
+                if body is not None:
+                    for child in body:
+                        child_order += 1
+                        add_theme_node(child, block, child_order, node_key + ":" + (child.get("id") or str(child_order)))
+
+            for order, directive in enumerate(prov.findall("prov"), 1):
+                add_theme_node(directive, page, order,
+                               f"npd-theme:{item['xmlid']}:node:{directive.get('id')}")
             continue
+        prov_body = prov.find("prov.body")
         order = 0
-        for child in prov_body:
+        body_children = list(prov_body) if prov_body is not None else []
+        # Policy direction clauses use a direct para when they have no nested
+        # subparagraphs; include that text on the provision page as body text.
+        if act["key"] == "illustrative-national-policy-direction":
+            body_children = [child for child in prov if child.tag == "para"] + body_children
+        for child in body_children:
             if child.tag in {"label", "heading"}:
                 continue
             value = element_text(child, id_to_page, id_to_uuid)
@@ -283,9 +350,6 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
             target_key = concept["links"][i - 1]["target"]
             target_act = by_key[target_key]["act"]["tag"]
             graph.block(text, page, page, i + 1, f"concept-link:{concept['id']}:{i}", refs=[refs[i - 1]], tags=[target_act])
-
-    # The existing renderer has a fixed NPD navigation link; provide a transparent placeholder.
-    graph.page("Illustrative National Policy Direction Contents", "npd-placeholder", ["NPD"])
 
     with tempfile.TemporaryDirectory(prefix="xml-site-build-") as td:
         edn_path = Path(td) / "xml-derived.edn"

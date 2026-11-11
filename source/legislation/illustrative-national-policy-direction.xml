@@ -1,0 +1,2419 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<act id="iNPD" year.imprint="2026" act.type="policy">
+  <cover id="iNPD-cover">
+    <title>Illustrative National Policy Direction</title>
+  </cover>
+  <contents>
+    <heading>Contents</heading>
+    <toc />
+  </contents>
+  <body id="iNPD-body" prov-type="clause">
+    <part id="npd-part-13771" toc="yes">
+      <heading>System-wide Directives</heading>
+      <prov id="npd-13772">
+        <heading>Māori Interests</heading>
+        <prov.body>
+          <subprov id="npd-13773">
+            <para>
+              <text>SW-Directive 1.1: When preparing regional spatial plans, land use plans and natural environment plans, decision-makers must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13774">
+                <para>
+                  <text>a) Identify Treaty settlement redress or arrangements relevant to the area.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13775">
+                <para>
+                  <text>b) Establish whether any agreement has been reached between the Crown and the relevant PSGE(s) on how that Treaty settlement redress or arrangements will operate under the Natural Environment Bill and Planning Bill under clause 9.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13776">
+                <para>
+                  <text>c) Where no agreement has been reached, ensure that, in line with clause 10 of the Natural Environment Bill and Planning Bill, any Treaty settlement redress or arrangements are given an effect that is the same or equivalent as the effect they had under the Resource Management Act 1991 to the greatest extent possible under the Natural Environment Bill and Planning Bill.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13778">
+            <para>
+              <text>SW-Directive 1.2: Engagement with Māori groups in the development of regional spatial plans, land use plans and natural environment plans must be undertaken in accordance with statutory requirements and national standards.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13780">
+            <para>
+              <text>SW-Directive 1.3: To protect and provide for sites of significance to Māori [in accordance with national standards]:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13781">
+                <para>
+                  <text>a) Regional spatial plans must consider how options for growth and change can best provide for identified sites of significance to Māori by avoiding strategic growth, development, land and resource use, and infrastructure in locations that would undermine the values Māori associate with those sites.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13782">
+                <para>
+                  <text>b) Land use plans and natural environment plans must:</text>
+                </para>
+                <prov.body>
+                  <subprov id="npd-13783">
+                    <para>
+                      <text>i) Identify and protect sites of significance to Māori by mapping or otherwise identifying those sites.</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-13784">
+                    <para>
+                      <text>ii) Manage adverse effects on identified sites of significance to Māori.</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-13785">
+                    <para>
+                      <text>iii) Ensure that any environmental limits are set in a way that protects identified sites of significance to Māori.</text>
+                    </para>
+                  </subprov>
+                </prov.body>
+              </subprov>
+              <subprov id="npd-13786">
+                <para>
+                  <text>c) Regional spatial plans, land use plans and natural environment plans must only include sites of significance that meet evidential requirements.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13788">
+            <para>
+              <text>SW-Directive 1.4: To support the development of identified Māori land [in accordance with national standards]:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13789">
+                <para>
+                  <text>a) Regional spatial plans must identify strategic opportunities where development and infrastructure investment can occur.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13790">
+                <para>
+                  <text>b) Land use plans and natural</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13792">
+        <heading>Natural Hazards</heading>
+        <prov.body>
+          <subprov id="npd-13793">
+            <para>
+              <text>SW-Directive 2.1: To safeguard against natural hazard risks and improve resilience, regional spatial plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13794">
+                <para>
+                  <text>a) Direct housing growth, infrastructure, and investment towards areas where natural hazard risks can be avoided or mitigated.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13795">
+                <para>
+                  <text>b) Identify areas of existing development exposed to climate-related natural hazard events where adaptation planning should be prioritised.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13796">
+            <para>
+              <text>SW-Directive 2.2: To ensure activities do not create or increase significant natural hazard risk for other people, places and values, land use plans and natural environment plans must ensure activities, including any associated mitigation measures, that create or increase significant natural hazard risk on other land uses and public values, avoid or mitigate that risk using an approach that is proportionate to the level of risk.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13799">
+            <para>
+              <text>SW-Directive 2.3: To improve the resilience of communities to natural hazards, land use plans and natural environment plans must enable foreseeable emergency response and recovery activities.</text>
+            </para>
+            <prov.body />
+          </subprov>
+          <subprov id="npd-13801">
+            <para>
+              <text>SW-Directive 2.4: To improve the resilience of communities, land use plans and natural environment plans must enable the development and use of measures that reduce natural hazard risk and support adaptation.</text>
+            </para>
+            <prov.body />
+          </subprov>
+          <subprov id="npd-13803">
+            <para>
+              <text>SW-Directive 2.5: To ensure a risk-based approach to natural hazard management, land use plans and natural environment plans must ensure that assessments of natural hazard risks take into account existing and proposed mitigation measures, residual risk, long-term hazard risk profiles, and where applicable, comply with any relevant requirements in national standards.</text>
+            </para>
+            <prov.body />
+          </subprov>
+          <subprov id="npd-13805">
+            <para>
+              <text>SW-Directive 2.6: To manage natural hazard risks proportionately, land use and natural environment plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13806">
+                <para>
+                  <text>a) scale the information requirements to assess natural hazard risk, to the anticipated level of risk.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13807">
+                <para>
+                  <text>b) Require avoidance and/or mitigation measures which are commensurate with the level of natural hazard risk, while also considering the cost-effectiveness of mitigation measures relative to the level of anticipated risk.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-sw-directive-1.5">
+        <heading>SW-Directive 1.5: To protect identified Māori land, land use plans and natural environment plans must [in accordance with national standards]:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-sw-directive-1.5-para-a">
+            <para>
+              <text>a) identify such land and its cultural values</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-sw-directive-1.5-para-b">
+            <para>
+              <text>b) manage adverse effects of activities that may affect identified Māori land. and resolve conflicts</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-sw-directive-1.6">
+        <heading>SW-Directive 1.6: Where other directives enable use, development, or other activities, identified Māori land and sites of significance to Māori must be provided for in accordance with SW-Directive 1.3(b)(ii) and 1.5(b). (not part of NPD) • Spatial planning standards that: • direct spatial plan content for identifying M • Standards for sites of significance to Māori th • provide a methodology and criteria for ide as relates to spatial plans) • direct how adverse effects on sites of sign • Standards for identified Māori land that: • specify how Māori land is to be identified • direct how adverse effects on identified M • Māori participation standard that specifies re regional spatial plans and plan making.</heading>
+      </prov>
+    </part>
+    <part id="npd-part-13411" toc="yes">
+      <heading>Cross-cutting Directives</heading>
+      <prov id="npd-13412">
+        <para>
+          <text>CC-Directive 1: Private property rights. When implementing this NPD, the use of private land is to be enabled with restrictions only imposed when necessary to ensure others are not unreasonably affected or to provide for important public values.</text>
+        </para>
+      </prov>
+      <prov id="npd-13413">
+        <heading>CC-Directive 2: When implementing this NPD, economic growth and change is to be supported by:</heading>
+        <prov.body>
+          <subprov id="npd-13414">
+            <para>
+              <text>a) being responsive to new and emerging economic opportunities</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13415">
+            <para>
+              <text>b) providing certainty for investment</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13416">
+            <para>
+              <text>c) reducing unnecessary costs and constraints for projects that drive economic growth and employment.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13417">
+        <heading>CC-Directive 3: To protect the operation of existing lawfully established land uses:</heading>
+        <prov.body>
+          <subprov id="npd-13418">
+            <para>
+              <text>a) land use plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13419">
+                <para>
+                  <text>i) enable existing lawfully established land uses to operate without unreasonable constraints.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13420">
+                <para>
+                  <text>ii) Ensure new incompatible or sensitive activities are responsible for avoiding or mitigating conflicts with existing lawfully established land uses, both through location and mitigation methods.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13421">
+            <para>
+              <text>b) Local authorities must manage complaints from new, or more intensive, sensitive activities about existing land uses [in accordance with national standards].</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13422">
+        <heading>CC-Directive 4: Managing land use and reverse sensitivity. To enable the use of land and support growth and change while minimising conflicts between land uses:</heading>
+        <prov.body>
+          <subprov id="npd-13423">
+            <para>
+              <text>a) Spatial plans must identify broad land use patterns, where incompatible land uses may conflict, and identify where separation and management of incompatible land uses is required.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13424">
+            <para>
+              <text>b) Land use plans must use a range of planning tools and methods, including (where appropriate):</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13425">
+                <para>
+                  <text>i) Zoning to identify anticipated land uses that are enabled without unreasonable constraint.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13426">
+                <para>
+                  <text>ii) Buffers to separate and manage incompatible land uses [eg, setbacks to established industries].</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13427">
+                <para>
+                  <text>iii) Standards and methods to manage the external effects of land uses and improve compatibility between land uses [eg, noise insulation standards].</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13428">
+            <para>
+              <text>c) Land use plans must recognise the role of private agreements, including non-complaint covenants, in managing conflicts and complaints between land uses.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13429">
+        <heading>CC-Directive 5: Regional spatial plans prioritise growth and change in areas:</heading>
+        <prov.body>
+          <subprov id="npd-13430">
+            <para>
+              <text>a) Where infrastructure can efficiently support growth and change.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13431">
+            <para>
+              <text>b) That make the best use of existing and planned infrastructure.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13432">
+            <para>
+              <text>c) That support access to housing and labour markets.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13433">
+            <para>
+              <text>d) Where can be managed.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13434">
+            <para>
+              <text>e) That provide for significant environmental and cultural values.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13435">
+        <heading>CC-Directive 6: Regional spatial plans sequence growth, change and infrastructure to support:</heading>
+        <prov.body>
+          <subprov id="npd-13436">
+            <para>
+              <text>a) Efficient public investment.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13437">
+            <para>
+              <text>b) Strategic opportunities for development where infrastructure may be provided via private or other means of investment.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13438">
+        <heading>CC-Directive 7: Regional spatial plans seek to:</heading>
+        <prov.body>
+          <subprov id="npd-13439">
+            <para>
+              <text>a) Maximise compatibility (and otherwise minimise conflicts) between development, the natural environment and cultural values over the long term, including by identifying:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13440">
+                <para>
+                  <text>i) where development may need to be constrained because of natural hazard risk</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13441">
+                <para>
+                  <text>ii) how growth can be provided while protecting high value growing areas [eg, food and fibre production]</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13442">
+                <para>
+                  <text>iii) where infrastructure may need to be provided where there are natural environment constraints</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13443">
+                <para>
+                  <text>iv) Strategic opportunities to provide for development while enhancing the natural environment.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13444">
+            <para>
+              <text>b) Avoid unnecessary long-term costs to communities and the public.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13445">
+        <para>
+          <text>CC-Directive 8: Land use plans and natural environment plans should avoid unnecessary duplication or inconsistent regulatory requirements in relation to activities regulated under other legislation.</text>
+        </para>
+      </prov>
+      <prov id="npd-13446">
+        <para>
+          <text>CC-Directive 9: While a range of information and views may be provided through consent/permit processes, responsibility for deciding whether to grant, decline, or impose conditions on a consent/permit application rests with the relevant statutory decision-maker identified in the legislation.</text>
+        </para>
+      </prov>
+      <prov id="npd-13447">
+        <heading>Indicative Implementation Through National Standards (Not Part of the NPD)</heading>
+        <prov.body>
+          <subprov id="npd-13448">
+            <para>
+              <text>National standards for land use plans:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13449">
+                <para>
+                  <text>Set out nationally consistent requirements for managing reverse sensitivity effects, including separation distances, buffers and overlays to protect established land uses from new sensitive and incompatible activities.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13450">
+                <para>
+                  <text>Require new sensitive or incompatible activities to avoid or mitigate their effects on existing land uses.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13451">
+                <para>
+                  <text>Set clear expectations for the anticipated land uses within zones that are to be enabled without unreasonable constraint from sensitive and incompatible activities.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13452">
+            <para>
+              <text>National standards for managing complaints:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13453">
+                <para>
+                  <text>Require local authorities to manage complaints from new, or more intensive, sensitive activities about existing land uses in a nationally consistent way, including how to consider complaints about effects that are known and lawfully established, anticipated, or reasonably foreseeable in particular locations.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+    </part>
+    <part id="npd-part-13455" toc="yes">
+      <heading>Housing and Development</heading>
+      <prov id="npd-13456">
+        <heading>HD-Directive 1.1: To enable competitive urban land markets:</heading>
+        <prov.body>
+          <subprov id="npd-13457">
+            <para>
+              <text>a) spatial plans must identify an abundance of areas for urban development, so there is no expectation of scarce land supply for future development</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13458">
+            <para>
+              <text>b) land use plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13459">
+                <para>
+                  <text>i) Enable abundant development opportunities for housing and business use.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13460">
+                <para>
+                  <text>ii) Meet housing and business capacity requirements, including Housing Growth Targets [as set out in national</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13461">
+            <para>
+              <text>c) local authorities must respond to a determination by the urban land market statutory officer that an act or omission by the local authority has materially contributed to a non-competitive urban land market, including any findings on the extent of non-competitiveness, in accordance with any relevant national standards, by:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13462">
+                <para>
+                  <text>i) Taking into account the determination when making and deciding on plan changes, including private plan changes.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13463">
+                <para>
+                  <text>ii) Undertaking actions, which could include changes to the land use plan, required to address the matters identified in the determination.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13465">
+        <heading>HD-Directive 1.2: The framework for determining whether an urban land market is competitive as developed by the urban land market statutory officer must, at a minimum, consider:</heading>
+        <prov.body>
+          <subprov id="npd-13466">
+            <para>
+              <text>a) Land efficiency indicators, including the impact of land use regulation on land prices.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13467">
+            <para>
+              <text>b) Housing and business capacity.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13468">
+            <para>
+              <text>c) Responsiveness to new development opportunities.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13470">
+        <heading>HD-Directive 1.3: To enable change and development outcomes, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13471">
+            <para>
+              <text>a) Apply the most permissive planning provisions possible while being consistent with the development objectives sought for the location.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13472">
+            <para>
+              <text>b) Not unduly undermine development feasibility or the development objectives sought for the location, including when applying bespoke provisions.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13473">
+            <para>
+              <text>c) Provide clear, durable, and predictable provisions for development, so landowners and investors readily understand how land can be used and developed without unnecessary delay, discretion, or uncertainty.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13474">
+            <para>
+              <text>d) Provide for change in urban and rural areas to support economic growth, new patterns of production, employment and investment.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13475">
+            <para>
+              <text>e) Recognise that change is not, in and of itself, an adverse effect.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13477">
+        <para>
+          <text>HD-Directive 1.4: To manage constraints in areas identified as otherwise suitable for development or intensification, local authorities must use temporary or future provisions (as provided for by the Planning Bill) rather than requiring a plan change.</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13479">
+        <para>
+          <text>HD-Directive 1.5: To enable urban expansion, land use plans must not include urban growth boundaries or requirements for development to be connected to existing urban areas.</text>
+        </para>
+      </prov>
+      <prov id="npd-13481">
+        <para>
+          <text>HD-Directive 1.6: To meet development capacity or intensification requirements, land use plans may allow urban development in high value growing areas or areas of high natural character, or outstanding natural features or landscapes if the development meets criteria set out in national standards.</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13483">
+        <heading>HD-Directive 2.1: To provide for accessibility, choice and a mix of uses in urban areas, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13484">
+            <para>
+              <text>a) Enable a broad mix of compatible residential, commercial and community activities within urban zones intended predominantly for residential, commercial and community use.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13485">
+            <para>
+              <text>b) provide for a diverse range of housing types, including papakāinga, in different locations to meet the needs of different households and communities</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13486">
+            <para>
+              <text>c) Provide for a range of sites suitable for different businesses and industry, including variation in location and site size.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13487">
+            <para>
+              <text>d) Provide good accessibility between housing, workplaces, commercial and community services, and natural and open spaces, including where possible by public and active transport.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13489">
+        <heading>HD-Directive 2.2: To support well-functioning urban areas, land use plans of [specified urban] councils must, at a minimum, enable [in accordance with national standards]:</heading>
+        <prov.body>
+          <subprov id="npd-13490">
+            <para>
+              <text>a) As much intensification as possible in [city centres].</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13491">
+            <para>
+              <text>b) Very high building heights and density in:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13492">
+                <para>
+                  <text>i) [Metropolitan centres].</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13493">
+                <para>
+                  <text>ii) Specified catchments of [city centres].</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13494">
+            <para>
+              <text>c) High building heights and density in:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13495">
+                <para>
+                  <text>i) [Town and local centres].</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13496">
+                <para>
+                  <text>ii) Specified catchments of [metropolitan centres], rapid transit stops and high service frequency transit.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13497">
+            <para>
+              <text>d) Moderate building heights and density in areas such as:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13498">
+                <para>
+                  <text>i) [Neighbourhood centres].</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13499">
+                <para>
+                  <text>ii) Specified catchments of moderate service frequency transit and [town and local centres].</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13501">
+        <heading>HD-Directive 2.3: To support well-functioning urban areas, land use plans must enable sufficient intensification in all other areas (not referenced in HD-Directive 2.2) where:</heading>
+        <prov.body>
+          <subprov id="npd-13503">
+            <para>
+              <text>a) There is demand and/or good accessibility between housing, jobs, community services, and natural and open spaces, including by public and active transport.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13504">
+            <para>
+              <text>b) This makes efficient use of existing or planned infrastructure.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13506">
+        <heading>HD-Directive 3.1: To create well-functioning rural areas, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13507">
+            <para>
+              <text>a) enable primary production and associated processing activities and an appropriate mix of compatible residential, commercial, industrial and community activities, including papakāinga</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13508">
+            <para>
+              <text>b) provide for a diverse range of housing types, including workers’ accommodation and papakāinga, in different locations to meet the needs of different households and communities, including where this supports rural businesses</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13509">
+            <para>
+              <text>c) Support rural communities to have reliable access to workplaces, services and recreation.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13510">
+            <para>
+              <text>d) Enable rural land to be used and developed in a way that maximises the benefits of public and private investment.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13511">
+            <para>
+              <text>e) In rural towns and rural settlements, provide for a broad mix of compatible</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13513">
+        <heading>HD-Directive 4.1: To support housing and development in appropriate locations, land use plans must ensure natural hazard risks associated with housing and development are managed by:</heading>
+        <prov.body>
+          <subprov id="npd-13514">
+            <para>
+              <text>a) using an approach that is proportionate to the level of natural hazard risk</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13515">
+            <para>
+              <text>b) Avoiding housing and development where risks are assessed as ‘very high’ (see interpretation section – definition of risk levels included in the NPD via the risk matrix).</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+    </part>
+    <part id="npd-part-13517" toc="yes">
+      <heading>Infrastructure</heading>
+      <prov id="npd-13518">
+        <para>
+          <text>INFR-Directive 1.1: Spatial plans must identify the strategic infrastructure priorities that shape how the region grows and changes.</text>
+        </para>
+      </prov>
+      <prov id="npd-13520">
+        <heading>INFR-Directive 1.2: To enable the timely and efficient delivery of new infrastructure, including all ancillary activities, and upgrades, expansions, replacements and relocations not covered under existing infrastructure directives [INFR-Directive 1.3 &amp; 1.4], land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13521">
+            <para>
+              <text>a) Recognise and provide for the national, regional and local benefits of infrastructure.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13522">
+            <para>
+              <text>b) Recognise and provide for infrastructure to have an operational or functional need to locate, operate and traverse particular environments.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13523">
+            <para>
+              <text>c) Manage effects on important identified values in accordance with any relevant national standards.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13524">
+            <para>
+              <text>d) Apply targeted standardised plan provisions that recognise the specific needs, locations, accessibility and operational requirements of different infrastructure, such as linear and non-linear infrastructure [eg, port reclamation, dredging and operating hours].</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13525">
+            <para>
+              <text>e) Recognise the role of the infrastructure provider and requirements under other legislation [eg, Commerce Act for Transpower] in determining the route or location of the infrastructure required.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13527">
+        <heading>INFR-Directive 1.3: To enable existing infrastructure to efficiently and effectively maintain, increase or improve services delivered to people and communities, land use plans and natural environment plans must enable:</heading>
+        <prov.body>
+          <subprov id="npd-13528">
+            <para>
+              <text>a) Operation, maintenance, upgrade and repowering activities and all ancillary activities to be undertaken without unnecessary restriction within its operational envelope [see interpretation section].</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13529">
+            <para>
+              <text>b) Upgrade and relocation activities outside its operational envelope that increase safety, increase resilience, utilise new technology or reduce environmental effects, subject to infrastructure standards to manage effects.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13531">
+        <heading>INFR-Directive 1.4: To get the most out of existing infrastructure assets, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13532">
+            <para>
+              <text>a) Provide for existing infrastructure to access and use natural resources to provide for ongoing infrastructure services.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13533">
+            <para>
+              <text>b) Recognise existing infrastructure that uses existing natural resources forms part of the existing environment when assessing environmental effects in re-permitting decisions.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13535">
+        <heading>INFR-Directive 1.5: To manage conflicts between infrastructure and significant natural environment values and significant historic heritage, and must manage adverse effects in accordance with national standards:</heading>
+        <prov.body>
+          <subprov id="npd-13536">
+            <para>
+              <text>a) On high natural character, outstanding natural landscapes and features, and on significant historic heritage excluding sites of significance to Māori, under the Planning Bill, and on all domains where environmental limits have been set under the Natural Environment Bill.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13537">
+            <para>
+              <text>b) Where any breach of environmental limits occurs, by developing and implementing an action plan to remedy the breach within a set target date.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13540">
+        <para>
+          <text>INFR-Directive 1.6: Land use plans and natural environment plans must enable nature-based solutions and green infrastructure.</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13542">
+        <heading>INFR-Directive 1.7: To protect existing or planned infrastructure and enable its ongoing operation, maintenance, upgrading and reasonable expansion:</heading>
+        <prov.body>
+          <subprov id="npd-13543">
+            <para>
+              <text>a) spatial plans must identify, at a broad level:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13544">
+                <para>
+                  <text>i) infrastructure and areas where infrastructure needs to be protected from incompatible activities</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13545">
+                <para>
+                  <text>ii) land use patterns to support the ongoing operation and future development of infrastructure</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13546">
+                <para>
+                  <text>iii) Areas to support the co-location of compatible infrastructure, including through infrastructure corridors.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13547">
+            <para>
+              <text>b) Land use plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13548">
+                <para>
+                  <text>i) Protect the operation, maintenance, upgrading and reasonable expansion of infrastructure from the adverse effects of incompatible land uses, including reverse sensitivity and direct effects.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13549">
+                <para>
+                  <text>ii) Require new sensitive activities to avoid or mitigate effects that could result in unreasonable constraints on infrastructure.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13550">
+                <para>
+                  <text>iii) Use a range of planning tools and methods to protect infrastructure and support compatibility with other land uses, including:</text>
+                </para>
+                <prov.body>
+                  <subprov id="npd-13551">
+                    <para>
+                      <text>a. Through buffers to separate incompatible land uses.</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-13552">
+                    <para>
+                      <text>b. Design and mitigation to improve compatibility.</text>
+                    </para>
+                  </subprov>
+                </prov.body>
+              </subprov>
+              <subprov id="npd-13553">
+                <para>
+                  <text>iv) Enable co-location of compatible infrastructure, including in infrastructure corridors.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13555">
+        <para>
+          <text>INFR-Directive 2.1: Spatial plans must identify opportunities to improve New Zealand’s energy security, resilience, independence, and transition to a low carbon economy.</text>
+        </para>
+      </prov>
+      <prov id="npd-13558">
+        <heading>INFR-Directive 2.2: To maintain and improve energy security and resilience:</heading>
+        <prov.body>
+          <subprov id="npd-13559">
+            <para>
+              <text>a) land use plans and natural environment plans must enable all sources of energy to be developed and expanded, including thermal energy and emerging technologies</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13560">
+            <para>
+              <text>b) Natural environment plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13561">
+                <para>
+                  <text>i) Recognise the national significance of existing hydro-generation schemes [five national hydro-generation schemes currently in NPS-FM].</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13562">
+                <para>
+                  <text>ii) Protect the generation capacity and output of existing renewable energy assets when protecting, managing and allocating natural resources.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13564">
+        <heading>INFR-Directive 2.3: To help achieve the national goal of doubling renewable energy capacity by 2050, spatial plans must map or otherwise record, at a broad level:</heading>
+        <prov.body>
+          <subprov id="npd-13565">
+            <para>
+              <text>a) The diverse range of renewable energy sources available in the region.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13566">
+            <para>
+              <text>b) Any nationally and regionally strategic opportunities to increase capacity.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13568">
+        <heading>INFR-Directive 2.4: To enable the renewable energy system to be significantly developed and expanded, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13569">
+            <para>
+              <text>a) Recognise and provide for the national, regional and local benefits of energy infrastructure.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13570">
+            <para>
+              <text>b) Provide for opportunities for new and expanded renewable energy generation capacity, regardless of whether these have been spatially identified in advance.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13571">
+            <para>
+              <text>c) Recognise and provide for renewable energy generation to have an operational or functional need to locate and operate where the renewable resource is located and available at a viable scale and quality to sustain the activity.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13572">
+            <para>
+              <text>d) Protect the capacity and output of existing renewable energy generation assets and provide opportunities to increase the capacity of existing assets.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13574">
+        <para>
+          <text>INFR-Directive 3.1: To recognise that infrastructure resilience is achieved through asset management, design, and investment planning, land use plans must not restrict infrastructure because of the effects of natural hazard risk to the infrastructure.</text>
+        </para>
+      </prov>
+    </part>
+    <part id="npd-part-13680" toc="yes">
+      <heading>Primary production and the rural economy</heading>
+      <prov id="npd-13681">
+        <heading>PP-Directive 1.1: Agriculture and associated activities are enabled and managed through a proportionate and risk-based approach, so that adverse effects on the environment and human health are addressed appropriately, including by:</heading>
+        <prov.body>
+          <subprov id="npd-13682">
+            <para>
+              <text>a) Land use plans and natural environment plans enabling agricultural land use, and associated supporting activities and practices, including drain maintenance, aggregate extraction, tracking, effluent storage and management, pasture management, fertiliser application and on-farm water storage [and in accordance with national standards].</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13683">
+            <para>
+              <text>b) Any controls on agriculture activities being proportionate to environmental or human health risk.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13685">
+        <heading>PP-Directive 1.2: Freshwater farm plans are the primary mechanism for identifying and managing the effects of on-farm activities on freshwater and freshwater ecosystems at the property scale. Natural environment plans must not, unless authorised by a national standard:</heading>
+        <prov.body>
+          <subprov id="npd-13686">
+            <para>
+              <text>a) Duplicate requirements for managing effects [eg, by requiring a permit] that are already addressed through a freshwater farm plan.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13687">
+            <para>
+              <text>b) Require additional permits, approvals or controls unless an environmental limit has been, or is likely to be, breached and these are required by an Action Plan.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13688">
+            <para>
+              <text>c) Impose stricter controls on farming activities than those set by the relevant national standard.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13690">
+        <heading>PP-Directive 1.3: Where an environmental limit is breached or is likely to be breached, the council:</heading>
+        <prov.body>
+          <subprov id="npd-13691">
+            <para>
+              <text>a) Must develop an action plan to remedy the breach by a set target date.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13692">
+            <para>
+              <text>b) Must ensure there is an enforceable mechanism (which may include freshwater farm plans, action plans, rules, and expansion of existing catchment programmes) to remedy the breach by a set target date or interim limit.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13693">
+            <para>
+              <text>c) May allow existing activities to continue where they are able to reduce relevant environmental impacts in accordance with the mechanism and target date or interim limit.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13695">
+        <heading>PP-Directive 1.4: To support secure, reliable and resilient water supply for existing and future primary production, including stock drinking water:</heading>
+        <prov.body>
+          <subprov id="npd-13696">
+            <para>
+              <text>a) Natural environment plans must enable allocation of sustainably available water and require efficient water use.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13697">
+            <para>
+              <text>b) Land use plans and natural environment plans must provide for the taking and storage of water during periods of high flow.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13699">
+        <heading>PP-Directive 1.5: To enable the construction, operation, maintenance and use of constructed wetlands within rural production environments [in accordance with national standards]:</heading>
+        <prov.body>
+          <subprov id="npd-13700">
+            <para>
+              <text>a) Land use plans and natural environment plans must enable and provide for constructed wetlands for the following purposes (including in combination):</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13701">
+                <para>
+                  <text>i) Water quality improvement, including sediment retention and nutrient management.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13702">
+                <para>
+                  <text>ii) Stormwater attenuation and flood mitigation.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13703">
+                <para>
+                  <text>iii) Wastewater treatment (including farm or community-scale treatment), where effects are appropriately managed.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13704">
+                <para>
+                  <text>iv) Other edge-of-field mitigation and environmental enhancement projects that deliver measurable improvements to freshwater outcomes.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13705">
+            <para>
+              <text>b) Natural environment plans must provide for water takes and discharges related to constructed wetlands where necessary and appropriate.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13707">
+        <heading>PP-Directive 1.6: To ensure primary production activities can continue operating and adapting without unreasonable constraint from reverse sensitivity effects, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13708">
+            <para>
+              <text>a) Recognise primary production as the leading and expected land use within rural production zones.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13709">
+            <para>
+              <text>b) Use a range of planning tools and methods to separate incompatible land uses in rural areas where practicable, including by:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13710">
+                <para>
+                  <text>i) Directing rural lifestyle, rural settlements and sensitive or incompatible activities to appropriate locations.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13711">
+                <para>
+                  <text>ii) Limiting the establishment or intensification of incompatible activities within rural production zones as necessary to protect primary production activities from unreasonable constraint.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13712">
+            <para>
+              <text>c) Where new or intensified incompatible activities are proposed in proximity to existing primary production, require those activities to avoid or mitigate reverse sensitivity effects so primary production can continue to operate effectively and efficiently, including through appropriate location, design, buffers and any mitigation measures.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-2.1">
+        <heading>PP-Directive 2.1: To support the establishment, operation, maintenance and adaptation of horticulture land use plans and natural environment plans must [in accordance with national standards]:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-2.1-para-a">
+            <para>
+              <text>a) ensure that controls on horticultural activities are proportionate to the significance of adverse effects and focused on managing those effects rather than restricting horticultural activities, except where necessary to achieve environmental limits</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.1-para-b">
+            <para>
+              <text>b) provide for the continued operation, maintenance and adaptation of lawfully established horticultural activities, unless more restrictive controls are required to manage significant adverse effects or respond to a breach or likely breach of environmental limits</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.1-para-c">
+            <para>
+              <text>c) provide operational flexibility to support innovation, changing growing practices, crop rotation, species changes, expansion or redevelopment, and responses to market, climate, biosecurity, or environmental pressures. plans in Sub-theme 1: Agriculture which also applies to this subtheme and is not repeated here.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-2.2">
+        <heading>PP-Directive 2.2: High value growing areas are managed to protect domestic food supply, support economic growth, and provide flexibility for growers to adapt and respond to changing technologies and market demands:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-2.2-para-a">
+            <para>
+              <text>a) regional spatial plans must, using best available information, identify high value growing areas of regional or national significance and provide strategic direction on how potential conflicts between those areas, urban development, and infrastructure will be managed over the long term</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.2-para-b">
+            <para>
+              <text>b) land use plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-pdf-pp-directive-2.2-para-b-i">
+                <para>
+                  <text>i) allow infrastructure provision on high value growing areas in accordance with national standards</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-pp-directive-2.2-para-b-ii">
+                <para>
+                  <text>ii) restrict use and development that would compromise the availability of high value growing areas, except where specified exemptions apply [in accordance with national standards]</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.2-para-c">
+            <para>
+              <text>c) existing lawfully established growing operations in areas identified as high value growing areas will be permitted, [in accordance with national standards], requiring good management practice, and a certified freshwater farm plan</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.2-para-d">
+            <para>
+              <text>d) natural environment plans must provide for crop rotation cycles and future crop changes in high value growing areas to allow adaptation to market demand or management needs.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-2.3">
+        <heading>PP-Directive 2.3: Land use plans must recognise and provide for post-harvest facilities and supporting activities that have a functional or operational relationship with horticultural production, including packhouses, cool stores, processing and storage facilities, freight and logistics activities, and associated infrastructure.</heading>
+      </prov>
+      <prov id="npd-pdf-pp-directive-2.4">
+        <heading>PP-Directive 2.4: To support the efficient use of land while recognising Māori land aspirations and the constraints affecting productive use, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-2.4-para-a">
+            <para>
+              <text>a) enable identified Māori Land to be used and developed for papakāinga and other purposes to meet the present and future cultural, economic, social and/or environmental aspirations and needs of owners, their whānau, and their hapū</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-2.4-para-b">
+            <para>
+              <text>b) enable land to transition to an alternative land use or zone where there are permanent or long-term constraints, including limited access to natural resources, or a need to (not part of NPD) • National standards for land use plans and nat • set out standardised rural zone content, d activities and supporting infrastructure (in enabling their operation, maintenance, ex • permit existing commercial vegetable grow management practice), and in all other situ effects, ensuring this is proportionate to en • direct the circumstances where additiona adverse effects or environmental limits. • High value growing area standards that: • set out criteria and methods for identifyin • specify the requirements for managing su these areas (ie, specify the criteria when i • establish exemptions and decision-making activities. • Water allocation, efficiency and storage stand Agriculture sub-theme. • Freshwater farm plans: refer to the content o • Constructed wetlands standards: refer to the theme. manage environmental effects such as water quality.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-3.1">
+        <heading>PP-Directive 3.1: To support the establishment, operation, maintenance, harvesting and replanting of commercial forestry in accordance with national standards, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-3.1-para-a">
+            <para>
+              <text>a) enable commercial forestry activities and associated supporting activities in accordance with national standards</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-3.1-para-b">
+            <para>
+              <text>b) ensure any controls on commercial forestry activities provide for the use and development of commercial forestry while managing adverse effects on the environment, human health, and public safety</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-3.1-para-c">
+            <para>
+              <text>c) not include controls that are more stringent than national standards except where those standards expressly authorise more stringent controls or permit conditions to address significant local risks or unique environmental characteristics [ie, defined areas of severe erosion risk, karst systems and geothermal].</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-3.2">
+        <heading>PP-Directive 3.2: To provide for the continued operation of commercial forestry activities where environmental limits are breached or are likely to be breached, councils must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-3.2-para-a">
+            <para>
+              <text>a) develop an action plan and enable the continued operation of commercial forestry activities</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-3.2-para-b">
+            <para>
+              <text>b) ensure there is an enforceable mechanism to remedy the breach within a set target date.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-3.3">
+        <heading>PP-Directive 3.3: In order to provide for commercial forestry across its full operational lifecycle, land use plans and natural environment plans must enable commercial forestry activities and associated supporting activities including for: afforestation, harvesting, earthworks, river crossings, forestry quarrying, and replanting [in accordance with national standards].</heading>
+      </prov>
+      <prov id="npd-pdf-pp-directive-3.4">
+        <heading>PP-Directive 3.4: To maintain long-term productive land use options and support transitions between productive land uses, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-3.4-para-a">
+            <para>
+              <text>a) avoid large-scale permanent exotic carbon forestry on productive land where it would significantly reduce future land use options or undermine the long-term availability of land for productive uses, unless there are clear long-term benefits</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-3.4-para-b">
+            <para>
+              <text>b) enable flexibility so that land can transition between forestry, agriculture, horticulture and other productive uses over time. Commercial forestry, water quality and freshwater systems</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-3.5">
+        <heading>PP-Directive 3.5: To manage water quality and freshwater outcomes while providing for commercial forestry, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-3.5-para-a">
+            <para>
+              <text>a) manage adverse effects of commercial forestry activities on freshwater by targeting controls to activities and locations where risks to water quality are highest</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-3.5-para-b">
+            <para>
+              <text>b) avoid unnecessary restrictions on commercial forestry where activities can occur without significant adverse effects on freshwater.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.1">
+        <heading>PP-Directive 4.1: To provide for the long- term development of aquaculture and other marine primary production activities (where they are significant to achieving regional outcomes or long-term strategic priorities) spatial plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-4.1-para-a">
+            <para>
+              <text>a) identify areas suitable for these activities</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.1-para-b">
+            <para>
+              <text>b) provide strategic direction for their long-term development [including by identifying future growth opportunities, infrastructure needs and interactions with other significant uses of the surrounding environment].</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.2">
+        <heading>PP-Directive 4.2: To enable aquaculture to establish, operate and adapt [in accordance with national standards] through a propor- tionate, risk-based approach, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-4.2-para-a">
+            <para>
+              <text>a) recognise and provide for the functional and operational needs of aquaculture, including the need for some activities to locate within the coastal marine area, freshwater environments and on land</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.2-para-b">
+            <para>
+              <text>b) enable aquaculture across the coastal marine area, freshwater and land-based systems, including associated supporting and ancillary activities, in appropriate locations</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.2-para-c">
+            <para>
+              <text>c) provide operational flexibility to support innovation and changes to farming and harvesting methods, species, technology, production systems and locations where those changes are consistent with any national standards</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.2-para-d">
+            <para>
+              <text>d) recognise the economic, social, cultural and environmental benefits of aquaculture and other marine primary production activities.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.3">
+        <heading>PP-Directive 4.3: To support existing (lawfully established) aquaculture (at the time the NPD is enacted), natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-4.3-para-a">
+            <para>
+              <text>a) provide for established aquaculture to continue to operate, be maintained and adapt</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.3-para-b">
+            <para>
+              <text>b) only impose more restrictive controls where necessary to safeguard ecosystems. Māori aquaculture development</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.4">
+        <heading>PP-Directive 4.4: To enable and support the aquaculture Treaty settlement process, land use plans and natural environment plans must provide for aquaculture activities, (and ancillary activities), within Aquaculture Settlement Areas in a manner consistent with the Māori Commercial Aquaculture Claims Settlement Act 2004.</heading>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.5">
+        <heading>PP-Directive 4.5: To manage environmental effects and enable adaptive management of aquaculture, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pp-directive-4.5-para-a">
+            <para>
+              <text>a) apply targeted and proportionate measures to manage effects and support innovation over time</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.5-para-b">
+            <para>
+              <text>b) manage adverse effects, including discharges and waste streams, to safeguard ecosystem and human health and manage effects on other users</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.5-para-c">
+            <para>
+              <text>c) protect and maintain water quality that supports aquaculture and other marine primary production activities, across freshwater, land and marine environments</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pp-directive-4.5-para-d">
+            <para>
+              <text>d) provide for the use of adaptive management approaches, including monitoring, review, and response over time, where environmental effects are uncertain and such approaches are appropriate.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pp-directive-4.6">
+        <heading>PP-Directive 4.6: To provide for marine primary production activities not otherwise addressed in this sub-theme, land use plans and natural environment plans must recognise and provide for marine primary production activities that depend on access to coastal and marine natural resources and have a functional or operational need to locate within coastal or marine environments. ecosystem health set out in Sub-theme 1: Environmental and human health which also applies to this sub-theme and is not repeated here.</heading>
+      </prov>
+      <prov id="npd-pdf-pp-directive-5.1">
+        <heading>PP-Directive 5.1: To recognise that the resilience of primary production activities is achieved through farm management, operational decisions, asset management, and investment planning, land use plans must not restrict primary production activities because of the effects of natural hazard risk to the primary production activities. Resources – qu mining and wa uarrying, aste mining and w Quarrying, mining and waste management provide an important contribution to New Zealand’s economic growth, including through regional employment, infrastructure and essential service delivery, and the secure supply of aggregates, minerals and other materials.</heading>
+      </prov>
+    </part>
+    <part id="npd-part-13713" toc="yes">
+      <heading>Resources - Quarrying, Mining and Waste</heading>
+      <prov id="npd-13714">
+        <heading>RW-Directive 1.1: To enable quarrying and mining activities to meet existing and future demand while managing unreasonable effects on people and the environment:</heading>
+        <prov.body>
+          <subprov id="npd-13715">
+            <para>
+              <text>a) Land use plans and natural environment plans must:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13716">
+                <para>
+                  <text>i) Enable new quarrying, mining, associated infrastructure, ancillary activities, rehabilitation, and ongoing operations in identified locations, subject to effects being appropriately managed.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13717">
+                <para>
+                  <text>ii) Provide for the expansion of existing quarries and mines where necessary to maintain supply of mineral resources, subject to effects being appropriately managed.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13718">
+            <para>
+              <text>b) Land use plans must manage the adverse effects of quarrying and mining activities to avoid unreasonable effects on others.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13719">
+            <para>
+              <text>c) Natural environment plans must enable quarrying and mining activities by managing environmental and human health effects, including through measures necessary to achieve environmental outcomes and environmental limits.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13721">
+        <heading>RW-Directive 1.2: To identify regionally significant mineral resources (including gravel in rivers and streams) and provide for their protection from competing land uses:</heading>
+        <prov.body>
+          <subprov id="npd-13722">
+            <para>
+              <text>a) Spatial plans must identify existing regionally significant quarries and mines, and potential new regionally significant mineral resources.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13723">
+            <para>
+              <text>b) Land use plans must protect identified regionally significant quarries, mines and mineral resources from competing land uses, including urban development and infrastructure, except where the infrastructure has an operational or functional need to locate within or near the resource and adverse effects on the continued operation, use, development, or expansion of the quarry, mine, or mineral resource are managed.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13725">
+        <heading>RW-Directive 1.3: To support improved environmental outcomes over the life of a quarry or mine, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13726">
+            <para>
+              <text>a) Provide for progressive rehabilitation, including restoration, offsetting, and agreed post-extraction land uses, where these contribute to improved environmental outcomes.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13727">
+            <para>
+              <text>b) Avoid imposing unnecessary constraints on rehabilitation activities and the achievement of agreed post-extraction outcomes.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13729">
+        <heading>RW-Directive 1.4: To provide for the long-term availability and extraction of identified mineral resources that are necessary to support infrastructure, development and economic wellbeing, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13730">
+            <para>
+              <text>a) Avoid locating urban development where it would prevent the extraction of identified mineral resources, unless there is no feasible alternative to meet development capacity requirements.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13731">
+            <para>
+              <text>b) Require new land uses to avoid or mitigate adverse effects on the extraction of the identified mineral resource.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13732">
+            <para>
+              <text>c) Where conflict cannot be avoided, prioritise the long-term availability of known significant mineral resources where these are necessary to support infrastructure, development and economic wellbeing.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13734">
+        <para>
+          <text>RW-Directive 1.5: To manage adverse effects of quarrying and mining activities, including associated activities, on freshwater and the coastal marine area, natural environment plans must manage the negative effects on the natural environment in accordance with national standards.</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13736">
+        <heading>RW-Directive 1.6: To provide for the continued operation of quarries and mines while progressing towards the achievement of environmental limits, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13737">
+            <para>
+              <text>a) Provide pathways that enable quarries and mines to continue operating where environmental limits are breached, or are likely to be breached.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13738">
+            <para>
+              <text>b) Ensure there is an enforceable mechanism to remedy the breach by a set target date.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-2.1">
+        <heading>RW-Directive 2.1: To enable waste management activities while managing environmental effects, natural environment plans and land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-2.1-para-a">
+            <para>
+              <text>a) enable the efficient and effective operation of waste management activities and provide for their operational need or functional need to be in particular locations</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.1-para-b">
+            <para>
+              <text>b) consider the benefits of new and existing waste facilities, which must be constructed, operated and maintained consistent with any relevant national standards that are appropriate to the waste facility type and the waste accepted, to minimise harm to human health and the environment in proportion to the level of risk</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.1-para-c">
+            <para>
+              <text>c) take a proportionate, risk-based approach to protecting human health and safeguarding the environment against any effects from using waste to backfill quarries and mines.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-2.2">
+        <heading>RW-Directive 2.2: To manage waste and debris proactively during and after an emergency or natural hazard event, and to support response and recovery activities, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-2.2-para-a">
+            <para>
+              <text>a) identify areas for temporary or permanent disposal and recovery of waste and debris for use following an emergency or natural hazard event</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.2-para-b">
+            <para>
+              <text>b) identify potential sources and volumes of waste and debris that may arise from an emergency or natural hazard event [eg, both within and adjacent to the potentially affected region]</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.2-para-c">
+            <para>
+              <text>c) consider transport distances, cost efficiency and the appropriateness of the activity type, given existing and adjacent land use [in accordance with any relevant national standard]</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.2-para-d">
+            <para>
+              <text>d) assess risks to human health and the environment to determine whether temporary or permanent effects can be managed in accordance with relevant national standards and applicable statutory requirements.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-2.3">
+        <heading>RW-Directive 2.3: To enable efficient access to, and transport of, waste, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-2.3-para-a">
+            <para>
+              <text>a) recognise that waste infrastructure needs access to transport infrastructure to maximise efficiency</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.3-para-b">
+            <para>
+              <text>b) enable efficient access for waste transport (including heavy vehicles) and co-location of compatible infrastructure and industrial activities.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-2.4">
+        <heading>RW-Directive 2.4: To manage the adverse effects of marine waste in the coastal marine area using a proportionate and precautionary approach, having regard to applicable international obligations where relevant, natural environment plans must.</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-2.4-para-a">
+            <para>
+              <text>a) prevent, reduce and control the adverse effects from the discharge or dumping of marine waste, having regard to the nature, scale, duration, frequency and risk of those effects</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.4-para-b">
+            <para>
+              <text>b) apply a proportionate approach when managing marine waste, particularly where there is scientific uncertainty about the potential for adverse effects on the marine environment or human health</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.4-para-c">
+            <para>
+              <text>c) provide for activities and infrastructure that appropriately prevent, reduce or control waste or other matter that may enter the marine environment</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.4-para-d">
+            <para>
+              <text>d) manage activities that contribute to marine waste from land-based and marine-based sources.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-2.5">
+        <heading>RW-Directive 2.5: To provide for urban growth without constraining waste infrastructure, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-2.5-para-a">
+            <para>
+              <text>a) map existing and future waste management and resource recovery infrastructure needs</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-2.5-para-b">
+            <para>
+              <text>b) avoid locating urban development where it would:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-pdf-rw-directive-2.5-para-b-i">
+                <para>
+                  <text>i) constrain existing waste management infrastructure, or</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-rw-directive-2.5-para-b-ii">
+                <para>
+                  <text>ii) prevent development of identified future waste infrastructure, unless no feasible alternative exists. land and soils Contaminated land and soils are managed in a way that protects human health and the environment, enables land development, supports housing and infrastructure delivery, and reduces unnecessary use and disposal of natural resources. The polluter pays principle will be central to contaminated land liability.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-3.1">
+        <heading>RW-Directive 3.1: Land use plans must ensure that contaminated land is remediated and/or managed to ensure it is suitable for its intended future use prior to its future development.</heading>
+      </prov>
+      <prov id="npd-pdf-rw-directive-3.2">
+        <heading>RW-Directive 3.2: To provide for the identification and remediation of contaminated land, land use plans and natural environment plans must require:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-3.2-para-a">
+            <para>
+              <text>a) the identification of contaminated land and assessment of the risks it poses to human and/or environmental health, to enable contaminated land to be remediated and/or managed before future use</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.2-para-b">
+            <para>
+              <text>b) prioritisation of the remediation and/ or management of contaminated land (including closed landfills) vulnerable to natural hazards and/or present a high risk to human health and/or the environment ng contaminated</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.2-para-c">
+            <para>
+              <text>c) publicly available council information held about past land use and the status of land, to be used by regulators, landowners (or those looking to purchase land), and other decision makers to inform whether further investigation or remediation and/ or management is required</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.2-para-d">
+            <para>
+              <text>d) the identification of historical land use, proposed land use and development activities including soil disturbance</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.2-para-e">
+            <para>
+              <text>e) assessment of contaminated land that may be vulnerable to natural hazards to determine appropriate remediation strategies and timeframes</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.2-para-f">
+            <para>
+              <text>f) integration, identification and management of contaminated land into any relevant standards and planning processes so they are considered as part of development proposals.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-3.3">
+        <heading>RW-Directive 3.3: To enable the reuse of soil, while ensuring adverse effects of soil movement and disposal are minimised, land use plans and natural environment plans must [in accordance with national standards]:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-3.3-para-a">
+            <para>
+              <text>a) manage soil disturbed during housing and infrastructure development using a proportionate, risk-based approach that retains soil capability where practicable and avoids unnecessary downcycling or disposal</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-3.3-para-b">
+            <para>
+              <text>b) promote the reuse of soil from housing and infrastructure development projects using a proportionate risk- based approach to managing the effects of contaminants on human and environmental health. (not part of NPD) • Waste management and disposal facilities sta • set out nationally consistent requirements expansion, closure and after-care of wast • specify requirements for disposal to land, emergency waste • establish requirements for air quality, odo • provide for the beneficial reuse and dispo • specify requirements for temporary emerg acceptance and prioritisation • establish requirements for the discharge a where authorised. • Contaminated land and soil standards that: • set out the requirements for identifying, in • set out methods for assessing and manag • establish requirements for recording, repo information • establish the requirements for soil disturb hrough national standards andards that: s for the location, establishment, operation, te management and disposal facilities , including contaminated, hazardous, mixed and our and landfill gas management osal of soil, managed fill and inert material gency waste facilities and emergency waste and disposal of waste to the coastal marine area nvestigating and managing contaminated land ging risk and setting soil contaminant standards orting and managing contaminated land bance, remediation, reuse and disposal.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-rw-directive-4.1">
+        <heading>RW-Directive 4.1: To manage the risks of natural hazards to waste management, resource recovery, and quarrying and mining activities, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-rw-directive-4.1-para-a">
+            <para>
+              <text>a) allow these activities to locate in areas exposed to natural hazards where there is an operational or functional need to do so</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-rw-directive-4.1-para-b">
+            <para>
+              <text>b) mitigate any significant natural hazard risk as far as is reasonably practicable, including beyond the operational lifetime of the activities.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+    </part>
+    <part id="npd-part-13739" toc="yes">
+      <heading>Public Values</heading>
+      <prov id="npd-13740">
+        <heading>PV-Directive 1.1: To protect environmental health, and improve resilience, Natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13741">
+            <para>
+              <text>a) Set ecosystem health limits in accordance with the methodology in national standards, ensuring that these are at or above any relevant minimum acceptable level unless provided for in a justification report.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13742">
+            <para>
+              <text>b) Utilise a range of methods to protect the natural environment and its ecosystem services that prioritise non-regulatory support (such as community and landowner enhancement projects) but also include rules where appropriate.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13743">
+            <para>
+              <text>c) Identify areas where coordinated investments are desirable to restore resilience or ecosystem services that will deliver social or economic benefits, including degraded ecosystems, catchments or wetlands.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13744">
+            <para>
+              <text>d) Recognise where ecosystem services can mitigate effects and risks and enable nature-based solutions in urban and rural areas [eg, wetlands to mitigate flooding, absorb contaminants and provide for recreation]</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13746">
+        <para>
+          <text>PV-Directive 1.2: Land use plans and Natural environment plans must enable the construction, operation, maintenance and renewal of constructed wetlands used primarily for contaminant treatment, stormwater management, wastewater treatment, sediment retention, nutrient attenuation or other water management purposes [in accordance with national standards].</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13748">
+        <heading>PV-Directive 1.3: To protect human health and support the resilience of communities, Natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13749">
+            <para>
+              <text>a) Ensure human health limits are met.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13750">
+            <para>
+              <text>b) Proactively manage land use (including contaminant pathways) and activities that generate, discharge or transport contaminants:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13751">
+                <para>
+                  <text>i) In a manner proportionate to the level of risk posed to human health identified in a health impact assessment.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13752">
+                <para>
+                  <text>ii) Include reverse sensitivity considerations to manage exposure risk.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13753">
+            <para>
+              <text>c) Protect air quality while taking into consideration home heating needs.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13754">
+            <para>
+              <text>d) Manage legacy effects from past contamination, including groundwater and soil contamination where this creates a hazard to human health.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13756">
+        <heading>PV-Directive 1.4: To protect drinking water sources from contamination, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13757">
+            <para>
+              <text>a) Identify and map source water risk management areas for every registered drinking water supply serving over 100 people in a region.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13758">
+            <para>
+              <text>b) Control discharges and other activities as needed to support compliance with drinking water standards after treatment.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13760">
+        <heading>PV-Directive 1.5: To support and enable the enhancement of the natural environment, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13761">
+            <para>
+              <text>a) Identify and prioritise opportunities to enhance ecosystem health, resilience and ecosystem services.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13762">
+            <para>
+              <text>b) Utilise a range of regulatory and non-regulatory methods to support environmental enhancement, including incentives, stewardship programmes and community-led projects.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13763">
+            <para>
+              <text>c) Support nature-based solutions and projects that deliver environmental co-benefits.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13765">
+        <para>
+          <text>PV-Directive 1.6: To support the development and implementation of the natural environment plan provisions and biodiversity strategy, councils should identify sites and opportunities that are suitable candidates for restoration and enhancement of the environment, including sites suitable for offsetting and compensation.</text>
+        </para>
+        <prov.body />
+      </prov>
+      <prov id="npd-13767">
+        <heading>PV-Directive 1.7: To enable the use and development of natural resources, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-13768">
+            <para>
+              <text>a) Provide for essential human health needs such as community drinking water supply.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13769">
+            <para>
+              <text>b) Ensure the use and development of natural resources does not unreasonably affect others, including existing resource users and receiving environments.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13770">
+            <para>
+              <text>c) Recognise that some activities have a functional or operational need to locate in natural environments, including freshwater, the coastal environment, and their adjacent margins.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.1">
+        <heading>PV-Directive 2.1: To protect significant indigenous biodiversity and safeguard the life-supporting capacity of ecosystems, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.1-para-a">
+            <para>
+              <text>a) identify and map terrestrial indigenous biodiversity using a nationally consistent approach to set a baseline for establishing environmental limits and to assess whether the limit is met over time</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.1-para-b">
+            <para>
+              <text>b) categorise identified indigenous biodiversity into ‘tiers’ that reflect ecological value and vulnerability, and which support proportionate protection, management and use, in accordance with national standards as follows:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-pdf-pv-directive-2.1-para-b-i">
+                <para>
+                  <text>i) tier 1 – the most significant (valuable or vulnerable) indigenous biodiversity, includes areas that are intact, irreplaceable, or vulnerable, where adverse effects should be avoided or stringently managed if use and development is enabled</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-pv-directive-2.1-para-b-ii">
+                <para>
+                  <text>ii) tier 2 – areas of valued indigenous biodiversity where some use and development can occur provided the management of effects is undertaken including offsetting and compensation</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-pv-directive-2.1-para-b-iii">
+                <para>
+                  <text>iii) tier 3 – areas where use and development are enabled with full flexibility to manage effects as appropriate.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.2">
+        <heading>PV-Directive 2.2: Regional councils must ensure that environmental limits are set for indigenous biodiversity in accordance with national standards.</heading>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.3">
+        <heading>PV-Directive 2.3: To enable the use and development of land and natural resources while achieving protection of significant indigenous biodiversity and safeguarding life-supporting capacity of ecosystems, natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.3-para-a">
+            <para>
+              <text>a) manage effects using the relevant framework set out in national standards</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.3-para-b">
+            <para>
+              <text>b) recognise the benefits that indigenous biodiversity provides for people and the economy, for tourism, forestry, farming, infrastructure, aquaculture and fisheries</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.3-para-c">
+            <para>
+              <text>c) apply an adaptive management approach where impacts on indigenous biodiversity are likely and its value is yet to be assessed.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.4">
+        <heading>PV-Directive 2.4: Protection of significant indigenous biodiversity, and safeguarding the life-supporting capacity of ecosystems will be achieved through:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.4-para-a">
+            <para>
+              <text>a) providing a range of regulatory and non-regulatory mechanisms, including measures such as covenants, incentives or voluntary biodiversity credits</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.4-para-b">
+            <para>
+              <text>b) applying proportionate controls on private and public land, with a higher standard for imposing controls on private land, and in line with the categorisation tier</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.4-para-c">
+            <para>
+              <text>c) encouraging use and development where it is complementary to or enhances indigenous biodiversity and ecosystems, eg, natural infrastructure or nature-based solutions.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.5">
+        <heading>PV-Directive 2.5: Regional councils must develop a regional biodiversity strategy that protects significant indigenous biodiversity, including through identifying and prioritising opportunities to:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.5-para-a">
+            <para>
+              <text>a) support landowner and community stewardship, eg, Queen Elizabeth II National Trust covenants</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.5-para-b">
+            <para>
+              <text>b) recognise the interaction between habitats, species and ecosystems, and the importance of spatial connections, ecosystem function and integrity</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.5-para-c">
+            <para>
+              <text>c) coordinate management of indigenous biodiversity across administrative boundaries.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.6">
+        <heading>PV-Directive 2.6: To support and enable the enhancement of the natural environment, natural environment plans and regional biodiversity strategies must identify and prioritise opportunities that:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.6-para-a">
+            <para>
+              <text>a) maintain, enhance and restore indigenous biodiversity and ecosystems</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.6-para-b">
+            <para>
+              <text>b) improve ecosystem resilience and adaptive capacity</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.6-para-c">
+            <para>
+              <text>c) support nature-based solutions and projects that deliver indigenous biodiversity co-benefits.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-2.7">
+        <heading>PV-Directive 2.7: In accordance with national standards, councils must work in partnership with tangata whenua and owners of identified Māori land to develop provisions in natural environment plans that:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-2.7-para-a">
+            <para>
+              <text>a) maintain and enhance indigenous biodiversity on identified Māori land</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.7-para-b">
+            <para>
+              <text>b) enable the use and development of identified Māori land to support social, cultural and economic outcomes, using the effects management framework to address impacts on indigenous biodiversity</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-2.7-para-c">
+            <para>
+              <text>c) encourage and support the maintenance, enhancement and restoration of indigenous biodiversity on identified Māori land where practicable, including through incentives. (not part of NPD) • Specify a methodology for setting biodiversit • Indigenous biodiversity standard that applies environments that: • sets criteria and methodologies to identify biodiversity in a tiered system based on e • provides regulatory and non-regulatory to framework and adaptive management, to effects, including enhancement • directs how regional biodiversity strategie including supporting enhancement and ac management with the community and acr • Provide a regulated offsetting and compensa including a consistent accounting methodolo • Regulatory relief standards (or regulations) th for providing relief where provisions protectin areas significantly constrain the reasonable u hrough national standards ty ecosystem health limits. s across land, freshwater and coastal y, categorise, protect and manage indigenous ecological significance ools, including a consistent effects management enable appropriate development and manage es will identify and prioritise biodiversity actions, ction plans and co-ordinating biodiversity ross administrative boundaries. ation framework for indigenous biodiversity ogy. hat provide a nationally consistent framework ng terrestrial indigenous biodiversity in identified use of land. and the coastal marine Rivers, lakes, the coast and their margins, are important public spaces for a range of activities including recreation, conservation, cultural connection, and food gathering. Access to these areas should be protected, maintained and, if appropriate, enhanced.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-3.1">
+        <heading>PV-Directive 3.1: To protect and maintain existing public access to and along rivers, lakes and the coastal marine area, land use plans and natural environment plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-3.1-para-a">
+            <para>
+              <text>a) avoid or minimise the loss of existing public access</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.1-para-b">
+            <para>
+              <text>b) maintain public access where practicable if access is affected by natural processes, including climate change and natural hazards ccess to lakes, rivers e area</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.1-para-c">
+            <para>
+              <text>c) integrate planning for public access with planning for natural hazard resilience and infrastructure, to achieve efficient outcomes</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.1-para-d">
+            <para>
+              <text>d) identify areas where recreational vehicular use on beaches, the foreshore and seabed may be permitted, with or without restriction</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.1-para-e">
+            <para>
+              <text>e) ensure public access is located on:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-pdf-pv-directive-3.1-para-e-i">
+                <para>
+                  <text>i) public land; or</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-pv-directive-3.1-para-e-ii">
+                <para>
+                  <text>ii) privately owned land where access is protected by a legal instrument.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-3.2">
+        <heading>PV-Directive 3.2: To enhance public access to and along rivers, lakes and the coastal marine area, land use plans and natural environment plans must consider opportunities to:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-3.2-para-a">
+            <para>
+              <text>a) provide new or improved connections between public areas and for the creation of well-functioning urban and rural areas</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.2-para-b">
+            <para>
+              <text>b) improve open space and recreation opportunities</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.2-para-c">
+            <para>
+              <text>c) provide access to valued natural environment areas and significant historic heritage</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.2-para-d">
+            <para>
+              <text>d) provide access to sites of significance to Māori, where agreed with relevant [iwi authorities/tangata whenua].</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-3.3">
+        <heading>PV-Directive 3.3: To maintain public access to and along rivers, lakes and the coastal marine area, land use plans and natural environment plans must restrict public access only where it is necessary to:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-3.3-para-a">
+            <para>
+              <text>a) protect public health or safety</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.3-para-b">
+            <para>
+              <text>b) protect identified areas of indigenous biodiversity</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.3-para-c">
+            <para>
+              <text>c) protect identified areas of high natural character, outstanding natural landscapes and features, significant historic heritage, or sites of significance to Māori</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.3-para-d">
+            <para>
+              <text>d) be consistent with the terms of Treaty settlement redress or other customary arrangements, including under other legislation</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.3-para-e">
+            <para>
+              <text>e) safeguard communities from the effects of natural hazards</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.3-para-f">
+            <para>
+              <text>f) provide for infrastructure with an operational need or functional need to be in the location. (not part of NPD) • requirements for maintaining, enhancing and lakes and the coastal marine area • providing for public access while appropriate cultural and private property interests.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-3.4">
+        <heading>PV-Directive 3.4: To ensure public access respects private property rights, land use plans and natural environment plans must only provide for public access across private land where:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-3.4-para-a">
+            <para>
+              <text>a) the landowner has agreed to that access</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-3.4-para-b">
+            <para>
+              <text>b) access is authorised under legislation or another lawful arrangement. and resolve conflicts Planning decisions are expected to enhance and maintain public access to lakes, rivers and the coastal marine area. Conflicts can arise where public access may affect private property rights. This is addressed by the directives in this section. hrough national standards d managing public access to and along rivers, ely managing public safety, environmental, outstanding natural fe Areas of high natural character within the coastal environment, wetlands, lakes and rivers, and their margins, and outstanding natural features and landscapes, provide important public values to New Zealand.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-4.1">
+        <heading>PV-Directive 4.1: To identify the values and characteristics of areas of high natural character within the coastal environment, wetlands, lakes and rivers and their margins and outstanding natural features and landscapes, land use plans must use the criteria and methods set out in national standards.</heading>
+      </prov>
+      <prov id="npd-pdf-pv-directive-4.2">
+        <heading>PV-Directive 4.2: To protect identified areas of high natural character and outstanding natural features and landscapes from inappropriate development, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-4.2-para-a">
+            <para>
+              <text>a) enable use and development where adverse effects on the identified values (not part of NPD) • National standards for identifying high natura features and landscapes that: • contain nationally consistent methodolog • set out requirements for identifying these and characteristics in land use plans. • Standardised plan provisions for land use pla • apply consistent rules and standards to e areas, landscapes and features – [eg, per use of existing land uses, recreational act • apply a consistent approach to manage ef • include rules to restrict and avoid inappro • Regulatory relief standards (or regulations) th providing relief where protections for high na and landscapes significantly constrain the re and characteristics are managed to acceptable levels [in accordance with national standards]</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-4.2-para-b">
+            <para>
+              <text>b) avoid inappropriate development that will result in the irreversible loss of, or significant residual adverse effects on, the identified values and characteristics. and resolve conflicts development, which includes direction for managing conflicts between urban development and high natural character and outstanding natural features and landscapes. includes direction for managing conflicts between infrastructure and high natural character and outstanding natural features and landscapes. hrough national standards al character areas and outstanding natural gies, criteria and thresholds e areas, features and landscapes and their values ans that: enable appropriate development within identified rmitted activity rules for restoration, reasonable tivities, existing infrastructure etc] ffects on identified values and characteristics opriate development. hat provide a nationally consistent framework for atural character and outstanding natural features easonable use of land.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-5.1">
+        <heading>PV-Directive 5.1: To identify the values and characteristics of significant historic heritage, local authorities must use criteria, thresholds and methods in national standards.</heading>
+      </prov>
+      <prov id="npd-pdf-pv-directive-5.2">
+        <heading>PV-Directive 5.2: To protect significant historic heritage from inappropriate use and development, land use plans must:</heading>
+        <prov.body>
+          <subprov id="npd-pdf-pv-directive-5.2-para-a">
+            <para>
+              <text>a) recognise the benefits of significant historic heritage and provide for the ongoing viability of these places</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-5.2-para-b">
+            <para>
+              <text>b) enable appropriate use and development of significant historic heritage where adverse effects on identified values and characteristics can be managed to acceptable levels</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-5.2-para-c">
+            <para>
+              <text>c) manage use and development (not provided for by 5.2 a) and b)) as directed by national standards</text>
+            </para>
+          </subprov>
+          <subprov id="npd-pdf-pv-directive-5.2-para-d">
+            <para>
+              <text>d) for buildings and structures identified as significant historic heritage, enable:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-pdf-pv-directive-5.2-para-d-i">
+                <para>
+                  <text>i) maintenance, repair and seismic strengthening</text>
+                </para>
+              </subprov>
+              <subprov id="npd-pdf-pv-directive-5.2-para-d-ii">
+                <para>
+                  <text>ii) additions, alterations and use that support long-term viability. Sites of significance to Māori and significant historic heritage</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-pdf-pv-directive-5.3">
+        <heading>PV-Directive 5.3: To manage any overlap, inconsistency or conflict between provisions applying to a place identified as both a site of significance to Māori and significant historic heritage, land use plans must prioritise protection of the site’s significance to Māori. (not part of NPD) • National standards for identifying significant • contain nationally consistent methodolog • include information requirements and req iwi/Māori • set out requirements for identifying signif characteristics in land use plans. • Standardised plan provisions for land use pla • apply consistent rules and standards to e • include provisions for protecting identified managing effects on identified values and • National standards (or regulations) for regula framework for providing relief where significa land use. hrough national standards historic heritage that: gies, criteria and thresholds quirements for involvement of owners and ficant historic heritage and their values and ans that: enable appropriate use and development d significant historic heritage, including d characteristics.</heading>
+      </prov>
+      <prov id="npd-pdf-pv-directive-6.1">
+        <heading>PV-Directive 6.1: To recognise that the resilience of activities that improve public values is achieved through asset management, design, investment planning, and other risk management measures, land use plans must not restrict such activities solely because they are exposed to natural hazard risk.</heading>
+      </prov>
+      <prov id="npd-pdf-pv-directive-6.2">
+        <heading>PV-Directive 6.2: To improve resilience to natural hazards, land use plans and natural environment plans must recognise and provide for the role of natural features, ecosystems, and nature-based solutions in avoiding, reducing, or mitigating natural hazard risks, including where they deliver wider environmental, social, cultural, or economic benefits.</heading>
+      </prov>
+    </part>
+    <part id="npd-part-13575" toc="yes">
+      <heading>Interpretation</heading>
+      <prov id="npd-13576">
+        <heading>Ancillary infrastructure activities mean an activity that supports and is subsidiary to an infrastructure activity, including but not limited to:</heading>
+        <prov.body>
+          <subprov id="npd-13577">
+            <para>
+              <text>a) vegetation clearance and tree trimming;</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13578">
+            <para>
+              <text>b) earthworks and land disturbance;</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13579">
+            <para>
+              <text>c) construction, maintenance, repair and upgrading of access tracks, bridges and culverts; and</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13580">
+            <para>
+              <text>d) power supply and telecommunications.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13582">
+        <para>
+          <text>Aquaculture Settlement Area is space in the coastal marine area declared in a Gazette notice under section 12 to be an aquaculture settlement area, in accordance with the Māori Commercial Aquaculture Claims Settlement Act 2004.</text>
+        </para>
+      </prov>
+      <prov id="npd-13584">
+        <para>
+          <text>Competitive urban land market is a market in which there is an abundant supply of developable land suitable for different uses such that land prices do not materially and persistently reflect premiums caused by constraints on land use.</text>
+        </para>
+      </prov>
+      <prov id="npd-13586">
+        <heading>Contaminated land (Planning Bill) means land that has a hazardous substance in or on it that:</heading>
+        <prov.body>
+          <subprov id="npd-13587">
+            <para>
+              <text>a) Has significant adverse effects on the built environment, including human health; or</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13588">
+            <para>
+              <text>b) Is reasonably likely to have significant adverse effects on the built environment, including human health.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13590">
+        <heading>Contaminated land (Natural Environment Bill) means land that has a hazardous substance in or on it that:</heading>
+        <prov.body>
+          <subprov id="npd-13591">
+            <para>
+              <text>a) Has significant adverse effects on natural resources, including human health; or</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13592">
+            <para>
+              <text>b) Is reasonably likely to have significant adverse effects on natural resources, or people, including human health.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13594">
+        <para>
+          <text>Constructed wetland means a wetland that has been designed and constructed to mimic the functions of a wetland where there is no existing wetland. For the purposes of this document, it does not include wetlands established primarily for ecological restoration, biodiversity enhancement, mitigation, offsetting, compensation or replacement of natural wetland values.</text>
+        </para>
+      </prov>
+      <prov id="npd-13596">
+        <heading>Disposal facility means:</heading>
+        <prov.body>
+          <subprov id="npd-13597">
+            <para>
+              <text>(1)</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13598">
+                <para>
+                  <text>a) A facility, including a landfill:</text>
+                </para>
+                <prov.body>
+                  <subprov id="npd-13599">
+                    <para>
+                      <text>i) at which waste is disposed of; and</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-13600">
+                    <para>
+                      <text>ii) at which the waste disposed of includes household waste; and</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-13601">
+                    <para>
+                      <text>iii) that operates, at least in part, as a business to dispose of waste; and</text>
+                    </para>
+                  </subprov>
+                </prov.body>
+              </subprov>
+              <subprov id="npd-13602">
+                <para>
+                  <text>b) Any other facility or class of facility at which waste is disposed of that is prescribed as a disposal facility.</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13603">
+            <label denominator="yes">2</label>
+            <para>
+              <text>In subsection (1)(a)(ii), household waste means waste from a household that is not entirely from construction, renovation, or demolition of the house.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13605">
+        <heading>Emergency waste means—</heading>
+        <prov.body>
+          <subprov id="npd-13606">
+            <para>
+              <text>a) Waste that has been caused by an emergency; or</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13607">
+            <para>
+              <text>b) Anything identified as emergency waste by notice made under section 38A of the Waste Minimisation Act 2008.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13609">
+        <para>
+          <text>High value growing areas: a definition will be developed after the non-statutory engagement. The intent of high value growing areas is to recognise that the definition of highly productive land in the National Policy Statement for Highly Productive Land is predominately based on Land Use Capability classifications and does not take into account the regional or national significance of the area for growing food and other important factors, such as water availability, climate, existing production patterns and supporting infrastructure. The proposed approach allows consideration of such factors, and the contribution of a high value growing area to domestic food supply and economic growth when identifying land to be prioritised for urban development or land-based primary production.</text>
+        </para>
+      </prov>
+      <prov id="npd-13611">
+        <para>
+          <text>Historic heritage as defined in the Planning Bill.</text>
+        </para>
+      </prov>
+      <prov id="npd-13613">
+        <heading>Infrastructure means:</heading>
+        <prov.body>
+          <subprov id="npd-13614">
+            <para>
+              <text>a) Facilities used to process (including to refine) or store, and pipelines that distribute or transmit, natural or manufactured gas, petroleum, biofuel, or geothermal energy.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13615">
+            <para>
+              <text>b) Facilities used to generate electricity for supply, excluding any facility that a person uses primarily to generate electricity for their own use.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13616">
+            <para>
+              <text>c) Lines (and any associated facilities, including support structures for those lines) used or intended to be used to convey electricity, excluding any lines or associated facilities that a person uses primarily in connection with a facility to generate electricity for their own use.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13617">
+            <para>
+              <text>d) Facilities used to store electricity or other energy.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13618">
+            <para>
+              <text>e) An aerodrome as defined in section 5 of the Civil Aviation Act 2023.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13619">
+            <para>
+              <text>f) A navigation installation as defined in section 5 of the Civil Aviation Act 2023.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13620">
+            <para>
+              <text>g) Facilities for the loading or unloading of cargo or passengers carried by sea, including a port related commercial undertaking as defined in section 2(1) of the Port Companies Act 1988, and Northport (being the port at Marsden Point).</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13621">
+            <para>
+              <text>h) A relevant school or an institution as defined in section 10 of the Education and Training Act 2020.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13622">
+            <para>
+              <text>i) An early childhood education and care centre as defined in section 10 of the Education and Training Act 2020, that is associated with and collocated with a relevant school or an institution.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13623">
+            <para>
+              <text>j) Facilities for an emergency service (such as an ambulance or a fire service).</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13624">
+            <para>
+              <text>k) Defence facilities operated by the New Zealand Defence Force to meet its obligations under the Defence Act 1990.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13625">
+            <para>
+              <text>l) A corrections prison as defined in section 3(1) of the Corrections Act 2004, and correction facilities operated by the Department of Corrections to meet its obligations under the Corrections Act 2004.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13626">
+            <para>
+              <text>m) Resource recovery facilities or waste disposal facilities, including emergency facilities and privately operated facilities that are open to the public.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13627">
+            <para>
+              <text>n) A network for the purpose of telecommunication as defined in section 5 of the Telecommunications Act 2001.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13628">
+            <para>
+              <text>o) a network for the purpose of radio-communication as defined in section 2(1) of the Radiocommunications Act 1989</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13629">
+            <para>
+              <text>p) the distribution, or storage and distribution, of water for the purpose of supply (including for the purpose of irrigation)</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13630">
+            <para>
+              <text>q) A drainage or sewerage system, including a stormwater network.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13631">
+            <para>
+              <text>r) A road, railway line, cycleway, walkway, or similar facility (such as light rail, a busway, or a shared-use path).</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13632">
+            <para>
+              <text>s) A health facility operated by Health New Zealand to meet its obligations under the Pae Ora (Healthy Futures) Act 2022.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13633">
+            <para>
+              <text>t) flood control and protection work carried out by, or on behalf, of a local authority.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13635">
+        <para>
+          <text>‘Lawfully established’ activity is one that was established in accordance with the law or the planning rules that applied at the time. This is a well-established legal concept, and generally means the activity continues to operate with the same or similar effects as when it was established.</text>
+        </para>
+      </prov>
+      <prov id="npd-13637">
+        <para>
+          <text>Mineral means a naturally occurring inorganic substance beneath or at the surface of the earth, whether or not under water; and includes all metallic minerals, non-metallic minerals, fuel minerals, precious stones, industrial rocks and building stones, and a prescribed substance within the meaning of the Atomic Energy Act 1945.</text>
+        </para>
+      </prov>
+      <prov id="npd-13639">
+        <para>
+          <text>Operational envelope means the horizontal and vertical space occupied by the physical infrastructure along with the surrounding area necessary to undertake routine operation and maintenance activities, ancillary infrastructure activities and associated access, including previously disturbed areas.</text>
+        </para>
+      </prov>
+      <prov id="npd-13641">
+        <heading>Primary production means:</heading>
+        <prov.body>
+          <subprov id="npd-13642">
+            <para>
+              <text>a) any aquaculture, agricultural, pastoral, horticultural, mining, quarrying or forestry activities; and</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13643">
+            <para>
+              <text>b) includes initial processing, as an ancillary activity, of commodities that result from the listed activities in a);</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13644">
+            <para>
+              <text>c) includes any land and buildings used for the production of the commodities from a) and used for the initial processing of the commodities in b); but</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13645">
+            <para>
+              <text>d) excludes further processing of those commodities into a different product.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13647">
+        <para>
+          <text>Quarry means a location or area used for the permanent removal and extraction of aggregates (clay, silt, rock or sand). It includes the area of aggregate resource and surrounding land associated with the operation of a quarry and which is used for quarrying activities.</text>
+        </para>
+      </prov>
+      <prov id="npd-13649">
+        <para>
+          <text>Quarrying activities means the extraction, processing (including crushing, screening, washing, and blending), transport, storage, sale and recycling of aggregates (clay, silt, rock, sand), the deposition of overburden material, rehabilitation, landscaping and clean filling of the quarry, and the use of land and accessory buildings for offices, workshops and car parking areas associated with the operation of the quarry.</text>
+        </para>
+      </prov>
+      <prov id="npd-13651">
+        <para>
+          <text>Renewable energy means energy produced from solar, wind, hydro, geothermal, biomass, tidal, wave and ocean current sources [from RMA].</text>
+        </para>
+      </prov>
+      <prov id="npd-13653">
+        <para>
+          <text>Renewable energy system means the infrastructure networks and sites necessary for the generation, transmission, distribution and storage of renewable energy.</text>
+        </para>
+      </prov>
+      <prov id="npd-13655">
+        <heading>Resource recovery facility —</heading>
+        <prov.body>
+          <subprov id="npd-13656">
+            <para>
+              <text>a) means a facility that:</text>
+            </para>
+            <prov.body>
+              <subprov id="npd-13657">
+                <para>
+                  <text>i) Collects, sorts, or processes material, or extracts materials or energy from material (or carries out any combination of those activities), for the purpose of recovering components for recycling or reuse.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13658">
+                <para>
+                  <text>ii) Is not a disposal facility.</text>
+                </para>
+              </subprov>
+              <subprov id="npd-13659">
+                <para>
+                  <text>iii) Does not incinerate waste (with or without energy recovery).</text>
+                </para>
+              </subprov>
+            </prov.body>
+          </subprov>
+          <subprov id="npd-13660">
+            <para>
+              <text>b) includes a facility that is focused on a single waste stream, for example, a construction and demolition resource recovery facility, or a large-scale composting operations and materials recovery facility.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13662">
+        <para>
+          <text>Reverse sensitivity means the potential for an existing land use to be constrained by a new, or more intensive, sensitive activity and is location and context dependent.</text>
+        </para>
+      </prov>
+      <prov id="npd-13664">
+        <heading>Well-functioning urban area means an urban area that:</heading>
+        <prov.body>
+          <subprov id="npd-13665">
+            <para>
+              <text>a) enables a range of homes that meet demand and needs of different households and provide choices for households in terms of type and location of homes</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13666">
+            <para>
+              <text>b) Has good accessibility for people between:</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13667">
+            <para>
+              <text>i) Housing, workplaces, commercial and community services, natural spaces and open spaces, including by public and active transport.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13668">
+            <para>
+              <text>ii) Housing and local commercial and community services by walking.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13669">
+            <para>
+              <text>c) Enables efficient use of public and private investments.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13670">
+            <para>
+              <text>d) Enables a variety of sites that are suitable for different business sectors in terms of location and size.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+      <prov id="npd-13672">
+        <heading>Well-functioning rural area means a rural area that:</heading>
+        <prov.body>
+          <subprov id="npd-13673">
+            <para>
+              <text>a) Provides opportunities for a range of housing types in different locations, including where required to support rural businesses.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13674">
+            <para>
+              <text>b) Provides rural communities with reliable access to workplaces, services and recreation.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13675">
+            <para>
+              <text>c) Enables efficient use of public and private investments.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13676">
+            <para>
+              <text>d) Enables efficient movement of people and goods.</text>
+            </para>
+          </subprov>
+          <subprov id="npd-13677">
+            <para>
+              <text>e) Supports a range of rural land uses and compatible activities.</text>
+            </para>
+          </subprov>
+        </prov.body>
+      </prov>
+    </part>
+  </body>
+</act>

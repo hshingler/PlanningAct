@@ -38,6 +38,6 @@ Push the XML files, ontology JSON, build script, renderer, brand assets, and wor
 
 ## Scope and source fidelity
 
-The XML build supports the site's existing navigation, search, provision pages, cross-references, Act views, comparison layout, and split-screen reader. Complex legal markup such as tables and editorial notes may need more renderer work. Actor and instrument pages depend on ontology records being added. The current ontology sample and National Policy Direction contents entry are demonstrations/placeholders, not substantive source content.
+The XML build supports the site's existing navigation, search, provision pages, cross-references, Act views, comparison layout, and split-screen reader. Complex legal markup such as tables and editorial notes may need more renderer work. Actor and instrument pages depend on ontology records being added. The ontology sample remains a demonstration; the Illustrative National Policy Direction contents page is generated from its XML source.
 
 This site is a navigation and knowledge tool. Check statutory wording, amendments, commencement, and legal context against the official legislation.
