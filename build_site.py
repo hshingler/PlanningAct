@@ -261,13 +261,10 @@ def render_comparison_block(eid, desired, page_default='shared', inherited=None,
     relevant=(own==desired) or bool(child_html)
     if not relevant: return ''
     uid=b['uuid'] or f'id-{eid}'
-    labels=tag_titles(b['tags'])
-    tag_html=''.join(f'<span class="tag">{html.escape(str(t))}</span>' for t in labels if t)
-    tags_html=f'<div class="tags">{tag_html}</div>' if tag_html else ''
     context_class=' comparison-context' if own not in (desired,'shared') else ''
     toggle='<button class="block-toggle" type="button" aria-expanded="true" aria-label="Collapse block" title="Collapse/expand block">−</button>' if child_html else ''
     kids=f'<ul class="block-children">{child_html}</ul>' if child_html else ''
-    return f'<li class="block-item{context_class}" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{render_legal_text(b["title"])}</div>{tags_html}{kids}</li>'
+    return f'<li class="block-item{context_class}" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{render_legal_text(b["title"])}</div>{kids}</li>'
 
 def comparison_section(page_id):
     page_default=page_act(pages[page_id])
@@ -295,13 +292,11 @@ def comparison_section(page_id):
 def render_block(eid,seen,prefix=''):
     if eid in seen or eid not in block_info: return ''
     seen.add(eid); b=block_info[eid]; uid=b['uuid'] or f'id-{eid}'
-    title_html=render_legal_text(b['title'],prefix); labels=tag_titles(b['tags'])
-    tag_html=''.join(f'<span class="tag">{html.escape(str(t))}</span>' for t in labels if t)
+    title_html=render_legal_text(b['title'],prefix)
     child_ids=children.get(eid,[]); kids=''.join(render_block(k,seen,prefix) for k in child_ids)
     toggle='<button class="block-toggle" type="button" aria-expanded="true" aria-label="Collapse block" title="Collapse/expand block">−</button>' if child_ids else ''
     child_html=f'<ul class="block-children">{kids}</ul>' if child_ids else ''
-    tags_html=f'<div class="tags">{tag_html}</div>' if tag_html else ''
-    return f'<li class="block-item" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{title_html}</div>{tags_html}{child_html}</li>'
+    return f'<li class="block-item" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{title_html}</div>{child_html}</li>'
 
 if out.exists(): shutil.rmtree(out)
 (out/'pages').mkdir(parents=True, exist_ok=True); (out/'assets').mkdir(parents=True, exist_ok=True)
