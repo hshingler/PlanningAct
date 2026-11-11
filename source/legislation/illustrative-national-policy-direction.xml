@@ -93,18 +93,19 @@
                 <para>
                   <text>b) Land use plans and natural environment plans must:</text>
                 </para>
-              </subprov>
-                <subprov id="npd-13791">
-                 <para>
-                    <text>i) enable the owners of identified Māori land to use and develop that land to support Māori cultural, social, environmental or economic aspirations, including for papakāinga, infrastructure and renewable energy, primary production, housing, and commercial activities</text>
-                </para>
-                </subprov>
-                  <subprov id="npd-13792">
+                <prov.body>
+                  <subprov id="npd-pdf-sw-directive-1.4-para-b-i">
+                    <para>
+                      <text>i) enable the owners of identified Māori land to use and develop that land to support Māori cultural, social, environmental or economic aspirations, including for papakāinga, infrastructure and renewable energy, primary production, housing, and commercial activities</text>
+                    </para>
+                  </subprov>
+                  <subprov id="npd-pdf-sw-directive-1.4-para-b-ii">
                     <para>
                       <text>ii) not unreasonably constrain current and future use and development opportunities.</text>
                     </para>
                   </subprov>
-              </subprov>  
+                </prov.body>
+              </subprov>
             </prov.body>
           </subprov>
         </prov.body>
@@ -187,7 +188,7 @@
         </prov.body>
       </prov>
       <prov id="npd-pdf-sw-directive-1.6">
-        <heading>SW-Directive 1.6: Where other directives enable use, development, or other activities, identified Māori land and sites of significance to Māori must be provided for in accordance with SW-Directive 1.3(b)(ii) and 1.5(b). (not part of NPD) • Spatial planning standards that: • direct spatial plan content for identifying M • Standards for sites of significance to Māori th • provide a methodology and criteria for ide as relates to spatial plans) • direct how adverse effects on sites of sign • Standards for identified Māori land that: • specify how Māori land is to be identified • direct how adverse effects on identified M • Māori participation standard that specifies re regional spatial plans and plan making.</heading>
+        <heading>SW-Directive 1.6: Where other directives enable use, development, or other activities, identified Māori land and sites of significance to Māori must be provided for in accordance with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13411" toc="yes">
