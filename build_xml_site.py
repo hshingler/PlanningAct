@@ -219,10 +219,21 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
             uid = stable_uuid("xml:" + xmlid)
             id_to_uuid[xmlid] = uid
     # Allocate page entities in a second pass; resolve exact legal IDs thereafter.
+    parents = {child: parent for act in acts for parent in act["root"].iter() for child in parent}
     for refkey, item in by_key.items():
         act, prov, title, xmlid = item["act"], item["prov"], item["title"], item["xmlid"]
         extra_tags = ontology.get("provisions", {}).get(refkey, {}).get("tags", [])
         tags = [] if item.get("theme") else [act["tag"], "Provision", *extra_tags]
+        if not item.get("theme"):
+            hierarchy = []
+            node = parents.get(prov)
+            while node is not None:
+                if node.tag in {"part", "subpart"}:
+                    label = clean(node.findtext("label", ""))
+                    if label:
+                        hierarchy.append(f"context:{node.tag.title()} {label}")
+                node = parents.get(node)
+            tags.extend(reversed(hierarchy))
         page = graph.page(title, ("npd-theme:" if item.get("theme") else "provision:") + xmlid,
                           tags, uid=id_to_uuid[xmlid])
         item["page"] = page
@@ -239,11 +250,11 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
         page_tags = []
         if act["key"] != "illustrative-national-policy-direction":
             as_at = act["root"].get("date.as.at")
-            version = f"Public Act {act['root'].get('year')} No {act['root'].get('act.no')}"
+            version = ""
             if as_at:
                 date = datetime.strptime(as_at, "%Y-%m-%d")
-                version += f" · version as at {date.strftime('%d %B %Y').lstrip('0')}"
-            page_tags = [act["tag"], version]
+                version = f"version as at {date.strftime('%d %B %Y').lstrip('0')}"
+            page_tags = [act["tag"], *([version] if version else [])]
         page = graph.page(page_title, "contents:" + act["key"], page_tags)
         contents_by_act[act["key"]] = page
         home = page

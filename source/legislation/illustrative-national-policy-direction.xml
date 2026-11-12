@@ -384,7 +384,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13455" toc="yes">
-      <heading>Housing and Development</heading>
+      <heading>Housing and Development Directives</heading>
       <prov id="npd-theme-competitive-urban-land-markets">
         <heading>Competitive urban land markets</heading>
         <prov.body>
@@ -671,7 +671,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13517" toc="yes">
-      <heading>Infrastructure</heading>
+      <heading>Infrastructure Directives</heading>
       <prov id="npd-theme-all-infrastructure">
         <heading>All infrastructure</heading>
         <prov.body>
@@ -918,7 +918,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13680" toc="yes">
-      <heading>Primary production and the rural economy</heading>
+      <heading>Primary production and the rural economy Directives</heading>
       <prov id="npd-theme-agriculture">
         <heading>Agriculture</heading>
         <prov.body>
@@ -1317,7 +1317,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13713" toc="yes">
-      <heading>Resources - Quarrying, Mining and Waste</heading>
+      <heading>Resources - Quarrying, Mining and Waste Directives</heading>
       <prov id="npd-theme-quarrying-mining">
         <heading>Quarrying and mining</heading>
         <prov.body>
@@ -1623,7 +1623,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13739" toc="yes">
-      <heading>Public Values</heading>
+      <heading>Public Values Directives</heading>
       <prov id="npd-theme-environmental-human-health">
         <heading>Environmental and human health</heading>
         <prov.body>
@@ -2104,7 +2104,7 @@ with SW-Directive 1.3(b)(ii) and 1.5(b).</heading>
       </prov>
     </part>
     <part id="npd-part-13575" toc="yes">
-      <heading>Interpretation</heading>
+      <heading>Interpretation iNPD</heading>
       <prov id="npd-13576">
         <heading>Ancillary infrastructure activities mean an activity that supports and is subsidiary to an infrastructure activity, including but not limited to:</heading>
         <prov.body>
