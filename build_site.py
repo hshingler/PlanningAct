@@ -436,7 +436,8 @@ part_pages=[p for p in pages.values() if re.match(r'^(part|subpart)\s+[0-9ivxlcd
 def nav_href(p,from_root=False): return ('../' if from_root else '')+'pages/'+p['slug']+'.html'
 def sidebar_html(from_root=False):
     prefix='../' if from_root else ''
-    nea_href=prefix+'index.html?view=nea'
+    planning_contents_href=prefix+'pages/planning-act-2026-contents.html'
+    nea_contents_href=prefix+'pages/natural-environment-act-2026-contents.html'
     provision_items=sorted(provision_pages,key=lambda p:statutory_sort_key(p['title']))
     groups=collections.OrderedDict()
     for p in provision_items:
@@ -447,7 +448,7 @@ def sidebar_html(from_root=False):
     tree=[]
     for label,items in groups.items():
         tree.append('<li><details><summary>'+html.escape(label)+' ('+str(len(items))+')</summary><ul class="side-tree">'+''.join('<li><a href="'+nav_href(p,from_root)+'">'+html.escape(p['title'])+'</a></li>' for p in items)+'</ul></details></li>')
-    return f'''<aside class="panel sidebar"><a class="sidebar-home" href="{prefix}index.html">Home</a><section class="side-section fixed-nav"><h3>Contents</h3><ul class="navlist"><li><a href="{prefix}index.html?view=pa" data-view="pa">Planning Act</a></li><li><a href="{nea_href}" data-view="nea">Natural Environment Act</a></li><li><a href="{prefix}pages/illustrative-national-policy-direction-contents.html" data-preserve-view>National policy direction</a></li></ul></section><section class="side-section recent-section"><h3>Recently visited</h3><ol class="recent-list" id="recent-pages"><li class="muted small">Pages and searches will appear here.</li></ol></section><section class="side-section"><h3>Explore</h3><ul class="navlist"><li><a href="{prefix}actors.html">Actors</a></li><li><a href="{prefix}concepts-expressions.html">Concepts</a></li><li><a href="{prefix}planning-instruments.html">Instruments</a></li></ul></section>{('<section class="side-section"><h3>Provisions</h3><ul class="side-tree">'+''.join(tree)+'</ul></section>') if tree else ''}</aside>'''
+    return f'''<aside class="panel sidebar"><a class="sidebar-home" href="{prefix}index.html">Home</a><section class="side-section fixed-nav"><h3>Contents</h3><ul class="navlist"><li><a href="{planning_contents_href}">Planning Act</a></li><li><a href="{nea_contents_href}">Natural Environment Act</a></li><li><a href="{prefix}pages/illustrative-national-policy-direction-contents.html" data-preserve-view>National policy direction</a></li></ul></section><section class="side-section recent-section"><h3>Recently visited</h3><ol class="recent-list" id="recent-pages"><li class="muted small">Pages and searches will appear here.</li></ol></section><section class="side-section"><h3>Explore</h3><ul class="navlist"><li><a href="{prefix}actors.html">Actors</a></li><li><a href="{prefix}concepts-expressions.html">Concepts</a></li><li><a href="{prefix}planning-instruments.html">Instruments</a></li></ul></section>{('<section class="side-section"><h3>Provisions</h3><ul class="side-tree">'+''.join(tree)+'</ul></section>') if tree else ''}</aside>'''
 
 
 # Render individual pages. Concept and actor pages use special reference grouping.
