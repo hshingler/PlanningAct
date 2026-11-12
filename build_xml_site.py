@@ -223,7 +223,7 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
     for refkey, item in by_key.items():
         act, prov, title, xmlid = item["act"], item["prov"], item["title"], item["xmlid"]
         extra_tags = ontology.get("provisions", {}).get(refkey, {}).get("tags", [])
-        tags = [] if item.get("theme") else [act["tag"], "Provision", *extra_tags]
+        tags = ["iNPD"] if item.get("theme") else [act["tag"], "Provision", *extra_tags]
         if not item.get("theme"):
             hierarchy = []
             node = parents.get(prov)
@@ -245,7 +245,7 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
         page_title = {
             "planning-act-2026": "Planning Act 2026",
             "natural-environment-act-2026": "Natural Environment Act 2026",
-            "illustrative-national-policy-direction": "Illustrative National Policy Direction Contents",
+            "illustrative-national-policy-direction": "Illustrative National Policy Direction",
         }[act["key"]]
         page_tags = []
         if act["key"] != "illustrative-national-policy-direction":
@@ -255,6 +255,8 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
                 date = datetime.strptime(as_at, "%Y-%m-%d")
                 version = f"version as at {date.strftime('%d %B %Y').lstrip('0')}"
             page_tags = [act["tag"], *([version] if version else [])]
+        else:
+            page_tags = ["iNPD"]
         page = graph.page(page_title, "contents:" + act["key"], page_tags)
         contents_by_act[act["key"]] = page
         home = page
