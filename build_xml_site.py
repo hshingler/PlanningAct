@@ -14,6 +14,7 @@ import sys
 import tempfile
 import unicodedata
 import uuid
+from datetime import datetime
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -231,11 +232,18 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
     contents_by_act = {}
     for act in acts:
         page_title = {
-            "planning-act-2026": "Planning Act 2026 — Contents",
-            "natural-environment-act-2026": "Natural Environment Act 2026 - Contents",
+            "planning-act-2026": "Planning Act 2026",
+            "natural-environment-act-2026": "Natural Environment Act 2026",
             "illustrative-national-policy-direction": "Illustrative National Policy Direction Contents",
         }[act["key"]]
-        page_tags = [] if act["key"] == "illustrative-national-policy-direction" else [act["tag"]]
+        page_tags = []
+        if act["key"] != "illustrative-national-policy-direction":
+            as_at = act["root"].get("date.as.at")
+            version = f"Public Act {act['root'].get('year')} No {act['root'].get('act.no')}"
+            if as_at:
+                date = datetime.strptime(as_at, "%Y-%m-%d")
+                version += f" · version as at {date.strftime('%d %B %Y').lstrip('0')}"
+            page_tags = [act["tag"], version]
         page = graph.page(page_title, "contents:" + act["key"], page_tags)
         contents_by_act[act["key"]] = page
         home = page
