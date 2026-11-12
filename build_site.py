@@ -150,7 +150,12 @@ def render_links(s,prefix=''):
         target=resolve_uuid(uid)
         if not target: return html.escape(label)
         token=f'LOGSEQLINKTOKEN{len(links)}END'
-        links.append((token,f'<a href="{html.escape(prefix+target,quote=True)}">{html.escape(label)}</a>'))
+        page=page_by_uuid.get(uid)
+        if page is None and uid in block_by_uuid:
+            page=pages[block_by_uuid[uid]['page_id']]
+        title_tone=page_title_tone(page) if page else ''
+        tone=f' class="{title_tone}"' if title_tone else ''
+        links.append((token,f'<a{tone} href="{html.escape(prefix+target,quote=True)}">{html.escape(label)}</a>'))
         return token
     def labeled(m): return hold(m.group(1),m.group(2))
     s=re.sub(r'\[((?:[^\[\]]|\[[^\]]*\])*)\]\(\[\[([0-9a-fA-F-]{36})\]\]\)',labeled,s)
@@ -209,6 +214,8 @@ def merge_references(page_id):
 
 def reference_item_html(ref,from_root=False):
     source_title=pages[ref['page_id']]['title']; href=reference_href(ref,from_root); excerpt=clean_text(ref.get('text',ref.get('title','')))
+    source_tone=page_title_tone(pages[ref['page_id']])
+    source_class=f' class="{source_tone}"' if source_tone else ''
     bid=ref.get('id'); ancestors=[]; seen_ancestors=set()
     while bid in block_info and bid not in seen_ancestors:
         seen_ancestors.add(bid); block=block_info[bid]; ancestors.append(clean_text(block['title']))
@@ -219,7 +226,7 @@ def reference_item_html(ref,from_root=False):
     searchable=source_title+' '+context+' '+excerpt
     context_html=f'<div class="reference-context">{render_links(context, "pages/" if from_root else "")}</div>' if context else ''
     return (f'<li class="reference-item" data-act="{source_act(ref)}" data-filter-text="{html.escape(searchable.casefold(),quote=True)}" data-start-text="{html.escape(excerpt.casefold(),quote=True)}">'
-            f'<a href="{html.escape(href,quote=True)}">{html.escape(source_title)}</a> '
+            f'<a{source_class} href="{html.escape(href,quote=True)}">{html.escape(source_title)}</a> '
             f'<span class="reference-status {"linked" if ref["linked"] else "candidate"}">{"Linked" if ref["linked"] else "Possible match"}</span>{context_html}'
             f'<p class="reference-extract">{render_links(excerpt, "pages/" if from_root else "")}</p></li>')
 
@@ -379,7 +386,7 @@ css += '''
 .view-switch a.active::before{background:#625b4f}
 @media(max-width:520px){.view-switch{gap:2px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start}.view-switch a,.view-switch a:last-child{padding:7px 9px 6px;font-size:.72rem}.view-switch a.active{padding-top:9px}}
 '''
-(out/'assets/style.css').write_text(css+'\n.provision-context{margin:-.65rem 0 1rem;color:#776d5c;font-size:.95rem;letter-spacing:.02em}\n.view-switch a[data-view="pa"]{background:#5088AB;color:#fff}.view-switch a[data-view="nea"]{background:#57A092;color:#fff}.view-switch a[data-view="both"]{background:#BDE0DA;color:#302f2a}.view-switch a:hover{filter:brightness(.93)}\n.main-column[data-page-act="pa"]>.provision-title{color:#5088AB}.main-column[data-page-act="nea"]>.provision-title{color:#57A092}\n',encoding='utf-8')
+(out/'assets/style.css').write_text(css+'\n.provision-context{margin:-.65rem 0 1rem;color:#776d5c;font-size:.95rem;letter-spacing:.02em}.search-legal-reference{margin:-2px 0 7px;color:#776d5c;font:500 .76rem/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.02em}\n.view-switch a[data-view="pa"]{background:#5088AB;color:#fff}.view-switch a[data-view="nea"]{background:#57A092;color:#fff}.view-switch a[data-view="both"]{background:#BDE0DA;color:#302f2a}.view-switch a:hover{filter:brightness(.93)}\n.provision-title-pa{color:#5088AB!important}.provision-title-nea{color:#57A092!important}.provision-title-npd{color:#598f86!important}\n',encoding='utf-8')
 
 # Search index includes full page text and graph tags for grouped search results.
 def tagged_act(tag_ids):
@@ -391,6 +398,19 @@ def tagged_act(tag_ids):
 
 def page_act(p):
     return tagged_act(p.get('tags',[])) or 'shared'
+
+def page_title_tone(p):
+    if page_act(p)=='npd': return 'provision-title-npd'
+    if any(str(t).casefold()=='provision' for t in tag_titles(p['tags'])):
+        return f'provision-title-{page_act(p)}'
+    return ''
+
+def page_legal_reference(p):
+    resolved=tag_titles(p['tags'])
+    if not any(str(t).casefold()=='provision' for t in resolved): return ''
+    act=next(({'pa 2026':'Planning Act 2026','nea 2026':'Natural Environment Act 2026'}.get(str(t).casefold()) for t in resolved if str(t).casefold() in {'pa 2026','nea 2026'}),None)
+    context=[str(t).split(':',1)[1] for t in resolved if str(t).casefold().startswith('context:')]
+    return ' - '.join([act,*context]) if act and context else ''
 
 def block_act(bid, fallback='shared'):
     seen=set()
@@ -417,7 +437,7 @@ for p in pages.values():
             if bid in seen: continue
             seen.add(bid); block_ids.append(bid); walk(bid)
     walk(p['id']); body=' '.join(block_info[bid]['title'] for bid in block_ids)
-    search_records.append({'title':p['title'],'slug':p['slug'],'name':p['name'],'tags':tag_titles(p['tags']),'act':page_act(p),'text':clean_text(body)[:50000]})
+    search_records.append({'title':p['title'],'slug':p['slug'],'name':p['name'],'tags':tag_titles(p['tags']),'act':page_act(p),'provision':any(str(t).casefold()=='provision' for t in tag_titles(p['tags'])),'legal_reference':page_legal_reference(p),'text':clean_text(body)[:50000]})
 (out/'assets'/'search-index.json').write_text(json.dumps(search_records,ensure_ascii=False),encoding='utf-8')
 
 page_script=r'''<script>
@@ -459,12 +479,10 @@ for p in pages.values():
     seen=set(); tree=''.join(render_block(bid,seen) for bid in children.get(p['id'],[]))
     resolved_tags=tag_titles(p['tags'])
     is_provision=any(str(t).casefold() == 'provision' for t in resolved_tags)
-    context=[str(t).split(':',1)[1] for t in resolved_tags if str(t).casefold().startswith('context:')]
     hidden_provision_tags={'provision','prototypepurpose'}
     display_tags=[t for t in resolved_tags if t and not (is_provision and (re.sub(r'[^a-z0-9]','',str(t).casefold()) in hidden_provision_tags or str(t).casefold().startswith('context:')))]
     tags=''.join(f'<span class="tag">{html.escape(str(t))}</span>' for t in display_tags)
-    act_context=next(({'pa 2026':'Planning Act 2026','nea 2026':'Natural Environment Act 2026'}.get(str(t).casefold()) for t in resolved_tags if str(t).casefold() in {'pa 2026','nea 2026'}),None)
-    provision_context=' - '.join([act_context,*context]) if is_provision and act_context and context else ''
+    provision_context=page_legal_reference(p)
     is_comparison=is_concept_or_actor(p)
     refs_html=reference_section(p['id'],grouped=is_comparison)
     is_npd_contents=p['title'].casefold() == 'illustrative national policy direction'
@@ -474,6 +492,10 @@ for p in pages.values():
     page_content=(comparison_section(p['id']) if is_comparison else f'<section class="content-card"><div class="block-controls">{controls}</div><ul class="page-tree">{page_tree}</ul></section>{refs_html}')
     page_tags_html=tags or ('' if p['title'].casefold() == 'illustrative national policy direction' else '<a href="../index.html">Home</a>')
     title_class='page-title provision-title' if is_provision else 'page-title'
+    if is_provision:
+        title_class += f' provision-title-{page_act(p)}'
+    elif page_act(p)=='npd':
+        title_class += ' provision-title-npd'
     body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(p['title'])} · NZ Planning System</title>{favicon_links('../')}<link rel="stylesheet" href="../assets/style.css"></head><body><header class="top"><div class="wrap"><div class="inner-header"><a class="brand-logo-link" href="../funnel-folly.html" aria-label="The Funnel Folly"><img class="brand-logo" src="../assets/bosch-funnel-icon.png" alt="Funnel Folly creature"></a><div class="brand-lockup"><span class="brand-title">NZ PLANNING SYSTEM</span><span class="brand-subtitle">LEGAL KNOWLEDGE BASE</span></div><form class="search inner-search" action="../index.html" method="get"><input type="search" name="q" placeholder="Search provisions, concepts, expressions or actors…" aria-label="Search"><button type="submit">Search</button><button type="button" id="clear-search">Clear</button></form><nav class="header-legislation" aria-label="Official legislation"><span class="official-label">Official Legislation:</span><a href="https://www.legislation.govt.nz/act/public/2026/70/en/latest/#LMS1035807" target="_blank" rel="noopener">Planning Act 2026</a><a href="https://www.legislation.govt.nz/act/public/2026/71/en/latest/#LMS1520775" target="_blank" rel="noopener">Natural Environment Act 2026</a></nav></div></div></header><main class="wrap"><div class="layout">{sidebar_html(True)}<section class="main-column" data-page-act="{page_act(p)}" data-default-view="{'both' if is_comparison else page_act(p)}"><h1 class="{title_class}">{html.escape(p['title'])}</h1>{f'<div class="provision-context">{html.escape(provision_context)}</div>' if provision_context else ''}<div class="page-tags">{page_tags_html}</div>{page_content}<div class="footer">Generated from the supplied Logseq EDN export · Site built {datetime.now(ZoneInfo('Pacific/Auckland')).strftime('%d %B %Y')}. Confirm statutory wording and context against official legislation.</div></section></div><nav class="page-jump" aria-label="Page navigation"><a href="#" aria-label="Go to top" title="Go to top">↑</a><a href="#page-bottom" aria-label="Go to bottom" title="Go to bottom">↓</a></nav><span id="page-top"></span><span id="page-bottom"></span></main>{page_script}</body></html>'''
     (out/'pages'/f"{p['slug']}.html").write_text(body,encoding='utf-8')
 
@@ -521,7 +543,7 @@ function isInterp(p){const n=p.title.toLowerCase().replace(/[^a-z0-9]+/g,' ').tr
 function isPurpose(p){return /\bpurpose\b/i.test(p.title)}
 function isGoal(p){return /\bgoals?\b/i.test(p.title)}
 function isInpd(p){return /\binpd\b/i.test(p.title+' '+(p.tags||[]).join(' '))}
-function renderGroup(title,items,q,filter=false){let h='<section class="search-group"><h2>'+esc(title)+' <span class="ref-count">'+items.length+'</span></h2>';if(filter)h+='<input class="search-other-filter" type="search" placeholder="Filter '+esc(title.toLowerCase())+'…" aria-label="Filter '+esc(title.toLowerCase())+'">';if(!items.length)h+='<p class="muted">No matching references.</p>';else{h+='<div class="search-group-grid">';for(const p of items){const lower=(p.text||'').toLowerCase(),terms=termsFor(q),positions=terms.map(t=>lower.indexOf(t)).filter(i=>i>=0),idx=positions.length?Math.min(...positions):-1;let ex=idx>=0?p.text.slice(Math.max(0,idx-100),Math.min(p.text.length,idx+Math.max(...terms.map(t=>t.length))+220)):p.text.slice(0,220);h+='<article class="search-ref" data-filter-text="'+esc((p.title+' '+ex).toLowerCase())+'"><h3><a href="pages/'+esc(p.slug)+'.html?q='+encodeURIComponent(q)+'&view='+encodeURIComponent(selectedView())+'">'+hi(p.title,q)+'</a></h3><p>'+p.tags.slice(0,4).map(t=>'<span class="tag">'+hi(t,q)+'</span>').join(' ')+'</p><p>'+hi(ex,q)+'</p></article>'}h+='</div>'}return h+'</section>'}
+function renderGroup(title,items,q,filter=false){let h='<section class="search-group"><h2>'+esc(title)+' <span class="ref-count">'+items.length+'</span></h2>';if(filter)h+='<input class="search-other-filter" type="search" placeholder="Filter '+esc(title.toLowerCase())+'…" aria-label="Filter '+esc(title.toLowerCase())+'">';if(!items.length)h+='<p class="muted">No matching references.</p>';else{h+='<div class="search-group-grid">';for(const p of items){const lower=(p.text||'').toLowerCase(),terms=termsFor(q),positions=terms.map(t=>lower.indexOf(t)).filter(i=>i>=0),idx=positions.length?Math.min(...positions):-1;let ex=idx>=0?p.text.slice(Math.max(0,idx-100),Math.min(p.text.length,idx+Math.max(...terms.map(t=>t.length))+220)):p.text.slice(0,220);const tone=p.provision?' provision-title-'+p.act:(isInpd(p)?' provision-title-npd':'');h+='<article class="search-ref" data-filter-text="'+esc((p.title+' '+(p.legal_reference||'')+' '+ex).toLowerCase())+'"><h3><a class="'+tone.trim()+'" href="pages/'+esc(p.slug)+'.html?q='+encodeURIComponent(q)+'&view='+encodeURIComponent(selectedView())+'">'+hi(p.title,q)+'</a></h3>'+(p.legal_reference?'<p class="search-legal-reference">'+esc(p.legal_reference)+'</p>':'')+'<p>'+p.tags.slice(0,4).map(t=>'<span class="tag">'+hi(t,q)+'</span>').join(' ')+'</p><p>'+hi(ex,q)+'</p></article>'}h+='</div>'}return h+'</section>'}
 document.getElementById('clear-search')?.addEventListener('click',()=>{input.value='';results.innerHTML='';showHomeContent(true);status.textContent=`Search ${records.length.toLocaleString()} pages.`;input.focus();const url=new URL(location.href);url.searchParams.delete('q');history.replaceState(null,'',url)});form.addEventListener('submit',e=>{e.preventDefault();const q=input.value.trim(),terms=termsFor(q),view=selectedView(),url=new URL(location.href);showHomeContent(!q);if(q)url.searchParams.set('q',q);else url.searchParams.delete('q');url.searchParams.set('view',view);history.replaceState(null,'',url);if(q){const recent=siteIndexUrl();recent.searchParams.set('q',q);recent.searchParams.set('view',view);saveRecent({title:q,href:recent.href,type:'search'})}results.innerHTML='';if(!q){status.textContent=`Search ${records.length.toLocaleString()} pages.`;return}const hits=records.map(p=>{const title=(p.title||'').toLowerCase(),tags=(p.tags||[]).join(' ').toLowerCase(),hay=(title+' '+(p.name||'')+' '+tags+' '+(p.text||'')).toLowerCase();const score=terms.reduce((n,t)=>n+(title.includes(t)?4:0)+(tags.includes(t)?2:0+0)+(hay.includes(t)?1:0),0);return {...p,score,hay}}).filter(p=>terms.every(t=>p.hay.includes(t))).filter(p=>view==='both'||p.act==='shared'||(view==='pa'&&p.act==='pa')||(view==='nea'&&p.act==='nea')).sort((a,b)=>b.score-a.score||a.title.localeCompare(b.title));status.textContent=`${hits.length} matching pages. All search terms must match; matching terms are highlighted.`;if(!hits.length){results.innerHTML='<div class="empty">No matches found for all terms. Try fewer words or a different spelling.</div>';return}const purpose=hits.filter(isPurpose),goals=hits.filter(isGoal),interp=hits.filter(isInterp),inpd=hits.filter(isInpd);const reserved=new Set([...purpose,...goals,...interp,...inpd]);const other=hits.filter(p=>!reserved.has(p));results.innerHTML=renderGroup('Act Purpose',purpose,q)+' '+renderGroup('Goals',goals,q)+' '+renderGroup('Interpretation',interp,q)+' '+renderGroup('Other provisions',other,q,true)+' '+renderGroup('Illustrative National Policy Direction',inpd,q,true);results.querySelectorAll('.search-other-filter').forEach(el=>el.addEventListener('input',()=>{const q2=el.value.toLowerCase();el.parentElement.querySelectorAll('.search-ref').forEach(card=>card.hidden=!card.dataset.filterText.includes(q2))}))});
 </script>'''
 index_html=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>NZ Planning System</title>{favicon_links()}<link rel="stylesheet" href="assets/style.css"></head><body><header class="top"><div class="wrap"><div class="inner-header"><a class="brand-logo-link" href="funnel-folly.html" aria-label="Read The Funnel Folly"><img class="brand-logo" src="assets/bosch-funnel-icon.png" alt="Funnel Folly creature — open The Funnel Folly"></a><div class="brand-lockup"><span class="brand-title">NZ PLANNING SYSTEM</span><span class="brand-subtitle">LEGAL KNOWLEDGE BASE</span></div><form class="search inner-search" id="search-form"><input id="q" type="search" placeholder="Search provisions, concepts, expressions or actors…" aria-label="Search"><button type="submit">Search</button><button type="button" id="clear-search">Clear</button></form><nav class="header-legislation" aria-label="Official legislation"><span class="official-label">Official Legislation:</span><a href="https://www.legislation.govt.nz/act/public/2026/70/en/latest/#LMS1035807" target="_blank" rel="noopener">Planning Act 2026</a><a href="https://www.legislation.govt.nz/act/public/2026/71/en/latest/#LMS1520775" target="_blank" rel="noopener">Natural Environment Act 2026</a></nav></div></div></header><main class="wrap"><div class="layout">{sidebar_html(False)}<section class="main-column"><nav class="view-switch home-view-switch" aria-label="Choose legislation view"><a href="?view=pa" data-view="pa">Planning Act</a><a href="?view=nea" data-view="nea">Natural Environment Act</a><a href="?view=both" data-view="both">Both</a></nav><div id="search-status" class="muted small"></div><div id="results"></div><section class="home-welcome" id="home-welcome"><h1>Welcome</h1><p>Welcome to a navigation site of the New Zealand planning system. The Resource Management Act 1991 has been replaced by a two-Act system with a top-down hierarchy of decision-making, touted as ‘the funnel’.</p><figure><img src="assets/planning-system-funnel.jpeg" alt="Diagram of the two-Act planning system hierarchy, showing national instruments, national policy direction, standards and regional and land use plans."><figcaption>The two-Act system and its top-down hierarchy of decision-making.</figcaption></figure></section></section></div><nav class="page-jump" aria-label="Page navigation"><a href="#" aria-label="Go to top" title="Go to top">↑</a><a href="#page-bottom" aria-label="Go to bottom" title="Go to bottom">↓</a></nav><span id="page-top"></span><span id="page-bottom"></span><div class="footer">Generated from your Logseq EDN export · Site built {datetime.now(ZoneInfo('Pacific/Auckland')).strftime('%d %B %Y')}. Verify statutory wording against official legislation.</div></main>{index_script}{page_script}</body></html>'''
