@@ -308,6 +308,33 @@ def render_block(eid,seen,prefix=''):
     child_html=f'<ul class="block-children">{kids}</ul>' if child_ids else ''
     return f'<li class="block-item" id="block-{html.escape(uid)}">{toggle}<div class="block-text">{title_html}</div>{child_html}</li>'
 
+def render_contents_item(eid, current_page_id, prefix='../'):
+    """Render a contents-tree entry and mark the current provision and its ancestors."""
+    if eid not in block_info:
+        return '', False
+    block=block_info[eid]
+    child_ids=children.get(eid,[])
+    rendered_children=[]
+    contains_current=False
+    for child_id in child_ids:
+        child_html,child_active=render_contents_item(child_id,current_page_id,prefix)
+        if child_html:
+            rendered_children.append(child_html)
+        contains_current=contains_current or child_active
+    target_page=next((ref for ref in block['refs'] if ref in pages),None)
+    current=target_page==current_page_id
+    active=current or contains_current
+    title=render_legal_text(block['title'],prefix)
+    if current:
+        title=re.sub(r'<a(?=\s|>)', '<a aria-current="page"', title, count=1)
+    classes='contents-item'+(' is-current' if current else '')+(' contains-current' if contains_current else '')
+    if rendered_children:
+        opened=' open' if active else ''
+        inner=f'<details{opened}><summary>{title}</summary><ul>{"".join(rendered_children)}</ul></details>'
+    else:
+        inner=f'<div class="contents-link">{title}</div>'
+    return f'<li class="{classes}">{inner}</li>',active
+
 if out.exists(): shutil.rmtree(out)
 (out/'pages').mkdir(parents=True, exist_ok=True); (out/'assets').mkdir(parents=True, exist_ok=True)
 # Copy brand assets on every build so the deployment workflow cannot omit or erase them.
@@ -387,13 +414,15 @@ css += '''
 @media(max-width:520px){.view-switch{gap:2px;flex-wrap:nowrap;overflow-x:auto;justify-content:flex-start}.view-switch a,.view-switch a:last-child{padding:7px 9px 6px;font-size:.72rem}.view-switch a.active{padding-top:9px}}
 '''
 (out/'assets/style.css').write_text(css+'\n.provision-context{margin:-.65rem 0 1rem;color:#776d5c;font-size:.95rem;letter-spacing:.02em}.search-legal-reference{margin:-2px 0 7px;color:#776d5c;font:500 .76rem/1.4 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.02em}\n.view-switch a[data-view="pa"]{background:#5088AB;color:#fff}.view-switch a[data-view="nea"]{background:#57A092;color:#fff}.view-switch a[data-view="both"]{background:#BDE0DA;color:#302f2a}.view-switch a:hover{filter:brightness(.93)}\n.provision-title-pa{color:#5088AB!important}.provision-title-nea{color:#57A092!important}.provision-title-npd{color:#598f86!important}\n',encoding='utf-8')
+with (out/'assets/style.css').open('a',encoding='utf-8') as stylesheet:
+    stylesheet.write('.provision-navigation{display:flex;justify-content:space-between;gap:12px;margin:-.45rem 0 1rem}.provision-nav-button{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:7px 13px;border:1px solid #cfc5ae;border-radius:6px;background:#f7f2e6;color:#51491f;font-weight:650}.provision-nav-button:hover{background:#eee5d1}.provision-nav-button.is-disabled{color:#999181;background:#f5f2eb;border-color:#e3ddcf}\n.legal-contents-drawer{position:fixed;z-index:20;left:0;top:155px;max-height:calc(100vh - 175px)}.legal-contents-drawer>summary{writing-mode:vertical-rl;transform:rotate(180deg);padding:14px 9px;border:1px solid #cfc5ae;border-left:0;border-radius:0 7px 7px 0;background:#62551c;color:#fff8e7;font-weight:700;cursor:pointer;list-style:none}.legal-contents-drawer>summary::-webkit-details-marker{display:none}.legal-contents-drawer[open]{width:min(360px,82vw);max-height:calc(100vh - 175px);background:#fffdf8;border:1px solid #ded6c4;border-left:0;border-radius:0 9px 9px 0;box-shadow:0 8px 26px #302f2a30}.legal-contents-drawer[open]>summary{writing-mode:horizontal-tb;transform:none;padding:10px 14px;border:0;border-bottom:1px solid #ded6c4;border-radius:0;background:#f2ecde;color:#51491f}.legal-contents-drawer nav{max-height:calc(100vh - 225px);overflow:auto;padding:14px}.legal-contents-drawer ul{list-style:none;padding-left:14px;margin:0}.legal-contents-drawer>nav>ul{padding-left:0}.legal-contents-drawer li{margin:2px 0}.legal-contents-drawer details>summary{cursor:pointer;font-weight:600;padding:4px}.legal-contents-drawer .contents-link{padding:4px}.legal-contents-drawer .is-current>.contents-link{background:#e8f0e7;border-left:4px solid #598f86;border-radius:3px;font-weight:750}.legal-contents-drawer .is-current a{color:#315b4e}.legal-contents-drawer .contains-current>details>summary{color:#315b4e;background:#eef3eb;border-radius:3px}\n')
 
 # Search index includes full page text and graph tags for grouped search results.
 def tagged_act(tag_ids):
     labels={str(x).casefold().replace(' ','') for x in tag_titles(tag_ids)}
     if 'pa2026' in labels or 'planningact2026' in labels: return 'pa'
     if 'nea2026' in labels or 'naturalenvironmentact2026' in labels: return 'nea'
-    if 'npd' in labels or 'nationalpolicydirection' in labels: return 'npd'
+    if 'npd' in labels or 'inpd' in labels or 'nationalpolicydirection' in labels: return 'npd'
     return None
 
 def page_act(p):
@@ -457,6 +486,21 @@ provision_pages=[p for p in pages.values() if page_has_tag(p['id'],'provision')]
 act_pages={p['slug']:page_act(p) for p in pages.values()}
 part_pages=[p for p in pages.values() if re.match(r'^(part|subpart)\s+[0-9ivxlcdm]+',p['title'].strip(),re.I)]
 def nav_href(p,from_root=False): return ('../' if from_root else '')+'pages/'+p['slug']+'.html'
+sequence_groups=collections.defaultdict(list)
+for page in pages.values():
+    if page_has_tag(page['id'],'provision'):
+        sequence_groups[page_act(page)].append(page)
+    elif page_act(page)=='npd' and page_has_tag(page['id'],'iNPD'):
+        sequence_groups['npd'].append(page)
+sequence_navigation={}
+for sequence in sequence_groups.values():
+    sequence.sort(key=lambda page:page['id'])
+    for index,page in enumerate(sequence):
+        sequence_navigation[page['id']] = (
+            sequence[index-1] if index else None,
+            sequence[index+1] if index+1<len(sequence) else None,
+        )
+
 def sidebar_html(from_root=False):
     prefix='../' if from_root else ''
     planning_contents_href=prefix+'pages/planning-act-2026-contents.html'
@@ -472,6 +516,10 @@ def sidebar_html(from_root=False):
     for label,items in groups.items():
         tree.append('<li><details><summary>'+html.escape(label)+' ('+str(len(items))+')</summary><ul class="side-tree">'+''.join('<li><a href="'+nav_href(p,from_root)+'">'+html.escape(p['title'])+'</a></li>' for p in items)+'</ul></details></li>')
     return f'''<aside class="panel sidebar"><a class="sidebar-home" href="{prefix}index.html">Home</a><section class="side-section fixed-nav"><h3>Contents</h3><ul class="navlist"><li><a href="{planning_contents_href}">Planning Act</a></li><li><a href="{nea_contents_href}">Natural Environment Act</a></li><li><a href="{prefix}pages/illustrative-national-policy-direction-contents.html" data-preserve-view>Illustrative National Policy Direction</a></li></ul></section><section class="side-section recent-section"><h3>Recently visited</h3><ol class="recent-list" id="recent-pages"><li class="muted small">Pages and searches will appear here.</li></ol></section><section class="side-section"><h3>Explore</h3><ul class="navlist"><li><a href="{prefix}actors.html">Actors</a></li><li><a href="{prefix}concepts-expressions.html">Concepts</a></li><li><a href="{prefix}planning-instruments.html">Instruments</a></li></ul></section>{('<section class="side-section"><h3>Provisions</h3><ul class="side-tree">'+''.join(tree)+'</ul></section>') if tree else ''}</aside>'''
+
+contents_page_by_act={page_act(page):page for page in pages.values() if page['title'].casefold() in {
+    'planning act 2026','natural environment act 2026','illustrative national policy direction'
+}}
 
 
 # Render individual pages. Concept and actor pages use special reference grouping.
@@ -496,7 +544,20 @@ for p in pages.values():
         title_class += f' provision-title-{page_act(p)}'
     elif page_act(p)=='npd':
         title_class += ' provision-title-npd'
-    body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(p['title'])} · NZ Planning System</title>{favicon_links('../')}<link rel="stylesheet" href="../assets/style.css"></head><body><header class="top"><div class="wrap"><div class="inner-header"><a class="brand-logo-link" href="../funnel-folly.html" aria-label="The Funnel Folly"><img class="brand-logo" src="../assets/bosch-funnel-icon.png" alt="Funnel Folly creature"></a><div class="brand-lockup"><span class="brand-title">NZ PLANNING SYSTEM</span><span class="brand-subtitle">LEGAL KNOWLEDGE BASE</span></div><form class="search inner-search" action="../index.html" method="get"><input type="search" name="q" placeholder="Search provisions, concepts, expressions or actors…" aria-label="Search"><button type="submit">Search</button><button type="button" id="clear-search">Clear</button></form><nav class="header-legislation" aria-label="Official legislation"><span class="official-label">Official Legislation:</span><a href="https://www.legislation.govt.nz/act/public/2026/70/en/latest/#LMS1035807" target="_blank" rel="noopener">Planning Act 2026</a><a href="https://www.legislation.govt.nz/act/public/2026/71/en/latest/#LMS1520775" target="_blank" rel="noopener">Natural Environment Act 2026</a></nav></div></div></header><main class="wrap"><div class="layout">{sidebar_html(True)}<section class="main-column" data-page-act="{page_act(p)}" data-default-view="{'both' if is_comparison else page_act(p)}"><h1 class="{title_class}">{html.escape(p['title'])}</h1>{f'<div class="provision-context">{html.escape(provision_context)}</div>' if provision_context else ''}<div class="page-tags">{page_tags_html}</div>{page_content}<div class="footer">Generated from the supplied Logseq EDN export · Site built {datetime.now(ZoneInfo('Pacific/Auckland')).strftime('%d %B %Y')}. Confirm statutory wording and context against official legislation.</div></section></div><nav class="page-jump" aria-label="Page navigation"><a href="#" aria-label="Go to top" title="Go to top">↑</a><a href="#page-bottom" aria-label="Go to bottom" title="Go to bottom">↓</a></nav><span id="page-top"></span><span id="page-bottom"></span></main>{page_script}</body></html>'''
+    previous,next_page=sequence_navigation.get(p['id'],(None,None))
+    provision_navigation=''
+    if previous or next_page:
+        previous_link=(f'<a class="provision-nav-button" href="{nav_href(previous,True)}" rel="prev">← Previous</a>' if previous else '<span class="provision-nav-button is-disabled" aria-disabled="true">← Previous</span>')
+        next_link=(f'<a class="provision-nav-button" href="{nav_href(next_page,True)}" rel="next">Next →</a>' if next_page else '<span class="provision-nav-button is-disabled" aria-disabled="true">Next →</span>')
+        provision_navigation=f'<nav class="provision-navigation" aria-label="Provision navigation">{previous_link}{next_link}</nav>'
+    legal_contents=''
+    is_directive=page_act(p)=='npd' and page_has_tag(p['id'],'iNPD')
+    if is_provision or is_directive:
+        contents_page=contents_page_by_act.get(page_act(p))
+        if contents_page:
+            toc_items=''.join(render_contents_item(bid,p['id'])[0] for bid in children.get(contents_page['id'],[]))
+            legal_contents=f'<details class="legal-contents-drawer"><summary>Contents</summary><nav aria-label="{html.escape(contents_page["title"])} contents"><ul>{toc_items}</ul></nav></details>'
+    body=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(p['title'])} · NZ Planning System</title>{favicon_links('../')}<link rel="stylesheet" href="../assets/style.css"></head><body>{legal_contents}<header class="top"><div class="wrap"><div class="inner-header"><a class="brand-logo-link" href="../funnel-folly.html" aria-label="The Funnel Folly"><img class="brand-logo" src="../assets/bosch-funnel-icon.png" alt="Funnel Folly creature"></a><div class="brand-lockup"><span class="brand-title">NZ PLANNING SYSTEM</span><span class="brand-subtitle">LEGAL KNOWLEDGE BASE</span></div><form class="search inner-search" action="../index.html" method="get"><input type="search" name="q" placeholder="Search provisions, concepts, expressions or actors…" aria-label="Search"><button type="submit">Search</button><button type="button" id="clear-search">Clear</button></form><nav class="header-legislation" aria-label="Official legislation"><span class="official-label">Official Legislation:</span><a href="https://www.legislation.govt.nz/act/public/2026/70/en/latest/#LMS1035807" target="_blank" rel="noopener">Planning Act 2026</a><a href="https://www.legislation.govt.nz/act/public/2026/71/en/latest/#LMS1520775" target="_blank" rel="noopener">Natural Environment Act 2026</a></nav></div></div></header><main class="wrap"><div class="layout">{sidebar_html(True)}<section class="main-column" data-page-act="{page_act(p)}" data-default-view="{'both' if is_comparison else page_act(p)}"><h1 class="{title_class}">{html.escape(p['title'])}</h1>{provision_navigation}{f'<div class="provision-context">{html.escape(provision_context)}</div>' if provision_context else ''}<div class="page-tags">{page_tags_html}</div>{page_content}<div class="footer">Generated from the supplied Logseq EDN export · Site built {datetime.now(ZoneInfo('Pacific/Auckland')).strftime('%d %B %Y')}. Confirm statutory wording and context against official legislation.</div></section></div><nav class="page-jump" aria-label="Page navigation"><a href="#" aria-label="Go to top" title="Go to top">↑</a><a href="#page-bottom" aria-label="Go to bottom" title="Go to bottom">↓</a></nav><span id="page-top"></span><span id="page-bottom"></span></main>{page_script}</body></html>'''
     (out/'pages'/f"{p['slug']}.html").write_text(body,encoding='utf-8')
 
 # Browse pages from existing graph tags.

@@ -179,7 +179,7 @@ def provision_context(root: ET.Element, prov: ET.Element) -> tuple[str, str | No
         sch_title = clean(schedule.findtext("heading", ""))
         key = f"schedule-{sch_no}:{label or 'clause'}:{prov.get('id')}"
         title = f"Schedule {sch_no}, clause {label} — {heading}"
-        if sch_title:
+        if sch_title and sch_no != "2":
             title += f" ({sch_title})"
         return key, title
     return label or prov.get("id", "unknown"), section_label(prov)
@@ -280,12 +280,13 @@ def build(acts_dir: Path, ontology_path: Path, output: Path):
                         graph.block(f"[{item['title']}]([[{id_to_uuid[xmlid]}]])", home, parent_node, counter,
                                     f"toc:{act['key']}:{xmlid}", refs=[item["page"]], tags=[act["tag"]])
                 elif child.tag in {"part", "subpart", "schedule", "schedule.group", "schedule.provisions"}:
+                    if child.tag == "schedule.provisions":
+                        add_section_refs(parent_node, list(child))
+                        continue
                     label = clean(child.findtext("label", ""))
                     heading = clean(child.findtext("heading", ""))
                     if child.tag == "schedule":
                         title = f"Schedule {label} — {heading}".strip(" —")
-                    elif child.tag == "schedule.provisions":
-                        title = "Provisions"
                     elif child.tag == "schedule.group":
                         title = heading or "Schedules"
                     else:
