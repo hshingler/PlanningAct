@@ -53,7 +53,7 @@ def xml_inline(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[str,
             style = child.get("style", "italic")
             inner = f"**{inner}**" if style == "bold" else f"*{inner}*"
         elif tag == "def-term":
-            pass
+            inner = f"**{inner}**"
         elif tag in {"entry", "cell"}:
             inner = " " + inner + " | "
         out += inner
@@ -71,22 +71,27 @@ def element_text(el: ET.Element, id_to_page: dict[str, int], id_to_uuid: dict[st
             pieces.append(("\u2003" * depth) + f"({marker})")
         if el.text and el.text.strip():
             pieces.append(el.text.strip(" \t\r\n"))
+        after_crosshead = False
         for child in el:
             if child.tag == "label":
                 continue
             if child.tag in {"para", "subprov", "label-para", "def-para", "row", "crosshead", "example"}:
-                child_depth = depth + (1 if child.tag == "label-para" else 0)
+                child_depth = depth + (1 if child.tag == "label-para" and not after_crosshead else 0)
                 value = element_text(child, id_to_page, id_to_uuid, child_depth)
             else:
                 value = xml_inline(child, id_to_page, id_to_uuid)
             if value.strip():
                 pieces.append(value.strip(" \t\r\n"))
+            after_crosshead = child.tag == "label-para.crosshead"
         if marker and len(pieces) > 1:
             pieces[0] += " " + pieces.pop(1)
         text = "\n".join(pieces)
     else:
         text = xml_inline(el, id_to_page, id_to_uuid)
-    return text.strip(" \t\r\n")
+    text = text.strip(" \t\r\n")
+    if el.tag == "def-para" and text:
+        text = "[[DEF-START]]\n" + text + "\n[[DEF-END]]"
+    return text
 
 
 class Graph:
@@ -176,11 +181,8 @@ def provision_context(root: ET.Element, prov: ET.Element) -> tuple[str, str | No
         node = parents.get(node)
     if schedule is not None:
         sch_no = clean(schedule.findtext("label", ""))
-        sch_title = clean(schedule.findtext("heading", ""))
         key = f"schedule-{sch_no}:{label or 'clause'}:{prov.get('id')}"
         title = f"Schedule {sch_no}, clause {label} — {heading}"
-        if sch_title and sch_no != "2":
-            title += f" ({sch_title})"
         return key, title
     return label or prov.get("id", "unknown"), section_label(prov)
 
